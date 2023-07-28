@@ -24,10 +24,16 @@ export default function PlotAddChooseSize(props: Props) {
   const { watch, setValue } = useFormContext();
   const openDialog = useOpenDialog();
 
+  const op = plotter.options;
+  const isBladebit3OrNewer =
+    plotter.defaults.plotterName.startsWith('bladebit') && plotter.version && +plotter.version.split('.')[0] >= 3;
+
   const plotterName = watch('plotterName');
   const plotSize = watch('plotSize');
   const overrideK = watch('overrideK');
   const isKLow = plotSize < MIN_MAINNET_K_SIZE;
+
+  const compressionAvailable = op.haveBladebitCompressionLevel && isBladebit3OrNewer;
 
   const [allowedPlotSizes, setAllowedPlotSizes] = useState(
     getPlotSizeOptions(plotterName).filter((option) => plotter.options.kSizes.includes(option.value))
@@ -68,23 +74,26 @@ export default function PlotAddChooseSize(props: Props) {
   }, [plotSize, overrideK, setValue, openDialog]);
 
   return (
-    <CardStep step={step} title={<Trans>Choose Plot Size</Trans>}>
+    <CardStep
+      step={step}
+      title={compressionAvailable ? <Trans>Choose K value and compression level</Trans> : <Trans>Choose K value</Trans>}
+    >
       <Typography variant="subtitle1">
         <Trans>
           {
             'You do not need to be synced or connected to plot. Temporary files are created during the plotting process which exceed the size of the final plot files. Make sure you have enough space. '
           }
-          <Link target="_blank" href="https://github.com/Ball-Network/seacoin-blockchain/wiki/k-sizes">
+          <Link target="_blank" href="https://github.com/ball-network/seacoin-blockchain/wiki/k-sizes">
             Learn more
           </Link>
         </Trans>
       </Typography>
 
-      <Grid container>
+      <Grid container spacing={2} direction="column">
         <Grid xs={12} sm={10} md={8} lg={8} item>
           <FormControl variant="filled" fullWidth>
             <InputLabel required focused>
-              <Trans>Plot Size</Trans>
+              <Trans>K value</Trans>
             </InputLabel>
             <Select name="plotSize">
               {allowedPlotSizes.map((option) => (
@@ -100,6 +109,25 @@ export default function PlotAddChooseSize(props: Props) {
             )}
           </FormControl>
         </Grid>
+        {compressionAvailable && (
+          <Grid xs={12} sm={12} item>
+            <FormControl variant="filled" fullWidth>
+              <InputLabel>
+                <Trans>Compression level</Trans>
+              </InputLabel>
+              <Select name="bladebitCompressionLevel" defaultValue={plotter.defaults.bladebitCompressionLevel}>
+                <MenuItem value={0}>0 - No compression</MenuItem>
+                <MenuItem value={1}>1</MenuItem>
+                <MenuItem value={2}>2</MenuItem>
+                <MenuItem value={3}>3</MenuItem>
+                <MenuItem value={4}>4</MenuItem>
+                <MenuItem value={5}>5</MenuItem>
+                <MenuItem value={6}>6</MenuItem>
+                <MenuItem value={7}>7</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+        )}
       </Grid>
     </CardStep>
   );

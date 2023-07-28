@@ -1,5 +1,5 @@
-import api, { store, useGetLoggedInFingerprintQuery, useLogInMutation } from '@sea-network/api-react';
-import { useOpenDialog } from '@sea-network/core';
+import api, { store, useGetLoggedInFingerprintQuery } from '@sea-network/api-react';
+import { useOpenDialog, useAuth } from '@sea-network/core';
 import { Trans } from '@lingui/macro';
 import debug from 'debug';
 import React, { type ReactNode } from 'react';
@@ -71,7 +71,7 @@ function parseNotification(
 export default function useWalletConnectCommand(options: UseWalletConnectCommandOptions) {
   const { onNotification } = options;
   const openDialog = useOpenDialog();
-  const [logIn] = useLogInMutation();
+  const { logIn } = useAuth();
   const { data: currentFingerprint, isLoading: isLoadingLoggedInFingerprint } = useGetLoggedInFingerprintQuery();
   const { getPairBySession } = useWalletConnectPairs();
 
@@ -161,7 +161,7 @@ export default function useWalletConnectCommand(options: UseWalletConnectCommand
       }
     }
 
-    const { params: definitionParams = [], bypassConfirm } = definition;
+    const { service, params: definitionParams = [], bypassConfirm } = definition;
 
     log('Confirm arguments', definitionParams);
 
@@ -197,10 +197,7 @@ export default function useWalletConnectCommand(options: UseWalletConnectCommand
     // auto login before execute command
     if (isDifferentFingerprint && allowConfirmationFingerprintChange) {
       log('Changing fingerprint', fingerprint);
-      await logIn({
-        fingerprint,
-        type: 'skip',
-      }).unwrap();
+      await logIn(fingerprint);
     }
 
     // wait for sync
@@ -208,6 +205,17 @@ export default function useWalletConnectCommand(options: UseWalletConnectCommand
       log('Waiting for sync');
       // wait for wallet synchronisation
       await waitForWalletSync();
+    }
+
+    if (service === 'TEST' && 'response' in definition) {
+      const { response } = definition;
+
+      const responseValue = typeof response === 'function' ? response(values) : response;
+
+      return {
+        success: true,
+        ...responseValue,
+      };
     }
 
     // validate current fingerprint again

@@ -876,6 +876,10 @@ export const walletApi = apiWithTag.injectEndpoints({
       ],
     }),
 
+    crCatApprovePending: mutation(build, CAT, 'crCatApprovePending', {
+      invalidatesTags: [{ type: 'Transactions', id: 'LIST' }],
+    }),
+
     // PlotNFTs
 
     // TODO refactor
@@ -1448,16 +1452,7 @@ export const walletApi = apiWithTag.injectEndpoints({
 
     spendClawbackCoins: mutation(build, WalletService, 'spendClawbackCoins'),
 
-
-    stakingInfo: build.query<
-      {
-        balance: number;
-        address: string;
-      },
-      {
-        fingerprint: number;
-      }
-    >({
+    stakingInfo: build.query<{balance: number;address: string;}, {fingerprint: number;}>({
       query: ({ fingerprint }) => ({
         command: 'stakingInfo',
         service: Staking,
@@ -1466,14 +1461,7 @@ export const walletApi = apiWithTag.injectEndpoints({
       transformResponse: (response: any) => response,
     }),
 
-    stakingSend: build.mutation<
-      any,
-      {
-        amount: string;
-        fingerprint: number;
-        waitForConfirmation?: boolean;
-      }
-    >({
+    stakingSend: build.mutation<any, {amount: string;fingerprint: number;waitForConfirmation?: boolean;}>({
       async queryFn(args, queryApi, _extraOptions, fetchWithBQ) {
         let subscribeResponse: any;
 
@@ -1590,14 +1578,7 @@ export const walletApi = apiWithTag.injectEndpoints({
       invalidatesTags: [{ type: 'Transactions', id: 'LIST' }],
     }),
 
-    stakingWithdraw: build.mutation<
-      any,
-      {
-        amount: string;
-        fingerprint: number;
-        waitForConfirmation?: boolean;
-      }
-    >({
+    stakingWithdraw: build.mutation<any,{amount: string;fingerprint: number;waitForConfirmation?: boolean;}>({
       async queryFn(args, queryApi, _extraOptions, fetchWithBQ) {
         let subscribeResponse: any;
 
@@ -1714,18 +1695,10 @@ export const walletApi = apiWithTag.injectEndpoints({
       invalidatesTags: [{ type: 'Transactions', id: 'LIST' }],
     }),
 
-    findPoolNFT: build.mutation<
-      {
-        totalAmount: number;
-        balanceAmount: number;
-        contractAddress: string;
-        recordAmount: string;
-      },
-      {
-        launcherId: string;
-        contractAddress?: string;
-      }
-    >({
+    findPoolNFT: build.mutation<{totalAmount: number;balanceAmount: number;contractAddress: string;recordAmount: string;},{
+      launcherId: string;
+      contractAddress?: string;
+    }>({
       query: ({ launcherId, contractAddress }) => {
         return {
         command: 'findPoolNFT',
@@ -1734,18 +1707,10 @@ export const walletApi = apiWithTag.injectEndpoints({
       }},
     }),
 
-    recoverPoolNFT: build.mutation<
-      {
-        num: number;
-        totalAmount: number;
-        amount: number;
-        status: string;
-      },
-      {
-        launcherId: string;
-        contractAddress?: string;
-      }
-    >({
+    recoverPoolNFT: build.mutation<{num: number;totalAmount: number;amount: number;status: string;},{
+      launcherId: string;
+      contractAddress?: string;
+    }>({
       query: ({ launcherId, contractAddress }) => {
         return {
         command: 'recoverPoolNFT',

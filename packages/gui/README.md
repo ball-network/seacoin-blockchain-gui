@@ -1,12 +1,10 @@
 # seacoin-blockchain-gui/gui
 
-![GitHub contributors](https://img.shields.io/github/contributors/Ball-Network/seacoin-blockchain-gui?logo=GitHub)
-
 Sea GUI - written in TypeScript and uses Electron/React.
 
 ## Development
 
-Please read and follow the main [README.md](https://github.com/Ball-Network/seacoin-blockchain-gui) of this monorepo.
+Please read and follow the main [README.md](https://github.com/ball-network/seacoin-blockchain-gui) of this monorepo.
 
 ## Best practices
 

@@ -9,5 +9,5 @@ export default function Keys(props: SvgIconProps) {
 }
 
 export function SeaBlack(props: SvgIconProps) {
-  return <SvgIcon component={SeaBlackIcon} viewBox="0 0 152 152" sx={{ width: '100px', height: '100px' }} {...props} />;
+  return <SvgIcon component={SeaBlackIcon} viewBox="0 0 152 152" sx={{ width: '100px', height: '39px' }} {...props} />;
 }

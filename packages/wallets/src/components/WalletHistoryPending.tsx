@@ -1,5 +1,5 @@
-import { TransactionType } from '@sea-network/api';
-import { TableControlledRow } from '@sea-network/core';
+import { TransactionType, TransactionTypeFilterMode } from '@sea-network/api';
+import { Color, TableControlledRow, useDarkMode } from '@sea-network/core';
 import { Trans } from '@lingui/macro';
 import { AccessTime as AccessTimeIcon } from '@mui/icons-material';
 import { TableCell, TableRow, Chip } from '@mui/material';
@@ -16,6 +16,7 @@ type Props = {
 };
 
 function WalletHistoryPending(props: Props) {
+  const { isDarkMode } = useDarkMode();
   const { walletId, cols, metadata, expandedField, expandedCellShift } = props;
   const [expanded, setExpanded] = useState<{
     [key: string]: boolean;
@@ -35,7 +36,7 @@ function WalletHistoryPending(props: Props) {
     reverse: false,
     confirmed: false,
     typeFilter: {
-      mode: 1,
+      mode: TransactionTypeFilterMode.INCLUDE,
       values: [TransactionType.INCOMING_CLAWBACK_RECEIVE, TransactionType.INCOMING_CLAWBACK_SEND],
     },
   });
@@ -50,8 +51,8 @@ function WalletHistoryPending(props: Props) {
         <TableCell
           colSpan={cols.length}
           sx={{
-            backgroundColor: (theme) => theme.palette.grey[600],
-            color: 'white',
+            backgroundColor: isDarkMode ? Color.Neutral[500] : Color.Neutral[400],
+            color: Color.Neutral[50],
             fontSize: 16,
             '& svg': {
               verticalAlign: 'middle',
@@ -63,10 +64,10 @@ function WalletHistoryPending(props: Props) {
           <Chip
             label={transactions?.length}
             sx={{
-              backgroundColor: (theme) => theme.palette.grey[800],
+              backgroundColor: isDarkMode ? Color.Neutral[700] : Color.Neutral[500],
               marginLeft: 1,
               minWidth: '30px',
-              color: 'white',
+              color: Color.Neutral[50],
             }}
             size="small"
           />
@@ -77,7 +78,7 @@ function WalletHistoryPending(props: Props) {
         <TableControlledRow
           row={row}
           rowIndex={rowIndex}
-          oddRowBackgroundColor="rgba(0,0,0,0.10);"
+          oddRowBackgroundColor={isDarkMode ? Color.Neutral[700] : Color.Neutral[300]}
           currentCols={cols}
           metadata={metadata}
           expandedField={expandedField}
@@ -90,7 +91,7 @@ function WalletHistoryPending(props: Props) {
         <TableCell
           colSpan={cols.length}
           sx={{
-            backgroundColor: (theme) => theme.palette.grey[600],
+            backgroundColor: isDarkMode ? Color.Neutral[500] : Color.Neutral[400],
             height: '10px',
             padding: 0,
           }}

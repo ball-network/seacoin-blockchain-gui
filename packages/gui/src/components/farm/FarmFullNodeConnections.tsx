@@ -55,7 +55,7 @@ const cols = [
         <FarmCloseConnection nodeId={row.nodeId}>
           {({ onClose }) => (
             <StyledIconButton onClick={() => onClose()}>
-              <DeleteIcon />
+              <DeleteIcon color="info" />
             </StyledIconButton>
           )}
         </FarmCloseConnection>
@@ -76,7 +76,7 @@ export default function FarmFullNodeConnections() {
       tooltip={
         <Trans>
           {'The full node that your farmer is connected to is below. '}
-          <Link target="_blank" href="https://github.com/Ball-Network/seacoin-blockchain/wiki/Network-Architecture">
+          <Link target="_blank" href="https://github.com/ball-network/seacoin-blockchain/wiki/Network-Architecture">
             Learn more
           </Link>
         </Trans>

@@ -2,7 +2,7 @@
 
 ![Sea logo](https://www.seacoin.vip/wp-content/uploads/2022/09/sea-logo.svg)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Ball-Network/seacoin-blockchain-gui?logo=GitHub)
+![GitHub contributors](https://img.shields.io/github/contributors/ball-network/seacoin-blockchain-gui?logo=GitHub)
 
 This library provides support for TypeScript/JavaScript [Sea](https://www.seacoin.vip) apps to access the [SeaCoin Blockchain RPC](https://docs.seacoin.vip/rpc/), by making it easier to perform the following actions:
 
@@ -62,4 +62,4 @@ import sleep from 'sleep-promise';
 
 ## Development
 
-Please read and follow the main [README.md](https://github.com/Ball-Network/seacoin-blockchain-gui) of this monorepo.
+Please read and follow the main [README.md](https://github.com/ball-network/seacoin-blockchain-gui) of this monorepo.

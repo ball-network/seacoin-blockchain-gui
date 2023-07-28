@@ -15,22 +15,34 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: cs\n"
-"X-Crowdin-File: /[Ball-Network.seacoin-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[ball-network.seacoin-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1304\n"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(>5 min)"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(~{selectedTime} min)"
 msgstr ""
+
+#: src/components/Amount/Amount.tsx:86
+msgid "{0, plural, one {mojo} other {mojos}}"
+msgstr ""
+
+#: src/hooks/useValidateChangePassphraseParams.tsx:35
+msgid "{minPassphraseLength, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
+msgstr "{minPassphraseLength, plural, one {Heslo musí mít minimálně # znak} other {Heslo musí být minimálně # znaků dlouhé}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
 msgid "A new version of Sea is available!"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:172
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:259
+msgid "Add Icon"
+msgstr ""
+
+#: src/screens/SelectKey/SelectKey.tsx:173
 msgid "Add wallet"
 msgstr ""
 
@@ -47,7 +59,7 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr "Jste si jisti, že chcete pokračovat? Pro potvrzení smazání zadejte otisk této peněženky."
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:127
+#: src/screens/SelectKey/SelectKey.tsx:128
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "Zpět"
@@ -84,45 +96,45 @@ msgstr "Zkopírováno"
 msgid "Copy to Clipboard"
 msgstr "Zkopírovat do schránky"
 
-#: src/screens/SelectKey/SelectKey.tsx:175
-msgid "Create New"
-msgstr ""
-
 #: src/screens/SelectKey/SelectKey.tsx:170
 #~ msgid "Create a new private key"
 #~ msgstr "Vytvořit nový privátní klíč"
 
-#: src/screens/SelectKey/SelectKey.tsx:270
+#: src/screens/SelectKey/SelectKey.tsx:273
 msgid "Create a new wallet key"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:262
+#: src/screens/SelectKey/SelectKey.tsx:265
 msgid "Create a new wallet key to get started with Sea."
+msgstr ""
+
+#: src/screens/SelectKey/SelectKey.tsx:176
+msgid "Create New"
 msgstr ""
 
 #: src/components/Settings/SettingsApp.tsx:110
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/screens/SelectKey/SelectKey.tsx:126
+#: src/screens/SelectKey/SelectKey.tsx:127
 #: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "Odstranit"
 
-#: src/screens/SelectKey/SelectKey.tsx:200
-msgid "Delete All Keys"
-msgstr ""
-
-#: src/screens/SelectKey/SelectKey.tsx:125
+#: src/screens/SelectKey/SelectKey.tsx:126
 msgid "Delete all keys"
 msgstr "Smazat všechny klíče"
+
+#: src/screens/SelectKey/SelectKey.tsx:201
+msgid "Delete All Keys"
+msgstr ""
 
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:96
 msgid "Delete key {fingerprint}"
 msgstr "Smazat klíč {fingerprint}"
 
-#: src/screens/SelectKey/SelectKey.tsx:131
+#: src/screens/SelectKey/SelectKey.tsx:132
 msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
 msgstr "Smazáním klíčů permanentně odeberete všechny klíče z počítače. Ujistěte se, že máte zálohu. Jste si jisti, že chcete pokračovat?"
 
@@ -143,7 +155,7 @@ msgstr "Vypnutí ochrany heslem"
 msgid "Discard"
 msgstr "Zahodit"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:183
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:147
 msgid "Download"
 msgstr ""
 
@@ -160,6 +172,10 @@ msgstr "Chyba:"
 msgid "Esc"
 msgstr ""
 
+#: src/components/LayoutMain/LayoutFooter.tsx:49
+msgid "FAQ"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:90
 msgid "Farmer Public Key"
 msgstr "Farmářuv veřejný klíč"
@@ -172,8 +188,8 @@ msgstr "Farmářuv veřejný klíč:"
 msgid "Farming"
 msgstr "Farmaření"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:333
-#: src/components/EstimatedFee/EstimatedFee.tsx:367
+#: src/components/EstimatedFee/EstimatedFee.tsx:334
+#: src/components/EstimatedFee/EstimatedFee.tsx:368
 #: src/components/Fee/Fee.tsx:44
 msgid "Fee"
 msgstr "Poplatek"
@@ -207,7 +223,7 @@ msgstr "Skrýt"
 msgid "Hide Advanced Options"
 msgstr "Skrýt Rozšířené Možnosti"
 
-#: src/screens/SelectKey/SelectKey.tsx:180
+#: src/screens/SelectKey/SelectKey.tsx:181
 msgid "Import Existing"
 msgstr ""
 
@@ -231,23 +247,23 @@ msgstr ""
 msgid "Light"
 msgstr "Světlý"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:221
-msgid "Likely in >5 minutes"
-msgstr ""
-
-#: src/components/EstimatedFee/EstimatedFee.tsx:222
+#: src/components/EstimatedFee/EstimatedFee.tsx:223
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:219
+#: src/components/EstimatedFee/EstimatedFee.tsx:220
 msgid "Likely in {minutes} minutes"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:222
+msgid "Likely in >5 minutes"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:46
 msgid "Loading details"
 msgstr "Načítám podrobnosti"
 
-#: src/screens/SelectKey/SelectKey.tsx:232
+#: src/screens/SelectKey/SelectKey.tsx:235
 msgid "Loading keys"
 msgstr ""
 
@@ -257,12 +273,12 @@ msgstr ""
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:317
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:336
-msgid "Log Out"
-msgstr "Odhlásit"
+#~ msgid "Log Out"
+#~ msgstr "Odhlásit"
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:335
-msgid "Logout"
-msgstr "Odhlásit"
+#~ msgid "Logout"
+#~ msgstr "Odhlásit"
 
 #: src/hooks/useKeyringMigrationPrompt.tsx:16
 msgid "Migrate"
@@ -284,7 +300,7 @@ msgstr "TOHLE NIKDY NIKOMU NESDĚLUJTE"
 msgid "New passphrase is the same as your current passphrase"
 msgstr "Nové heslo je stejné jako vaše aktuální heslo"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:132
 msgid "New version {latestVersion} available"
 msgstr ""
 
@@ -293,20 +309,20 @@ msgstr ""
 msgid "No 24 word seed, since this key is imported."
 msgstr "Žádný 24 slov, protože tento klíč je importován."
 
-#: src/screens/SelectKey/WalletStatus.tsx:61
-#~ msgid "Not Synced"
-#~ msgstr "Není synchronizováno"
-
 #: src/components/FormatConnectionStatus/FormatConnectionStatus.tsx:33
 msgid "Not connected"
 msgstr "Nepřipojeno"
+
+#: src/screens/SelectKey/WalletStatus.tsx:61
+#~ msgid "Not Synced"
+#~ msgstr "Není synchronizováno"
 
 #: src/components/AlertDialog/AlertDialog.tsx:23
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:30
 msgid "OK"
 msgstr "OK"
 
-#: src/screens/SelectKey/SelectKey.tsx:254
+#: src/screens/SelectKey/SelectKey.tsx:257
 msgid "Open a world of possibilities."
 msgstr ""
 
@@ -335,6 +351,10 @@ msgstr "Veřejný klíč"
 msgid "Public key:"
 msgstr "Veřejný klíč:"
 
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:278
+msgid "Random"
+msgstr ""
+
 #: src/components/Fee/Fee.tsx:18
 msgid "Recommended value: 0.000005"
 msgstr ""
@@ -346,6 +366,10 @@ msgstr ""
 #: src/components/ErrorBoundary/ErrorBoundary.tsx:85
 msgid "Reload Application"
 msgstr "Znovu spustit aplikaci"
+
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:259
+msgid "Remove Icon"
+msgstr ""
 
 #: src/screens/SelectKey/SelectKeyItem.tsx:97
 msgid "Rename"
@@ -364,14 +388,15 @@ msgstr "Zobrazit"
 msgid "Save"
 msgstr "Uložit"
 
-#: src/components/Settings/SettingsApp.tsx:125
-msgid "Sea Application Version:"
-msgstr ""
-
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
 msgid "Sea {latestVersion} is currently the latest version available."
 msgstr ""
 
+#: src/components/Settings/SettingsApp.tsx:125
+msgid "Sea Application Version:"
+msgstr ""
+
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:171
 #: src/screens/SelectKey/Search.tsx:34
 msgid "Search"
 msgstr ""
@@ -396,6 +421,7 @@ msgstr "Slova pro zálohu:"
 msgid "Select..."
 msgstr "Zvolit..."
 
+#: src/components/LayoutMain/LayoutFooter.tsx:52
 #: src/components/Settings/SettingsApp.tsx:154
 msgid "Send Feedback"
 msgstr "Odeslat zpětnou vazbu"
@@ -417,7 +443,7 @@ msgstr "Zobrazit pokročilé možnosti"
 #~ msgid "Sign In"
 #~ msgstr "Přihlásit se"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:171
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:135
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
 msgstr "Přeskočit"
@@ -470,11 +496,11 @@ msgstr "Transakce byla odeslána do úplného uzlu a čeká na zahrnutí do memp
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Transakce byla úspěšně odeslána do plného uzlu a zahrnuta do mempoolu."
 
-#: src/screens/SelectKey/SelectKey.tsx:239
+#: src/screens/SelectKey/SelectKey.tsx:242
 msgid "Try Again"
 msgstr "Zkusit znovu"
 
-#: src/screens/SelectKey/SelectKey.tsx:243
+#: src/screens/SelectKey/SelectKey.tsx:246
 msgid "Unable to load keys"
 msgstr ""
 
@@ -499,29 +525,29 @@ msgstr "Nastavení hesla je výrazně doporučeno pro ochranu vašich klíčů. 
 msgid "Value seems high"
 msgstr "Hodnota se zdá vysoká"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:270
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:232
 #: src/components/Settings/SettingsApp.tsx:86
 msgid "Wallet"
 msgstr "Peněženka"
-
-#: src/screens/SelectKey/WalletDeleteDialog.tsx:149
-msgid "Wallet Fingerprint"
-msgstr "Otisk peněženky"
-
-#: src/screens/SelectKey/SelectKey.tsx:219
-msgid "Wallet Keys"
-msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:63
 #: src/screens/SelectKey/SelectKeyItem.tsx:233
 msgid "Wallet {0}"
 msgstr "Peněženka {0}"
 
+#: src/screens/SelectKey/WalletDeleteDialog.tsx:149
+msgid "Wallet Fingerprint"
+msgstr "Otisk peněženky"
+
+#: src/screens/SelectKey/SelectKey.tsx:222
+msgid "Wallet Keys"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKey.tsx:142
 #~ msgid "Welcome to Sea. Please log in with an existing key, or create a new key."
 #~ msgstr "Vítejte v Sea. Přihlaste se pomocí existujícího klíče, nebo si vytvořte nový klíč."
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:177
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:141
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr ""
@@ -542,11 +568,3 @@ msgstr ""
 #: src/hooks/useKeyringMigrationPrompt.tsx:20
 msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Would you like to migrate your keys now?"
 msgstr "Vaše klíče nebyly migrovány do nové klíčenky. Nebudete schopni vytvářet nové klíče nebo odstraňovat staré, dokud nedokončíte migraci. Přejete si migrovat klíče nyní?"
-
-#: src/components/Amount/Amount.tsx:86
-msgid "{0, plural, one {mojo} other {mojos}}"
-msgstr ""
-
-#: src/hooks/useValidateChangePassphraseParams.tsx:35
-msgid "{minPassphraseLength, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
-msgstr "{minPassphraseLength, plural, one {Heslo musí mít minimálně # znak} other {Heslo musí být minimálně # znaků dlouhé}}"

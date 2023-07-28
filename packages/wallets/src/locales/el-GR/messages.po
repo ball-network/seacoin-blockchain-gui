@@ -15,15 +15,19 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: el\n"
-"X-Crowdin-File: /[Ball-Network.seacoin-blockchain-gui] main/packages/wallets/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[ball-network.seacoin-blockchain-gui] main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1308\n"
 
-#: src/components/WalletHistory.tsx:116
-msgid "+"
+#: src/components/WalletHistory.tsx:117
+msgid "-"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:116
-msgid "-"
+#: src/components/WalletSend.tsx:283
+msgid "- Set a time frame which allows you claw back (revoke) the transaction.<0/>- Recipient of the transaction can only claim the funds once that time frame expires."
+msgstr ""
+
+#: src/components/WalletHistory.tsx:117
+msgid "+"
 msgstr ""
 
 #: src/components/WalletHeader.tsx:71
@@ -36,7 +40,7 @@ msgstr "Προσθήκη"
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:68
-#: src/components/WalletsManageTokens.tsx:156
+#: src/components/WalletsManageTokens.tsx:155
 msgid "Add Token"
 msgstr ""
 
@@ -50,10 +54,14 @@ msgstr "Διεύθυνση"
 
 #: src/components/cat/WalletCATSend.tsx:196
 #: src/components/WalletSend.tsx:220
-msgid "Address / Puzzle hash"
-msgstr "Διεύθυνση / Puzzle hash"
+#~ msgid "Address / Puzzle hash"
+#~ msgstr "Διεύθυνση / Puzzle hash"
 
-#: src/components/cat/WalletCATSend.tsx:208
+#: src/components/AddressBookAutocomplete.tsx:68
+msgid "Address / Puzzle hash or Address Book Contact"
+msgstr ""
+
+#: src/components/cat/WalletCATSend.tsx:207
 #: src/components/WalletSend.tsx:232
 msgid "Amount"
 msgstr "Ποσό"
@@ -62,7 +70,7 @@ msgstr "Ποσό"
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:127
+#: src/components/WalletHistory.tsx:128
 msgid "Asset"
 msgstr ""
 
@@ -88,7 +96,11 @@ msgstr ""
 msgid "Available Balance"
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:46
+#: src/components/WalletSend.tsx:323
+msgid "Before sending this transaction, you should ensure that the recipient has a wallet with the capability to claim it manually after the timer has expired."
+msgstr ""
+
+#: src/components/WalletHistoryClawbackChip.tsx:61
 msgid "Can be claimed in "
 msgstr ""
 
@@ -97,8 +109,8 @@ msgstr ""
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: src/components/cat/WalletCATSend.tsx:117
-#: src/components/WalletSend.tsx:142
+#: src/components/cat/WalletCATSend.tsx:118
+#: src/components/WalletSend.tsx:144
 msgid "Cannot send sea to coloured address. Please enter a sea address."
 msgstr ""
 
@@ -106,29 +118,29 @@ msgstr ""
 #~ msgid "Check my snapshot balance"
 #~ msgstr ""
 
+#: src/components/WalletHistoryClawbackChip.tsx:68
+msgid "Claim transaction"
+msgstr ""
+
 #: src/components/ClawbackClaimTransactionDialog.tsx:136
 #: src/components/ClawbackClaimTransactionDialog.tsx:259
 msgid "Claim Transaction"
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:53
-msgid "Claim transaction"
-msgstr ""
-
-#: src/components/WalletHistoryClawbackChip.tsx:68
+#: src/components/WalletHistoryClawbackChip.tsx:83
 msgid "Claiming..."
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:136
-msgid "Claw Back Transaction"
+#: src/components/WalletHistoryClawbackChip.tsx:94
+msgid "Claw back this transaction"
 msgstr ""
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:259
 msgid "Claw back Transaction"
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:79
-msgid "Claw back this transaction"
+#: src/components/ClawbackClaimTransactionDialog.tsx:136
+msgid "Claw Back Transaction"
 msgstr ""
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:128
@@ -139,15 +151,15 @@ msgstr ""
 msgid "Clawback payment clawed back"
 msgstr ""
 
-#: src/components/WalletSend.tsx:340
+#: src/components/WalletSend.tsx:354
 msgid "Clawback will be applied."
 msgstr ""
 
-#: src/components/WalletSend.tsx:346
+#: src/components/WalletSend.tsx:361
 msgid "Clawback will not be applied."
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:94
+#: src/components/WalletHistoryClawbackChip.tsx:109
 msgid "Clawing back..."
 msgstr ""
 
@@ -164,17 +176,21 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:183
+#: src/components/WalletHistory.tsx:194
 msgid "Confirmed"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:372
+#: src/components/WalletHistory.tsx:412
 msgid "Confirmed at Height"
 msgstr ""
 
 #: src/components/WalletConnections.tsx:47
 msgid "Connection type"
 msgstr "Τύπος σύνδεσης"
+
+#: src/components/standard/nftRecover/NFTRecover.tsx:161
+msgid "contract address"
+msgstr ""
 
 #: src/components/WalletReceiveAddressField.tsx:71
 msgid "Copied"
@@ -197,12 +213,12 @@ msgstr ""
 msgid "Create Staking"
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:178
-#: src/components/WalletSend.tsx:202
+#: src/components/cat/WalletCATSend.tsx:179
+#: src/components/WalletSend.tsx:204
 msgid "Create Transaction"
 msgstr "Δημιουργία Συναλλαγής"
 
-#: src/components/WalletHistory.tsx:206
+#: src/components/WalletHistory.tsx:217
 msgid "Creation Date"
 msgstr ""
 
@@ -212,10 +228,6 @@ msgstr ""
 
 #: src/components/cat/WalletCATCreateSimple.tsx:100
 msgid "Custom"
-msgstr ""
-
-#: src/constants/WalletName.ts:29
-msgid "DID Wallet"
 msgstr ""
 
 #: src/constants/WalletName.ts:38
@@ -238,15 +250,23 @@ msgstr ""
 msgid "Derivation Index: {0}"
 msgstr ""
 
+#: src/constants/WalletName.ts:29
+msgid "DID Wallet"
+msgstr ""
+
+#: src/components/WalletSend.tsx:316
+msgid "Disable"
+msgstr ""
+
 #: src/components/create/WalletCreateList.tsx:39
 msgid "Distributed Identity"
 msgstr ""
 
-#: src/components/WalletImport.tsx:158
+#: src/components/WalletImport.tsx:157
 msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Sea wallet."
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:127
+#: src/components/cat/WalletCATSend.tsx:128
 msgid "Error the entered address appears to be for a different colour."
 msgstr ""
 
@@ -254,13 +274,13 @@ msgstr ""
 msgid "FAILED"
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:246
-#: src/components/WalletSend.tsx:384
+#: src/components/cat/WalletCATSend.tsx:245
+#: src/components/WalletSend.tsx:403
 msgid "Farm"
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:222
-#: src/components/WalletHistory.tsx:220
+#: src/components/cat/WalletCATSend.tsx:221
+#: src/components/WalletHistory.tsx:231
 #: src/components/WalletSend.tsx:245
 msgid "Fee"
 msgstr "Προμήθεια"
@@ -277,10 +297,6 @@ msgstr ""
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefore wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr ""
 
-#: src/components/WalletConnections.tsx:22
-msgid "IP address"
-msgstr "Διεύθυνση IP"
-
 #: src/components/WalletSendTransactionResultDialog.tsx:41
 msgid "If you would like to speed up the transaction, please delete unconfirmed transactions and retry with a higher fee."
 msgstr ""
@@ -289,17 +305,21 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: src/components/WalletImport.tsx:141
-msgid "Import Wallet from Mnemonics"
-msgstr "Εισαγωγή πορτοφολιού από Mnemonics"
-
-#: src/components/WalletImport.tsx:226
+#: src/components/WalletImport.tsx:225
 msgid "Import from {alternativeWordCount} word mnemonic"
 msgstr ""
+
+#: src/components/WalletImport.tsx:140
+msgid "Import Wallet from Mnemonics"
+msgstr "Εισαγωγή πορτοφολιού από Mnemonics"
 
 #: src/components/WalletHistory.tsx:87
 #~ msgid "Incoming"
 #~ msgstr "Εισερχόμενες"
+
+#: src/components/WalletConnections.tsx:22
+msgid "IP address"
+msgstr "Διεύθυνση IP"
 
 #: src/components/standard/nftRecover/NFTRecover.tsx:135
 msgid "Launcher Id"
@@ -309,16 +329,16 @@ msgstr ""
 msgid "List of connections is empty"
 msgstr ""
 
-#: src/components/WalletsManageTokens.tsx:133
+#: src/components/WalletsManageTokens.tsx:132
 msgid "Manage token list"
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:236
-#: src/components/WalletSend.tsx:373
+#: src/components/cat/WalletCATSend.tsx:235
+#: src/components/WalletSend.tsx:392
 msgid "Memo"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:377
+#: src/components/WalletHistory.tsx:417
 msgid "Memos"
 msgstr ""
 
@@ -334,14 +354,6 @@ msgstr ""
 msgid "Multi Sig Wallet"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:117
-msgid "NFT Recover"
-msgstr ""
-
-#: src/constants/WalletName.ts:35
-msgid "NFT Wallet"
-msgstr ""
-
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:68
 msgid "Name"
 msgstr ""
@@ -354,20 +366,32 @@ msgstr "Νέα διεύθυνση"
 msgid "New Receive Address"
 msgstr ""
 
-#: src/components/WalletAdd.tsx:64
+#: src/components/WalletAdd.tsx:62
 msgid "New Wallet"
 msgstr "Νέο Πορτοφόλι"
 
-#: src/components/WalletAdd.tsx:124
-#: src/components/WalletImport.tsx:196
+#: src/components/WalletAdd.tsx:122
+#: src/components/WalletImport.tsx:195
 msgid "Next"
 msgstr "Επόμενο"
+
+#: src/components/standard/nftRecover/NFTRecover.tsx:117
+msgid "NFT Recover"
+msgstr ""
+
+#: src/constants/WalletName.ts:35
+msgid "NFT Wallet"
+msgstr ""
+
+#: src/components/WalletHeader.tsx:56
+msgid "nftRecover"
+msgstr ""
 
 #: src/components/WalletRenameDialog.tsx:67
 msgid "Nickname"
 msgstr "Ψευδώνυμο"
 
-#: src/components/WalletHistory.tsx:445
+#: src/components/WalletHistory.tsx:485
 msgid "No previous transactions"
 msgstr "Δεν υπάρχουν προηγούμενες συναλλαγές"
 
@@ -375,8 +399,8 @@ msgstr "Δεν υπάρχουν προηγούμενες συναλλαγές"
 msgid "Node ID"
 msgstr "ID κόμβου"
 
-#: src/components/WalletHistory.tsx:366
-#: src/components/WalletHistory.tsx:373
+#: src/components/WalletHistory.tsx:406
+#: src/components/WalletHistory.tsx:413
 msgid "Not Available"
 msgstr "Δεν είναι διαθέσιμο"
 
@@ -385,20 +409,24 @@ msgstr "Δεν είναι διαθέσιμο"
 msgid "Not Available Balance"
 msgstr ""
 
+#: src/components/standard/nftRecover/NFTRecover.tsx:89
+msgid "not find contract address, Please enter a contract address"
+msgstr ""
+
 #: src/components/WalletStatus.tsx:58
 msgid "Not Synced"
 msgstr "Δεν Είναι Συγχρονισμένο"
+
+#: src/components/WalletHistory.tsx:203
+msgid "Offer Accepted"
+msgstr ""
 
 #: src/components/cat/WalletCATTAILDialog.tsx:66
 msgid "OK"
 msgstr "Εντάξει"
 
-#: src/components/WalletHistory.tsx:192
-msgid "Offer Accepted"
-msgstr ""
-
-#: src/components/cat/WalletCATSend.tsx:181
-#: src/components/WalletSend.tsx:205
+#: src/components/cat/WalletCATSend.tsx:182
+#: src/components/WalletSend.tsx:207
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "Κατά μέσο όρο υπάρχει ένα λεπτό μεταξύ κάθε μπλοκ συναλλαγών. Αν δεν υπάρχει συμφόρηση, μπορείτε να περιμένετε ότι η συναλλαγή σας θα συμπεριληφθεί σε λιγότερο από ένα λεπτό."
 
@@ -406,7 +434,7 @@ msgstr "Κατά μέσο όρο υπάρχει ένα λεπτό μεταξύ �
 #~ msgid "Outgoing"
 #~ msgstr "Εξερχόμενες"
 
-#: src/components/WalletImport.tsx:234
+#: src/components/WalletImport.tsx:233
 msgid "Paste Mnemonic"
 msgstr ""
 
@@ -414,7 +442,7 @@ msgstr ""
 msgid "Paste Mnemonic ({0} words)"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:185
+#: src/components/WalletHistory.tsx:196
 msgid "Pending"
 msgstr "Εκκρεμεί"
 
@@ -426,13 +454,13 @@ msgstr "Εκκρεμεί Υπόλοιπο"
 msgid "Pending Change"
 msgstr "Εκκρεμής Αλλαγή"
 
+#: src/components/WalletHistoryPending.tsx:63
+msgid "Pending claw back transactions"
+msgstr ""
+
 #: src/components/card/WalletCardPendingTotalBalance.tsx:41
 msgid "Pending Total Balance"
 msgstr "Συνολικό Υπόλοιπο Σε Εκκρεμότητα"
-
-#: src/components/WalletHistoryPending.tsx:62
-msgid "Pending claw back transactions"
-msgstr ""
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:206
 msgid "Please enter a transaction fee to claim the above amount:"
@@ -442,23 +470,23 @@ msgstr ""
 msgid "Please enter a transaction fee to claw back the above amount:"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:75
-msgid "Please enter a valid NFT Launcher Id"
-msgstr ""
-
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:42
 msgid "Please enter a valid asset id"
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:103
+#: src/components/standard/nftRecover/NFTRecover.tsx:75
+msgid "Please enter a valid NFT Launcher Id"
+msgstr ""
+
+#: src/components/cat/WalletCATSend.tsx:104
 #: src/components/standard/staking/WalletStakingSend.tsx:67
 #: src/components/standard/staking/WalletStakingWithdraw.tsx:67
-#: src/components/WalletSend.tsx:132
+#: src/components/WalletSend.tsx:134
 msgid "Please enter a valid numeric amount"
 msgstr "Παρακαλώ εισάγετε ένα έγκυρο αριθμητικό ποσό"
 
-#: src/components/cat/WalletCATSend.tsx:108
-#: src/components/WalletSend.tsx:137
+#: src/components/cat/WalletCATSend.tsx:109
+#: src/components/WalletSend.tsx:139
 msgid "Please enter a valid numeric fee"
 msgstr "Παρακαλώ εισάγετε μια έγκυρη αριθμητική χρέωση"
 
@@ -470,10 +498,10 @@ msgstr ""
 msgid "Please enter valid wallet name"
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:94
+#: src/components/cat/WalletCATSend.tsx:95
 #: src/components/standard/staking/WalletStakingSend.tsx:62
 #: src/components/standard/staking/WalletStakingWithdraw.tsx:62
-#: src/components/WalletSend.tsx:127
+#: src/components/WalletSend.tsx:129
 msgid "Please finish syncing before making a transaction"
 msgstr "Παρακαλώ ολοκληρώστε το συγχρονισμό πριν πραγματοποιήσετε μια συναλλαγή"
 
@@ -488,10 +516,6 @@ msgstr ""
 
 #: src/components/WalletConnections.tsx:28
 msgid "Port"
-msgstr ""
-
-#: src/constants/WalletName.ts:8
-msgid "RL Wallet"
 msgstr ""
 
 #: src/components/create/WalletCreateList.tsx:45
@@ -510,7 +534,7 @@ msgstr ""
 msgid "Receive Address"
 msgstr "Διεύθυνση Λήψης"
 
-#: src/components/cat/WalletCATSend.tsx:121
+#: src/components/cat/WalletCATSend.tsx:122
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr ""
 
@@ -535,12 +559,12 @@ msgstr ""
 msgid "Rename Wallet"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:191
+#: src/components/WalletHistory.tsx:202
 msgid "Retire"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:108
-msgid "SUCCESS"
+#: src/constants/WalletName.ts:8
+msgid "RL Wallet"
 msgstr ""
 
 #: src/components/WalletRenameDialog.tsx:75
@@ -562,9 +586,9 @@ msgstr ""
 msgid "Select Wallet Type"
 msgstr "Επιλέξτε Τύπο Πορτοφολιού"
 
-#: src/components/cat/WalletCATSend.tsx:257
+#: src/components/cat/WalletCATSend.tsx:256
 #: src/components/WalletHeader.tsx:50
-#: src/components/WalletSend.tsx:395
+#: src/components/WalletSend.tsx:414
 msgid "Send"
 msgstr "Αποστολή"
 
@@ -601,7 +625,7 @@ msgstr ""
 msgid "Standard Wallet"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:197
+#: src/components/WalletHistory.tsx:208
 msgid "Status"
 msgstr ""
 
@@ -611,6 +635,10 @@ msgstr ""
 
 #: src/components/WalletSendTransactionResultDialog.tsx:12
 msgid "Success"
+msgstr ""
+
+#: src/components/standard/nftRecover/NFTRecover.tsx:108
+msgid "SUCCESS"
 msgstr ""
 
 #: src/components/WalletHeader.tsx:49
@@ -637,7 +665,7 @@ msgstr ""
 msgid "This access token is verified"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:160
+#: src/components/WalletHistory.tsx:171
 msgid "This is not a valid address for sending funds to"
 msgstr ""
 
@@ -695,7 +723,7 @@ msgstr "Συνολικό Υπόλοιπο"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr ""
 
-#: src/components/WalletHistory.tsx:422
+#: src/components/WalletHistory.tsx:462
 msgid "Transactions"
 msgstr ""
 
@@ -707,17 +735,25 @@ msgstr ""
 msgid "Transactions with values smaller than the fee will not be auto claimed."
 msgstr ""
 
+#: src/components/standard/nftRecover/NFTRecover.tsx:120
+msgid "visiting the Pool tab of your CHIA-GUI. using this command: chia plotNFT show. Note: you have to do this on the CHIA client, not the fork!"
+msgstr ""
+
+#: src/components/Wallet.tsx:22
+msgid "Wallet {walletId} not found"
+msgstr ""
+
 #: src/components/WalletConnections.tsx:67
 msgid "Wallet Connections"
 msgstr ""
 
-#: src/components/WalletAdd.tsx:101
-#: src/components/WalletImport.tsx:148
-msgid "Wallet Name"
-msgstr ""
-
 #: src/components/cat/WalletCAT.tsx:66
 msgid "Wallet does not exists"
+msgstr ""
+
+#: src/components/WalletAdd.tsx:99
+#: src/components/WalletImport.tsx:147
+msgid "Wallet Name"
 msgstr ""
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:200
@@ -728,10 +764,6 @@ msgstr ""
 msgid "Wallet with type {0} not supported"
 msgstr ""
 
-#: src/components/Wallet.tsx:22
-msgid "Wallet {walletId} not found"
-msgstr ""
-
 #: src/components/WalletsSidebar.tsx:138
 #~ msgid "Want to see your old balance for yourself?"
 #~ msgstr ""
@@ -740,11 +772,11 @@ msgstr ""
 #~ msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
 #~ msgstr ""
 
-#: src/components/WalletAdd.tsx:67
+#: src/components/WalletAdd.tsx:65
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Καλώς ορίσατε! Οι ακόλουθες λέξεις χρησιμοποιούνται για το αντίγραφο ασφαλείας του πορτοφολιού σας. Χωρίς αυτές, θα χάσετε την πρόσβαση στο πορτοφόλι σας. Σημειώστε κάθε λέξη μαζί με τον αριθμό σειράς δίπλα τους. (Η σειρά είναι σημαντική)"
 
-#: src/components/WalletHistoryClawbackChip.tsx:41
+#: src/components/WalletHistoryClawbackChip.tsx:56
 msgid "Will be autoclaimed in "
 msgstr ""
 
@@ -776,22 +808,6 @@ msgstr ""
 #~ msgid "Your CAT tokens have been upgraded!"
 #~ msgstr ""
 
-#: src/components/WalletImport.tsx:72
+#: src/components/WalletImport.tsx:73
 msgid "Your pasted list does not include {mnemonicWordCount} valid mnemonic words."
-msgstr ""
-
-#: src/components/standard/nftRecover/NFTRecover.tsx:161
-msgid "contract address"
-msgstr ""
-
-#: src/components/WalletHeader.tsx:56
-msgid "nftRecover"
-msgstr ""
-
-#: src/components/standard/nftRecover/NFTRecover.tsx:89
-msgid "not find contract address, Please enter a contract address"
-msgstr ""
-
-#: src/components/standard/nftRecover/NFTRecover.tsx:120
-msgid "visiting the Pool tab of your CHIA-GUI. using this command: chia plotNFT show. Note: you have to do this on the CHIA client, not the fork!"
 msgstr ""

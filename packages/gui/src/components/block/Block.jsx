@@ -148,7 +148,7 @@ export default function Block() {
 
   const poolReward = mojoToSea(calculatePoolReward(blockRecord.height));
   const baseFarmerReward = mojoToSea(calculateBaseFarmerReward(blockRecord.height));
-  const CommunityReward = mojoToSea(calculateCommunityReward(blockRecord.height));
+  const communityReward = mojoToSea(calculateCommunityReward(blockRecord.height));
 
   const seaFees = blockRecord.fees !== undefined ? mojoToSea(blockRecord.fees) : '';
 
@@ -238,13 +238,13 @@ export default function Block() {
       value: `${baseFarmerReward} ${currencyCode}`,
     },
     {
+      name: <Trans>Community Reward Amount</Trans>,
+      value: `${communityReward} ${currencyCode}`,
+    },
+    {
       name: <Trans>Fees Amount</Trans>,
       value: seaFees ? `${seaFees} ${currencyCode}` : '',
       tooltip: <Trans>The total transactions fees in this block. Rewarded to the farmer.</Trans>,
-    },
-    {
-      name: <Trans>Community Reward Amount</Trans>,
-      value: `${CommunityReward} ${currencyCode}`,
     },
   ];
 

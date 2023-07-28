@@ -150,6 +150,25 @@ const walletConnectCommands: WalletConnectCommand[] = [
     ],
   },
   {
+    command: 'spendClawbackCoins',
+    label: <Trans>Claw back or claim claw back transaction</Trans>,
+    service: ServiceName.WALLET,
+    waitForSync: true,
+    params: [
+      {
+        name: WalletConnectCommandParamName.COIN_IDS,
+        label: <Trans>Coin Ids</Trans>,
+        type: 'object',
+      },
+      {
+        name: WalletConnectCommandParamName.FEE,
+        label: <Trans>Fee</Trans>,
+        type: 'BigNumber',
+        displayComponent: (value) => <MojoToSea value={value} />,
+      },
+    ],
+  },
+  {
     command: 'signMessageById',
     label: <Trans>Sign Message by Id</Trans>,
     service: ServiceName.WALLET,
@@ -824,7 +843,6 @@ const walletConnectCommands: WalletConnectCommand[] = [
     command: 'spendVC',
     label: <Trans>Add Proofs To Verifiable Credential</Trans>,
     service: ServiceName.WALLET,
-    bypassConfirm: true,
     params: [
       {
         name: WalletConnectCommandParamName.VC_ID,
@@ -865,7 +883,6 @@ const walletConnectCommands: WalletConnectCommand[] = [
     command: 'addVCProofs',
     label: <Trans>Add Proofs</Trans>,
     service: ServiceName.WALLET,
-    bypassConfirm: true,
     params: [
       {
         name: WalletConnectCommandParamName.PROOFS,
@@ -891,7 +908,6 @@ const walletConnectCommands: WalletConnectCommand[] = [
     command: 'revokeVC',
     label: <Trans>Revoke Verifiable Credential</Trans>,
     service: ServiceName.WALLET,
-    bypassConfirm: true,
     params: [
       {
         name: WalletConnectCommandParamName.VC_PARENT_ID,
@@ -934,6 +950,42 @@ const walletConnectCommands: WalletConnectCommand[] = [
         type: 'boolean',
         label: <Trans>Is notification visible to all paired fingerprints</Trans>,
         isOptional: true,
+      },
+    ],
+  },
+  {
+    command: 'getWalletAddresses',
+    label: <Trans>Get wallet addresses for one or more wallet keys</Trans>,
+    service: ServiceName.DAEMON,
+    bypassConfirm: true,
+    params: [
+      {
+        name: WalletConnectCommandParamName.FINGERPRINTS,
+        type: 'object', // number array
+        label: <Trans>Fingerprints</Trans>,
+        isOptional: true,
+        defaultValue: undefined,
+      },
+      {
+        name: WalletConnectCommandParamName.INDEX,
+        type: 'number',
+        label: <Trans>Index</Trans>,
+        isOptional: true,
+        defaultValue: undefined,
+      },
+      {
+        name: WalletConnectCommandParamName.COUNT,
+        type: 'number',
+        label: <Trans>Count</Trans>,
+        isOptional: true,
+        defaultValue: undefined,
+      },
+      {
+        name: WalletConnectCommandParamName.NON_OBSERVER_DERIVATION,
+        type: 'boolean',
+        label: <Trans>Non Observer Derivation</Trans>,
+        isOptional: true,
+        defaultValue: undefined,
       },
     ],
   },

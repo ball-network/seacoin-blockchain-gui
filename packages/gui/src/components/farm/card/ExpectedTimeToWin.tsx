@@ -9,14 +9,13 @@ import FullNodeState from '../../../constants/FullNodeState';
 import useFullNodeState from '../../../hooks/useFullNodeState';
 import FarmCardNotAvailable from './FarmCardNotAvailable';
 
-const MINUTES_PER_BLOCK = (24 * 60) / 4608; // 0.3125
-
-export default function FarmCardExpectedTimeToWin() {
+export default React.memo(ExpectedTimeToWin);
+function ExpectedTimeToWin() {
   const { state: fullNodeState } = useFullNodeState();
 
   const { data, isLoading: isLoadingBlockchainState, error: errorBlockchainState } = useGetBlockchainStateQuery();
   const {
-    totalPlotSize,
+    totalEffectivePlotSize,
     isLoading: isLoadingTotalHarvesterSummary,
     error: errorLoadingPlots,
   } = useGetTotalHarvestersSummaryQuery();
@@ -31,16 +30,23 @@ export default function FarmCardExpectedTimeToWin() {
       return new BigNumber(0);
     }
 
-    return totalPlotSize.div(totalNetworkSpace);
-  }, [isLoading, totalPlotSize, totalNetworkSpace]);
+    return totalEffectivePlotSize.div(totalNetworkSpace);
+  }, [isLoading, totalEffectivePlotSize, totalNetworkSpace]);
 
-  const minutes = !proportion.isZero() ? new BigNumber(MINUTES_PER_BLOCK).div(proportion) : new BigNumber(0);
+  const expectedTimeToWin = React.useMemo(() => {
+    if (fullNodeState !== FullNodeState.SYNCED || !data) {
+      return null;
+    }
 
-  const expectedTimeToWin = moment
-    .duration({
-      minutes: minutes.toNumber(),
-    })
-    .humanize();
+    const averageBlockMinutes = data.averageBlockTime / 60;
+    const minutes = !proportion.isZero() ? new BigNumber(averageBlockMinutes).div(proportion) : new BigNumber(0);
+
+    return moment
+      .duration({
+        minutes: minutes.toNumber(),
+      })
+      .humanize();
+  }, [proportion, data, fullNodeState]);
 
   if (fullNodeState !== FullNodeState.SYNCED) {
     const state = fullNodeState === FullNodeState.SYNCHING ? State.WARNING : undefined;

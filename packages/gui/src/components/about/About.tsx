@@ -144,7 +144,7 @@ export default function About(props: Props) {
           )}
         </VersionsTable>
 
-        <BugReport href="https://github.com/Ball-Network/seacoin-blockchain/issues" target="_blank">
+        <BugReport href="https://github.com/ball-network/seacoin-blockchain/issues" target="_blank">
           Report an issue
         </BugReport>
         {'{{CSS}}'}

@@ -2,7 +2,7 @@
 
 ![Sea logo](https://www.seacoin.vip/wp-content/uploads/2022/09/sea-logo.svg)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Ball-Network/seacoin-blockchain-gui?logo=GitHub)
+![GitHub contributors](https://img.shields.io/github/contributors/ball-network/seacoin-blockchain-gui?logo=GitHub)
 
 This library provides react hooks on the top of @sea-network/api and uses [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) under the hood.
 It is designed to simplify common cases for loading data in a web application, eliminating the need to hand-write data fetching & caching logic yourself. Benefits include:
@@ -74,4 +74,4 @@ export default function Application() {
 
 ## Development
 
-Please read and follow the main [README.md](https://github.com/Ball-Network/seacoin-blockchain-gui) of this monorepo.
+Please read and follow the main [README.md](https://github.com/ball-network/seacoin-blockchain-gui) of this monorepo.

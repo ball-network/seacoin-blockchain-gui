@@ -47,7 +47,7 @@ export default function SettingsApp(props: SettingsAppProps) {
   async function handleOpenFAQURL(): Promise<void> {
     try {
       const { shell } = window as unknown as { shell: Shell };
-      await shell.openExternal('https://github.com/Ball-Network/seacoin-blockchain/wiki/FAQ');
+      await shell.openExternal('https://github.com/ball-network/seacoin-blockchain/wiki/FAQ');
     } catch (error: any) {
       showError(error);
     }

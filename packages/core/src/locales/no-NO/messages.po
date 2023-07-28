@@ -15,22 +15,34 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: no\n"
-"X-Crowdin-File: /[Ball-Network.seacoin-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[ball-network.seacoin-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1304\n"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(>5 min)"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(~{selectedTime} min)"
+msgstr ""
+
+#: src/components/Amount/Amount.tsx:86
+msgid "{0, plural, one {mojo} other {mojos}}"
+msgstr ""
+
+#: src/hooks/useValidateChangePassphraseParams.tsx:35
+msgid "{minPassphraseLength, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
 msgstr ""
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
 msgid "A new version of Sea is available!"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:172
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:259
+msgid "Add Icon"
+msgstr ""
+
+#: src/screens/SelectKey/SelectKey.tsx:173
 msgid "Add wallet"
 msgstr ""
 
@@ -47,7 +59,7 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr ""
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:127
+#: src/screens/SelectKey/SelectKey.tsx:128
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "Tilbake"
@@ -84,45 +96,45 @@ msgstr "Kopiert"
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavlen"
 
-#: src/screens/SelectKey/SelectKey.tsx:175
-msgid "Create New"
-msgstr ""
-
 #: src/screens/SelectKey/SelectKey.tsx:170
 #~ msgid "Create a new private key"
 #~ msgstr "Opprett en ny privat nøkkel"
 
-#: src/screens/SelectKey/SelectKey.tsx:270
+#: src/screens/SelectKey/SelectKey.tsx:273
 msgid "Create a new wallet key"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:262
+#: src/screens/SelectKey/SelectKey.tsx:265
 msgid "Create a new wallet key to get started with Sea."
+msgstr ""
+
+#: src/screens/SelectKey/SelectKey.tsx:176
+msgid "Create New"
 msgstr ""
 
 #: src/components/Settings/SettingsApp.tsx:110
 msgid "Dark"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:126
+#: src/screens/SelectKey/SelectKey.tsx:127
 #: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "Slett"
 
-#: src/screens/SelectKey/SelectKey.tsx:200
-msgid "Delete All Keys"
-msgstr ""
-
-#: src/screens/SelectKey/SelectKey.tsx:125
+#: src/screens/SelectKey/SelectKey.tsx:126
 msgid "Delete all keys"
 msgstr "Slett alle nøkler"
+
+#: src/screens/SelectKey/SelectKey.tsx:201
+msgid "Delete All Keys"
+msgstr ""
 
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:96
 msgid "Delete key {fingerprint}"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:131
+#: src/screens/SelectKey/SelectKey.tsx:132
 msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
 msgstr "Sletting av alle nøkler vil fjerne nøkler fra datamaskinen permanent, sørg for at du har sikkerhetskopier. Er du sikker på at du vil fortsette?"
 
@@ -143,7 +155,7 @@ msgstr ""
 msgid "Discard"
 msgstr ""
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:183
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:147
 msgid "Download"
 msgstr ""
 
@@ -160,6 +172,10 @@ msgstr ""
 msgid "Esc"
 msgstr ""
 
+#: src/components/LayoutMain/LayoutFooter.tsx:49
+msgid "FAQ"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:90
 msgid "Farmer Public Key"
 msgstr ""
@@ -172,8 +188,8 @@ msgstr ""
 msgid "Farming"
 msgstr "Jordbruk"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:333
-#: src/components/EstimatedFee/EstimatedFee.tsx:367
+#: src/components/EstimatedFee/EstimatedFee.tsx:334
+#: src/components/EstimatedFee/EstimatedFee.tsx:368
 #: src/components/Fee/Fee.tsx:44
 msgid "Fee"
 msgstr "Avgift"
@@ -207,7 +223,7 @@ msgstr ""
 msgid "Hide Advanced Options"
 msgstr "Skjul Avanserte Alternativer"
 
-#: src/screens/SelectKey/SelectKey.tsx:180
+#: src/screens/SelectKey/SelectKey.tsx:181
 msgid "Import Existing"
 msgstr ""
 
@@ -231,23 +247,23 @@ msgstr ""
 msgid "Light"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:221
-msgid "Likely in >5 minutes"
-msgstr ""
-
-#: src/components/EstimatedFee/EstimatedFee.tsx:222
+#: src/components/EstimatedFee/EstimatedFee.tsx:223
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:219
+#: src/components/EstimatedFee/EstimatedFee.tsx:220
 msgid "Likely in {minutes} minutes"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:222
+msgid "Likely in >5 minutes"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:46
 msgid "Loading details"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:232
+#: src/screens/SelectKey/SelectKey.tsx:235
 msgid "Loading keys"
 msgstr ""
 
@@ -257,12 +273,12 @@ msgstr ""
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:317
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:336
-msgid "Log Out"
-msgstr ""
+#~ msgid "Log Out"
+#~ msgstr ""
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:335
-msgid "Logout"
-msgstr ""
+#~ msgid "Logout"
+#~ msgstr ""
 
 #: src/hooks/useKeyringMigrationPrompt.tsx:16
 msgid "Migrate"
@@ -284,7 +300,7 @@ msgstr ""
 msgid "New passphrase is the same as your current passphrase"
 msgstr ""
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:132
 msgid "New version {latestVersion} available"
 msgstr ""
 
@@ -293,20 +309,20 @@ msgstr ""
 msgid "No 24 word seed, since this key is imported."
 msgstr ""
 
-#: src/screens/SelectKey/WalletStatus.tsx:61
-#~ msgid "Not Synced"
-#~ msgstr ""
-
 #: src/components/FormatConnectionStatus/FormatConnectionStatus.tsx:33
 msgid "Not connected"
 msgstr "Ikke tilkoblet"
+
+#: src/screens/SelectKey/WalletStatus.tsx:61
+#~ msgid "Not Synced"
+#~ msgstr ""
 
 #: src/components/AlertDialog/AlertDialog.tsx:23
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:30
 msgid "OK"
 msgstr "Ok"
 
-#: src/screens/SelectKey/SelectKey.tsx:254
+#: src/screens/SelectKey/SelectKey.tsx:257
 msgid "Open a world of possibilities."
 msgstr ""
 
@@ -335,6 +351,10 @@ msgstr ""
 msgid "Public key:"
 msgstr ""
 
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:278
+msgid "Random"
+msgstr ""
+
 #: src/components/Fee/Fee.tsx:18
 msgid "Recommended value: 0.000005"
 msgstr ""
@@ -345,6 +365,10 @@ msgstr ""
 
 #: src/components/ErrorBoundary/ErrorBoundary.tsx:85
 msgid "Reload Application"
+msgstr ""
+
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:259
+msgid "Remove Icon"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyItem.tsx:97
@@ -364,14 +388,15 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/components/Settings/SettingsApp.tsx:125
-msgid "Sea Application Version:"
-msgstr ""
-
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
 msgid "Sea {latestVersion} is currently the latest version available."
 msgstr ""
 
+#: src/components/Settings/SettingsApp.tsx:125
+msgid "Sea Application Version:"
+msgstr ""
+
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:171
 #: src/screens/SelectKey/Search.tsx:34
 msgid "Search"
 msgstr ""
@@ -396,6 +421,7 @@ msgstr ""
 msgid "Select..."
 msgstr ""
 
+#: src/components/LayoutMain/LayoutFooter.tsx:52
 #: src/components/Settings/SettingsApp.tsx:154
 msgid "Send Feedback"
 msgstr ""
@@ -417,7 +443,7 @@ msgstr ""
 #~ msgid "Sign In"
 #~ msgstr ""
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:171
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:135
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
 msgstr ""
@@ -470,11 +496,11 @@ msgstr ""
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:239
+#: src/screens/SelectKey/SelectKey.tsx:242
 msgid "Try Again"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:243
+#: src/screens/SelectKey/SelectKey.tsx:246
 msgid "Unable to load keys"
 msgstr ""
 
@@ -499,17 +525,9 @@ msgstr ""
 msgid "Value seems high"
 msgstr ""
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:270
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:232
 #: src/components/Settings/SettingsApp.tsx:86
 msgid "Wallet"
-msgstr ""
-
-#: src/screens/SelectKey/WalletDeleteDialog.tsx:149
-msgid "Wallet Fingerprint"
-msgstr ""
-
-#: src/screens/SelectKey/SelectKey.tsx:219
-msgid "Wallet Keys"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:63
@@ -517,11 +535,19 @@ msgstr ""
 msgid "Wallet {0}"
 msgstr ""
 
+#: src/screens/SelectKey/WalletDeleteDialog.tsx:149
+msgid "Wallet Fingerprint"
+msgstr ""
+
+#: src/screens/SelectKey/SelectKey.tsx:222
+msgid "Wallet Keys"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKey.tsx:142
 #~ msgid "Welcome to Sea. Please log in with an existing key, or create a new key."
 #~ msgstr "Velkommen til Sea. Vennligst logg inn med en eksisterende nøkkel, eller opprett en ny nøkkel."
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:177
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:141
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr ""
@@ -541,12 +567,4 @@ msgstr ""
 
 #: src/hooks/useKeyringMigrationPrompt.tsx:20
 msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Would you like to migrate your keys now?"
-msgstr ""
-
-#: src/components/Amount/Amount.tsx:86
-msgid "{0, plural, one {mojo} other {mojos}}"
-msgstr ""
-
-#: src/hooks/useValidateChangePassphraseParams.tsx:35
-msgid "{minPassphraseLength, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
 msgstr ""

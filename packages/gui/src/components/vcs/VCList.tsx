@@ -5,7 +5,7 @@ import {
   useLazyGetProofsForRootQuery,
   useVCCoinAdded,
 } from '@sea-network/api-react';
-import { Flex, More, MenuItem, AlertDialog, useOpenDialog, useDarkMode } from '@sea-network/core';
+import { Flex, More, MenuItem, AlertDialog, Loading, useOpenDialog, useDarkMode } from '@sea-network/core';
 import {
   VCZeroStateBackground as VCZeroStateBackgroundIcon,
   VCZeroStateBackgroundDark as VCZeroStateBackgroundDarkIcon,
@@ -132,7 +132,7 @@ export default function VCList() {
   function renderVCCard(index: number, vcRecord: any) {
     const proofHash = vcRecord?.vc?.proofHash;
     const vcProofs = proofHash ? proofs[proofHash] : undefined;
-    return <VCCard vcRecord={vcRecord} proofs={vcProofs} />;
+    return <VCCard vcRecord={vcRecord} proofs={vcProofs} isLocal={!!vcRecord.isLocal} />;
   }
 
   const allVCs = React.useMemo(() => {
@@ -143,13 +143,15 @@ export default function VCList() {
           ...record,
           isValid: !!(proofs[record.vc.proofHash] && Object.keys(proofs[record.vc.proofHash]).length > 0),
         }))
-        .concat(VCsLocalStorage[fingerprint])
+        .concat((VCsLocalStorage[fingerprint] || []).map((record: any) => ({ ...record, isLocal: true })))
         .filter(Boolean);
     }
     return [];
   }, [VCsLocalStorage, blockchainVCs?.vcRecords, fingerprint, proofs]);
 
-  if (isLoading) return null;
+  if (isLoading) {
+    return <Loading center />;
+  }
 
   const allVCsSortLatest = sortByTimestamp
     ? allVCs.sort((a: any, b: any) => {
@@ -300,7 +302,7 @@ export default function VCList() {
     );
   }
 
-  if (allVCsSortLatest.length === 0) {
+  if (!allVCsSortLatest?.length) {
     return renderZeroState();
   }
 
@@ -313,7 +315,7 @@ export default function VCList() {
       <Flex sx={{ justifyContent: 'space-between', marginBottom: '10px', padding: '15px' }}>
         <Flex>
           <Typography variant="h6">
-            <Trans>Verifiable Credentials</Trans>: {allVCs.length}
+            <Trans>Verifiable Credentials</Trans>: {allVCs?.length ?? 0}
           </Typography>
         </Flex>
         {renderActionsDropdown()}

@@ -35,6 +35,7 @@ import loadConfig from '../util/loadConfig';
 import manageDaemonLifetime from '../util/manageDaemonLifetime';
 import { setUserDataDir } from '../util/userData';
 import CacheManager from './CacheManager';
+import { readAddressBook, saveAddressBook } from './addressBook';
 import installDevTools from './installDevTools.dev';
 import { readPrefs, savePrefs, migratePrefs } from './prefs';
 
@@ -62,6 +63,8 @@ const cacheManager = new CacheManager({
 ipcMain.handle('readPrefs', (_event) => readPrefs());
 ipcMain.handle('savePrefs', (_event, prefsObj) => savePrefs(prefsObj));
 ipcMain.handle('migratePrefs', (_event, prefsObj) => migratePrefs(prefsObj));
+ipcMain.handle('saveAddressBook', (_event, addressBook) => saveAddressBook(addressBook));
+ipcMain.handle('readAddressBook', (_event) => readAddressBook());
 
 let mainWindow: BrowserWindow | null = null;
 
@@ -713,25 +716,25 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'SeaCoin Blockchain Wiki' }),
           click: () => {
-            openExternal('https://github.com/Ball-Network/seacoin-blockchain/wiki');
+            openExternal('https://github.com/ball-network/seacoin-blockchain/wiki');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
           click: () => {
-            openExternal('https://github.com/Ball-Network/seacoin-blockchain/wiki/FAQ');
+            openExternal('https://github.com/ball-network/seacoin-blockchain/wiki/FAQ');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Release Notes' }),
           click: () => {
-            openExternal('https://github.com/Ball-Network/seacoin-blockchain/releases');
+            openExternal('https://github.com/ball-network/seacoin-blockchain/releases');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Contribute on GitHub' }),
           click: () => {
-            openExternal('https://github.com/Ball-Network/seacoin-blockchain/blob/main/CONTRIBUTING.md');
+            openExternal('https://github.com/ball-network/seacoin-blockchain/blob/main/CONTRIBUTING.md');
           },
         },
         {
@@ -740,7 +743,7 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'Report an Issue...' }),
           click: () => {
-            openExternal('https://github.com/Ball-Network/seacoin-blockchain/issues');
+            openExternal('https://github.com/ball-network/seacoin-blockchain/issues');
           },
         },
         {

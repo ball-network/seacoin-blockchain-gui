@@ -92,7 +92,7 @@ Function checkIsSeaRunning
       ${EndIf}
     ${EndIf}
 
-    StrCpy $R0 "daemon.exe sea_data_layer.exe start_data_layer.exe sea_data_layer_http.exe start_data_layer_http.exe sea_farmer.exe start_farmer.exe sea_full_node.exe start_full_node.exe sea_harvester.exe start_harvester.exe sea_wallet.exe start_wallet.exe"
+    StrCpy $R0 "sea_daemon.exe sea_data_layer.exe sea_data_layer_http.exe sea_farmer.exe sea_full_node.exe sea_harvester.exe sea_wallet.exe"
     StrCpy $R3 "" ; Accumulator for the names of all running processes
   processLoop:
     ClearErrors

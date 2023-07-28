@@ -15,22 +15,34 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: id\n"
-"X-Crowdin-File: /[Ball-Network.seacoin-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[ball-network.seacoin-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1304\n"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(>5 min)"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(~{selectedTime} min)"
 msgstr ""
+
+#: src/components/Amount/Amount.tsx:86
+msgid "{0, plural, one {mojo} other {mojos}}"
+msgstr "{0, plural,one {mojo} other {mojos}}"
+
+#: src/hooks/useValidateChangePassphraseParams.tsx:35
+msgid "{minPassphraseLength, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
+msgstr "{minPassphraseLength, plural, one {Kata kunci harus paling sedikit # karakter panjang nya} other {Kata kunci harus paling sedikit # karakter panjang nya}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
 msgid "A new version of Sea is available!"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:172
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:259
+msgid "Add Icon"
+msgstr ""
+
+#: src/screens/SelectKey/SelectKey.tsx:173
 msgid "Add wallet"
 msgstr ""
 
@@ -47,7 +59,7 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr ""
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:127
+#: src/screens/SelectKey/SelectKey.tsx:128
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "Kembali"
@@ -84,45 +96,45 @@ msgstr "Disalin"
 msgid "Copy to Clipboard"
 msgstr "Salin ke Clipboard"
 
-#: src/screens/SelectKey/SelectKey.tsx:175
-msgid "Create New"
-msgstr ""
-
 #: src/screens/SelectKey/SelectKey.tsx:170
 #~ msgid "Create a new private key"
 #~ msgstr "Buat sebuah private key baru"
 
-#: src/screens/SelectKey/SelectKey.tsx:270
+#: src/screens/SelectKey/SelectKey.tsx:273
 msgid "Create a new wallet key"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:262
+#: src/screens/SelectKey/SelectKey.tsx:265
 msgid "Create a new wallet key to get started with Sea."
+msgstr ""
+
+#: src/screens/SelectKey/SelectKey.tsx:176
+msgid "Create New"
 msgstr ""
 
 #: src/components/Settings/SettingsApp.tsx:110
 msgid "Dark"
 msgstr "Gelap"
 
-#: src/screens/SelectKey/SelectKey.tsx:126
+#: src/screens/SelectKey/SelectKey.tsx:127
 #: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "Hapus"
 
-#: src/screens/SelectKey/SelectKey.tsx:200
-msgid "Delete All Keys"
-msgstr ""
-
-#: src/screens/SelectKey/SelectKey.tsx:125
+#: src/screens/SelectKey/SelectKey.tsx:126
 msgid "Delete all keys"
 msgstr "Hapus semua key"
+
+#: src/screens/SelectKey/SelectKey.tsx:201
+msgid "Delete All Keys"
+msgstr ""
 
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:96
 msgid "Delete key {fingerprint}"
 msgstr "Hapus Kunci {fingerprint}"
 
-#: src/screens/SelectKey/SelectKey.tsx:131
+#: src/screens/SelectKey/SelectKey.tsx:132
 msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
 msgstr "Menghapus semua kunci akan menghilangkan kunci-kunci tersebut dari komputer anda, pastikan anda telah memiliki cadangan. Apa anda yakin ingin melanjutkan?"
 
@@ -143,7 +155,7 @@ msgstr "Nonaktifkan proteksi sandi"
 msgid "Discard"
 msgstr "Buang"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:183
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:147
 msgid "Download"
 msgstr ""
 
@@ -160,6 +172,10 @@ msgstr ""
 msgid "Esc"
 msgstr ""
 
+#: src/components/LayoutMain/LayoutFooter.tsx:49
+msgid "FAQ"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:90
 msgid "Farmer Public Key"
 msgstr ""
@@ -172,8 +188,8 @@ msgstr "Kunci Publik Farmer:"
 msgid "Farming"
 msgstr "Farming"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:333
-#: src/components/EstimatedFee/EstimatedFee.tsx:367
+#: src/components/EstimatedFee/EstimatedFee.tsx:334
+#: src/components/EstimatedFee/EstimatedFee.tsx:368
 #: src/components/Fee/Fee.tsx:44
 msgid "Fee"
 msgstr "Biaya"
@@ -207,7 +223,7 @@ msgstr ""
 msgid "Hide Advanced Options"
 msgstr "Sembunyikan Opsi Tingkat Lanjut"
 
-#: src/screens/SelectKey/SelectKey.tsx:180
+#: src/screens/SelectKey/SelectKey.tsx:181
 msgid "Import Existing"
 msgstr ""
 
@@ -231,23 +247,23 @@ msgstr ""
 msgid "Light"
 msgstr "Terang"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:221
-msgid "Likely in >5 minutes"
-msgstr ""
-
-#: src/components/EstimatedFee/EstimatedFee.tsx:222
+#: src/components/EstimatedFee/EstimatedFee.tsx:223
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:219
+#: src/components/EstimatedFee/EstimatedFee.tsx:220
 msgid "Likely in {minutes} minutes"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:222
+msgid "Likely in >5 minutes"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:46
 msgid "Loading details"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:232
+#: src/screens/SelectKey/SelectKey.tsx:235
 msgid "Loading keys"
 msgstr ""
 
@@ -257,12 +273,12 @@ msgstr ""
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:317
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:336
-msgid "Log Out"
-msgstr "Keluar"
+#~ msgid "Log Out"
+#~ msgstr "Keluar"
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:335
-msgid "Logout"
-msgstr "Keluar"
+#~ msgid "Logout"
+#~ msgstr "Keluar"
 
 #: src/hooks/useKeyringMigrationPrompt.tsx:16
 msgid "Migrate"
@@ -284,7 +300,7 @@ msgstr ""
 msgid "New passphrase is the same as your current passphrase"
 msgstr "Kalimat sandi baru sama dengan kalimat sandi yang sekarang"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:132
 msgid "New version {latestVersion} available"
 msgstr ""
 
@@ -293,20 +309,20 @@ msgstr ""
 msgid "No 24 word seed, since this key is imported."
 msgstr "Tidak ada benih 24 kata, sejak kunci ini di impor."
 
-#: src/screens/SelectKey/WalletStatus.tsx:61
-#~ msgid "Not Synced"
-#~ msgstr ""
-
 #: src/components/FormatConnectionStatus/FormatConnectionStatus.tsx:33
 msgid "Not connected"
 msgstr "Tidak terhubung"
+
+#: src/screens/SelectKey/WalletStatus.tsx:61
+#~ msgid "Not Synced"
+#~ msgstr ""
 
 #: src/components/AlertDialog/AlertDialog.tsx:23
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:30
 msgid "OK"
 msgstr "OK"
 
-#: src/screens/SelectKey/SelectKey.tsx:254
+#: src/screens/SelectKey/SelectKey.tsx:257
 msgid "Open a world of possibilities."
 msgstr ""
 
@@ -335,6 +351,10 @@ msgstr ""
 msgid "Public key:"
 msgstr "Kunci publik:"
 
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:278
+msgid "Random"
+msgstr ""
+
 #: src/components/Fee/Fee.tsx:18
 msgid "Recommended value: 0.000005"
 msgstr ""
@@ -345,6 +365,10 @@ msgstr ""
 
 #: src/components/ErrorBoundary/ErrorBoundary.tsx:85
 msgid "Reload Application"
+msgstr ""
+
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:259
+msgid "Remove Icon"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyItem.tsx:97
@@ -364,14 +388,15 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/components/Settings/SettingsApp.tsx:125
-msgid "Sea Application Version:"
-msgstr ""
-
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
 msgid "Sea {latestVersion} is currently the latest version available."
 msgstr ""
 
+#: src/components/Settings/SettingsApp.tsx:125
+msgid "Sea Application Version:"
+msgstr ""
+
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:171
 #: src/screens/SelectKey/Search.tsx:34
 msgid "Search"
 msgstr ""
@@ -396,6 +421,7 @@ msgstr "Benih:"
 msgid "Select..."
 msgstr "Pilih..."
 
+#: src/components/LayoutMain/LayoutFooter.tsx:52
 #: src/components/Settings/SettingsApp.tsx:154
 msgid "Send Feedback"
 msgstr "Kirim Masukan"
@@ -417,7 +443,7 @@ msgstr "Lihat opsi lanjutan"
 #~ msgid "Sign In"
 #~ msgstr "Log Masuk"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:171
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:135
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
 msgstr "Lewati"
@@ -470,11 +496,11 @@ msgstr "Transaksi sudah di kirim ke full node dan sedang menunggu di tambahkan k
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Transaksi sudah sukses di kirimkan ke node utama dan sudah tercatat di mempool."
 
-#: src/screens/SelectKey/SelectKey.tsx:239
+#: src/screens/SelectKey/SelectKey.tsx:242
 msgid "Try Again"
 msgstr "Coba Lagi"
 
-#: src/screens/SelectKey/SelectKey.tsx:243
+#: src/screens/SelectKey/SelectKey.tsx:246
 msgid "Unable to load keys"
 msgstr ""
 
@@ -499,29 +525,29 @@ msgstr "Mengaktifkan opsi kalimat kunci sangat di ajurkan untuk melindungi kunci
 msgid "Value seems high"
 msgstr "Nilai Kelihatan terlalu tinggi"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:270
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:232
 #: src/components/Settings/SettingsApp.tsx:86
 msgid "Wallet"
 msgstr "Dompet"
-
-#: src/screens/SelectKey/WalletDeleteDialog.tsx:149
-msgid "Wallet Fingerprint"
-msgstr ""
-
-#: src/screens/SelectKey/SelectKey.tsx:219
-msgid "Wallet Keys"
-msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:63
 #: src/screens/SelectKey/SelectKeyItem.tsx:233
 msgid "Wallet {0}"
 msgstr ""
 
+#: src/screens/SelectKey/WalletDeleteDialog.tsx:149
+msgid "Wallet Fingerprint"
+msgstr ""
+
+#: src/screens/SelectKey/SelectKey.tsx:222
+msgid "Wallet Keys"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKey.tsx:142
 #~ msgid "Welcome to Sea. Please log in with an existing key, or create a new key."
 #~ msgstr "Selamat datang di Sea. Silahkan masuk dengan key eksisting atau dengan membuat key baru."
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:177
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:141
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr ""
@@ -542,11 +568,3 @@ msgstr ""
 #: src/hooks/useKeyringMigrationPrompt.tsx:20
 msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Would you like to migrate your keys now?"
 msgstr "Kunci anda belum migrasi ke penyimpanan kunci baru. Anda tidak akan bisa membuat kunci baru atau menghapus kunci yang ada sampai dengan migrasi selesai. Apa anda mau migrasi kunci anda sekarang?"
-
-#: src/components/Amount/Amount.tsx:86
-msgid "{0, plural, one {mojo} other {mojos}}"
-msgstr "{0, plural,one {mojo} other {mojos}}"
-
-#: src/hooks/useValidateChangePassphraseParams.tsx:35
-msgid "{minPassphraseLength, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
-msgstr "{minPassphraseLength, plural, one {Kata kunci harus paling sedikit # karakter panjang nya} other {Kata kunci harus paling sedikit # karakter panjang nya}}"

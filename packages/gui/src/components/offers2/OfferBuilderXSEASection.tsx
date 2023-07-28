@@ -71,7 +71,7 @@ export default function OfferBuilderXSEASection(props: OfferBuilderXSEASectionPr
 
   return (
     <OfferBuilderSection
-      icon={<Farming />}
+      icon={<Farming color="info" />}
       title={currencyCode}
       subtitle={<Trans>Sea ({currencyCode}) is a digital currency that is secure and sustainable</Trans>}
       onAdd={!fields.length ? handleAdd : undefined}

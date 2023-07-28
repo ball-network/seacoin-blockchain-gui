@@ -33,7 +33,7 @@ export default function PlotOverviewHero() {
           <Typography variant="body1">
             <Trans>
               Plots are allocated space on your hard drive used to farm and earn Sea. &nbsp;
-              <Link target="_blank" href="https://github.com/Ball-Network/seacoin-blockchain/wiki/Network-Architecture">
+              <Link target="_blank" href="https://github.com/ball-network/seacoin-blockchain/wiki/Network-Architecture">
                 Learn more
               </Link>
             </Trans>

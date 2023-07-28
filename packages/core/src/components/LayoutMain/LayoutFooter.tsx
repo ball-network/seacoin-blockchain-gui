@@ -4,23 +4,24 @@ import React from 'react';
 import styled from 'styled-components';
 
 import walletPackageJson from '../../../package.json';
+import Color from '../../constants/Color';
 import useAppVersion from '../../hooks/useAppVersion';
 import Flex from '../Flex';
 
 const { productName } = walletPackageJson;
 
 const FAQ = styled.a`
-  color: rgb(128, 160, 194);
+  color: ${Color.Royal[300]};
 `;
 
 const SendFeedback = styled.a`
-  color: rgb(128, 160, 194);
+  color: ${Color.Royal[300]};
 `;
 
 async function openFAQURL(): Promise<void> {
   try {
     const { shell } = window as any;
-    await shell.openExternal('https://github.com/Ball-Network/seacoin-blockchain/wiki/FAQ');
+    await shell.openExternal('https://github.com/ball-network/seacoin-blockchain/wiki/FAQ');
   } catch (e) {
     console.error(e);
   }

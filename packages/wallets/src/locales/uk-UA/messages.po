@@ -15,16 +15,20 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: uk\n"
-"X-Crowdin-File: /[Ball-Network.seacoin-blockchain-gui] main/packages/wallets/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[ball-network.seacoin-blockchain-gui] main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1308\n"
 
-#: src/components/WalletHistory.tsx:116
-msgid "+"
-msgstr "+"
-
-#: src/components/WalletHistory.tsx:116
+#: src/components/WalletHistory.tsx:117
 msgid "-"
 msgstr "-"
+
+#: src/components/WalletSend.tsx:283
+msgid "- Set a time frame which allows you claw back (revoke) the transaction.<0/>- Recipient of the transaction can only claim the funds once that time frame expires."
+msgstr ""
+
+#: src/components/WalletHistory.tsx:117
+msgid "+"
+msgstr "+"
 
 #: src/components/WalletHeader.tsx:71
 msgid "Actions"
@@ -36,7 +40,7 @@ msgstr "Додати"
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:68
-#: src/components/WalletsManageTokens.tsx:156
+#: src/components/WalletsManageTokens.tsx:155
 msgid "Add Token"
 msgstr "Додати токен"
 
@@ -50,10 +54,14 @@ msgstr "Адреса"
 
 #: src/components/cat/WalletCATSend.tsx:196
 #: src/components/WalletSend.tsx:220
-msgid "Address / Puzzle hash"
-msgstr "Адреса / Хеш-головоломка"
+#~ msgid "Address / Puzzle hash"
+#~ msgstr "Адреса / Хеш-головоломка"
 
-#: src/components/cat/WalletCATSend.tsx:208
+#: src/components/AddressBookAutocomplete.tsx:68
+msgid "Address / Puzzle hash or Address Book Contact"
+msgstr ""
+
+#: src/components/cat/WalletCATSend.tsx:207
 #: src/components/WalletSend.tsx:232
 msgid "Amount"
 msgstr "Кількість"
@@ -62,7 +70,7 @@ msgstr "Кількість"
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Ви дійсно бажаєте видалити непідтверджені транзакції?"
 
-#: src/components/WalletHistory.tsx:127
+#: src/components/WalletHistory.tsx:128
 msgid "Asset"
 msgstr ""
 
@@ -88,7 +96,11 @@ msgstr ""
 msgid "Available Balance"
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:46
+#: src/components/WalletSend.tsx:323
+msgid "Before sending this transaction, you should ensure that the recipient has a wallet with the capability to claim it manually after the timer has expired."
+msgstr ""
+
+#: src/components/WalletHistoryClawbackChip.tsx:61
 msgid "Can be claimed in "
 msgstr ""
 
@@ -97,8 +109,8 @@ msgstr ""
 msgid "Cancel"
 msgstr "Відміна"
 
-#: src/components/cat/WalletCATSend.tsx:117
-#: src/components/WalletSend.tsx:142
+#: src/components/cat/WalletCATSend.tsx:118
+#: src/components/WalletSend.tsx:144
 msgid "Cannot send sea to coloured address. Please enter a sea address."
 msgstr "Не вдалося відправити Sea за кольоровою адресою. Будь ласка, введіть звичайну адресу Sea."
 
@@ -106,29 +118,29 @@ msgstr "Не вдалося відправити Sea за кольоровою �
 #~ msgid "Check my snapshot balance"
 #~ msgstr "Перевірте мій snapshot баланс"
 
+#: src/components/WalletHistoryClawbackChip.tsx:68
+msgid "Claim transaction"
+msgstr ""
+
 #: src/components/ClawbackClaimTransactionDialog.tsx:136
 #: src/components/ClawbackClaimTransactionDialog.tsx:259
 msgid "Claim Transaction"
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:53
-msgid "Claim transaction"
-msgstr ""
-
-#: src/components/WalletHistoryClawbackChip.tsx:68
+#: src/components/WalletHistoryClawbackChip.tsx:83
 msgid "Claiming..."
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:136
-msgid "Claw Back Transaction"
+#: src/components/WalletHistoryClawbackChip.tsx:94
+msgid "Claw back this transaction"
 msgstr ""
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:259
 msgid "Claw back Transaction"
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:79
-msgid "Claw back this transaction"
+#: src/components/ClawbackClaimTransactionDialog.tsx:136
+msgid "Claw Back Transaction"
 msgstr ""
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:128
@@ -139,15 +151,15 @@ msgstr ""
 msgid "Clawback payment clawed back"
 msgstr ""
 
-#: src/components/WalletSend.tsx:340
+#: src/components/WalletSend.tsx:354
 msgid "Clawback will be applied."
 msgstr ""
 
-#: src/components/WalletSend.tsx:346
+#: src/components/WalletSend.tsx:361
 msgid "Clawback will not be applied."
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:94
+#: src/components/WalletHistoryClawbackChip.tsx:109
 msgid "Clawing back..."
 msgstr ""
 
@@ -164,17 +176,21 @@ msgstr ""
 msgid "Confirmation"
 msgstr "Підтвердження"
 
-#: src/components/WalletHistory.tsx:183
+#: src/components/WalletHistory.tsx:194
 msgid "Confirmed"
 msgstr "Підтверджено"
 
-#: src/components/WalletHistory.tsx:372
+#: src/components/WalletHistory.tsx:412
 msgid "Confirmed at Height"
 msgstr "Підтверджено на висоті блоку"
 
 #: src/components/WalletConnections.tsx:47
 msgid "Connection type"
 msgstr "Тип підключення"
+
+#: src/components/standard/nftRecover/NFTRecover.tsx:161
+msgid "contract address"
+msgstr ""
 
 #: src/components/WalletReceiveAddressField.tsx:71
 msgid "Copied"
@@ -197,12 +213,12 @@ msgstr "Створити пропозицію"
 msgid "Create Staking"
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:178
-#: src/components/WalletSend.tsx:202
+#: src/components/cat/WalletCATSend.tsx:179
+#: src/components/WalletSend.tsx:204
 msgid "Create Transaction"
 msgstr "Створити транзакцію"
 
-#: src/components/WalletHistory.tsx:206
+#: src/components/WalletHistory.tsx:217
 msgid "Creation Date"
 msgstr ""
 
@@ -213,10 +229,6 @@ msgstr "Кастодіальний гаманець"
 #: src/components/cat/WalletCATCreateSimple.tsx:100
 msgid "Custom"
 msgstr "Користувацький"
-
-#: src/constants/WalletName.ts:29
-msgid "DID Wallet"
-msgstr "DID гаманець"
 
 #: src/constants/WalletName.ts:38
 msgid "Datalayer Wallet"
@@ -238,15 +250,23 @@ msgstr "Видалити непідтверджені транзакції"
 msgid "Derivation Index: {0}"
 msgstr "Індекс деривації: {0}"
 
+#: src/constants/WalletName.ts:29
+msgid "DID Wallet"
+msgstr "DID гаманець"
+
+#: src/components/WalletSend.tsx:316
+msgid "Disable"
+msgstr ""
+
 #: src/components/create/WalletCreateList.tsx:39
 msgid "Distributed Identity"
 msgstr "Розподілена ідентифікація"
 
-#: src/components/WalletImport.tsx:158
+#: src/components/WalletImport.tsx:157
 msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Sea wallet."
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:127
+#: src/components/cat/WalletCATSend.tsx:128
 msgid "Error the entered address appears to be for a different colour."
 msgstr "Помилка при введенні адреси, здається, це адреса для іншого кольору."
 
@@ -254,13 +274,13 @@ msgstr "Помилка при введенні адреси, здається, �
 msgid "FAILED"
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:246
-#: src/components/WalletSend.tsx:384
+#: src/components/cat/WalletCATSend.tsx:245
+#: src/components/WalletSend.tsx:403
 msgid "Farm"
 msgstr "Ферма"
 
-#: src/components/cat/WalletCATSend.tsx:222
-#: src/components/WalletHistory.tsx:220
+#: src/components/cat/WalletCATSend.tsx:221
+#: src/components/WalletHistory.tsx:231
 #: src/components/WalletSend.tsx:245
 msgid "Fee"
 msgstr "Комісія"
@@ -277,10 +297,6 @@ msgstr ""
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefore wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "HD або ієрархічні детерміновані ключі - це тип відкритої схеми ключ/закритого ключа, в якій один закритий ключ може мати майже нескінченну кількість різних відкритих ключів (і адреси для прийому), які зрештою повертатимуться і витрачатимуться одним приватним ключем."
 
-#: src/components/WalletConnections.tsx:22
-msgid "IP address"
-msgstr "ІР-адреса"
-
 #: src/components/WalletSendTransactionResultDialog.tsx:41
 msgid "If you would like to speed up the transaction, please delete unconfirmed transactions and retry with a higher fee."
 msgstr "Якщо ви хочете прискорити транзакцію, будь ласка, видаліть непідтверджені транзакції та спробуйте ще раз з більшою комісією."
@@ -289,17 +305,21 @@ msgstr "Якщо ви хочете прискорити транзакцію, б
 msgid "Import"
 msgstr "Імпорт"
 
-#: src/components/WalletImport.tsx:141
-msgid "Import Wallet from Mnemonics"
-msgstr "Імпортувати гаманець за допомогою мнемоніки"
-
-#: src/components/WalletImport.tsx:226
+#: src/components/WalletImport.tsx:225
 msgid "Import from {alternativeWordCount} word mnemonic"
 msgstr ""
+
+#: src/components/WalletImport.tsx:140
+msgid "Import Wallet from Mnemonics"
+msgstr "Імпортувати гаманець за допомогою мнемоніки"
 
 #: src/components/WalletHistory.tsx:87
 #~ msgid "Incoming"
 #~ msgstr "Вхідні"
+
+#: src/components/WalletConnections.tsx:22
+msgid "IP address"
+msgstr "ІР-адреса"
 
 #: src/components/standard/nftRecover/NFTRecover.tsx:135
 msgid "Launcher Id"
@@ -309,16 +329,16 @@ msgstr ""
 msgid "List of connections is empty"
 msgstr "Список підключень порожній"
 
-#: src/components/WalletsManageTokens.tsx:133
+#: src/components/WalletsManageTokens.tsx:132
 msgid "Manage token list"
 msgstr "Керування списком токенів"
 
-#: src/components/cat/WalletCATSend.tsx:236
-#: src/components/WalletSend.tsx:373
+#: src/components/cat/WalletCATSend.tsx:235
+#: src/components/WalletSend.tsx:392
 msgid "Memo"
 msgstr "Примітка"
 
-#: src/components/WalletHistory.tsx:377
+#: src/components/WalletHistory.tsx:417
 msgid "Memos"
 msgstr "Примітки"
 
@@ -334,14 +354,6 @@ msgstr "MiB Вивантаження/Завантаження"
 msgid "Multi Sig Wallet"
 msgstr "Multi Sig Wallet"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:117
-msgid "NFT Recover"
-msgstr ""
-
-#: src/constants/WalletName.ts:35
-msgid "NFT Wallet"
-msgstr "NFT Гаманець"
-
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:68
 msgid "Name"
 msgstr "Назва"
@@ -354,20 +366,32 @@ msgstr "Нова адреса"
 msgid "New Receive Address"
 msgstr ""
 
-#: src/components/WalletAdd.tsx:64
+#: src/components/WalletAdd.tsx:62
 msgid "New Wallet"
 msgstr "Новий гаманець"
 
-#: src/components/WalletAdd.tsx:124
-#: src/components/WalletImport.tsx:196
+#: src/components/WalletAdd.tsx:122
+#: src/components/WalletImport.tsx:195
 msgid "Next"
 msgstr "Далі"
+
+#: src/components/standard/nftRecover/NFTRecover.tsx:117
+msgid "NFT Recover"
+msgstr ""
+
+#: src/constants/WalletName.ts:35
+msgid "NFT Wallet"
+msgstr "NFT Гаманець"
+
+#: src/components/WalletHeader.tsx:56
+msgid "nftRecover"
+msgstr ""
 
 #: src/components/WalletRenameDialog.tsx:67
 msgid "Nickname"
 msgstr "Прізвисько"
 
-#: src/components/WalletHistory.tsx:445
+#: src/components/WalletHistory.tsx:485
 msgid "No previous transactions"
 msgstr "Немає попередніх транзакцій"
 
@@ -375,8 +399,8 @@ msgstr "Немає попередніх транзакцій"
 msgid "Node ID"
 msgstr "ID вузла"
 
-#: src/components/WalletHistory.tsx:366
-#: src/components/WalletHistory.tsx:373
+#: src/components/WalletHistory.tsx:406
+#: src/components/WalletHistory.tsx:413
 msgid "Not Available"
 msgstr "Не доступно"
 
@@ -385,20 +409,24 @@ msgstr "Не доступно"
 msgid "Not Available Balance"
 msgstr ""
 
+#: src/components/standard/nftRecover/NFTRecover.tsx:89
+msgid "not find contract address, Please enter a contract address"
+msgstr ""
+
 #: src/components/WalletStatus.tsx:58
 msgid "Not Synced"
 msgstr "Не синхронізовано"
+
+#: src/components/WalletHistory.tsx:203
+msgid "Offer Accepted"
+msgstr "Пропозицію прийнято"
 
 #: src/components/cat/WalletCATTAILDialog.tsx:66
 msgid "OK"
 msgstr "ОК"
 
-#: src/components/WalletHistory.tsx:192
-msgid "Offer Accepted"
-msgstr "Пропозицію прийнято"
-
-#: src/components/cat/WalletCATSend.tsx:181
-#: src/components/WalletSend.tsx:205
+#: src/components/cat/WalletCATSend.tsx:182
+#: src/components/WalletSend.tsx:207
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "У середньому між кожним блоком транзакції триває одна хвилина. За відсутністю заторів ви можете очікувати, що ваша транзакція буде включена менш ніж за хвилину."
 
@@ -406,7 +434,7 @@ msgstr "У середньому між кожним блоком транзак�
 #~ msgid "Outgoing"
 #~ msgstr "Вихідні"
 
-#: src/components/WalletImport.tsx:234
+#: src/components/WalletImport.tsx:233
 msgid "Paste Mnemonic"
 msgstr "Вставити мнемоніку"
 
@@ -414,7 +442,7 @@ msgstr "Вставити мнемоніку"
 msgid "Paste Mnemonic ({0} words)"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:185
+#: src/components/WalletHistory.tsx:196
 msgid "Pending"
 msgstr "В очікуванні"
 
@@ -426,13 +454,13 @@ msgstr "Баланс в очікуванні"
 msgid "Pending Change"
 msgstr "Зміни очікуються"
 
+#: src/components/WalletHistoryPending.tsx:63
+msgid "Pending claw back transactions"
+msgstr ""
+
 #: src/components/card/WalletCardPendingTotalBalance.tsx:41
 msgid "Pending Total Balance"
 msgstr "Загальний баланс очікується"
-
-#: src/components/WalletHistoryPending.tsx:62
-msgid "Pending claw back transactions"
-msgstr ""
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:206
 msgid "Please enter a transaction fee to claim the above amount:"
@@ -442,23 +470,23 @@ msgstr ""
 msgid "Please enter a transaction fee to claw back the above amount:"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:75
-msgid "Please enter a valid NFT Launcher Id"
-msgstr ""
-
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:42
 msgid "Please enter a valid asset id"
 msgstr "Введіть дійсний ID активу"
 
-#: src/components/cat/WalletCATSend.tsx:103
+#: src/components/standard/nftRecover/NFTRecover.tsx:75
+msgid "Please enter a valid NFT Launcher Id"
+msgstr ""
+
+#: src/components/cat/WalletCATSend.tsx:104
 #: src/components/standard/staking/WalletStakingSend.tsx:67
 #: src/components/standard/staking/WalletStakingWithdraw.tsx:67
-#: src/components/WalletSend.tsx:132
+#: src/components/WalletSend.tsx:134
 msgid "Please enter a valid numeric amount"
 msgstr "Будь ласка, введіть припустиму числову кількість"
 
-#: src/components/cat/WalletCATSend.tsx:108
-#: src/components/WalletSend.tsx:137
+#: src/components/cat/WalletCATSend.tsx:109
+#: src/components/WalletSend.tsx:139
 msgid "Please enter a valid numeric fee"
 msgstr "Будь ласка, введіть припустиму числову комісію"
 
@@ -470,10 +498,10 @@ msgstr "Будь ласка, введіть дійсну назву токена
 msgid "Please enter valid wallet name"
 msgstr "Будь ласка, введіть коректну назву гаманця"
 
-#: src/components/cat/WalletCATSend.tsx:94
+#: src/components/cat/WalletCATSend.tsx:95
 #: src/components/standard/staking/WalletStakingSend.tsx:62
 #: src/components/standard/staking/WalletStakingWithdraw.tsx:62
-#: src/components/WalletSend.tsx:127
+#: src/components/WalletSend.tsx:129
 msgid "Please finish syncing before making a transaction"
 msgstr "Будь ласка, завершіть синхронізацію перед створенням транзакції"
 
@@ -489,10 +517,6 @@ msgstr "Пул гаманець"
 #: src/components/WalletConnections.tsx:28
 msgid "Port"
 msgstr "Порт"
-
-#: src/constants/WalletName.ts:8
-msgid "RL Wallet"
-msgstr "RL Гаманець"
 
 #: src/components/create/WalletCreateList.tsx:45
 msgid "Rate Limited"
@@ -510,7 +534,7 @@ msgstr "Отримати"
 msgid "Receive Address"
 msgstr "Адреса отримання"
 
-#: src/components/cat/WalletCATSend.tsx:121
+#: src/components/cat/WalletCATSend.tsx:122
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr "Адреса одержувача не є адресою кольорового гаманця. Будь ласка, введіть адресу кольорового гаманця"
 
@@ -535,13 +559,13 @@ msgstr "Відновити гаманець"
 msgid "Rename Wallet"
 msgstr "Перейменувати гаманець"
 
-#: src/components/WalletHistory.tsx:191
+#: src/components/WalletHistory.tsx:202
 msgid "Retire"
 msgstr "Відкликати"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:108
-msgid "SUCCESS"
-msgstr ""
+#: src/constants/WalletName.ts:8
+msgid "RL Wallet"
+msgstr "RL Гаманець"
 
 #: src/components/WalletRenameDialog.tsx:75
 msgid "Save"
@@ -562,9 +586,9 @@ msgstr "Пошук в Tail Database"
 msgid "Select Wallet Type"
 msgstr "Оберіть тип гаманця"
 
-#: src/components/cat/WalletCATSend.tsx:257
+#: src/components/cat/WalletCATSend.tsx:256
 #: src/components/WalletHeader.tsx:50
-#: src/components/WalletSend.tsx:395
+#: src/components/WalletSend.tsx:414
 msgid "Send"
 msgstr "Надіслати"
 
@@ -601,7 +625,7 @@ msgstr ""
 msgid "Standard Wallet"
 msgstr "Стандартний гаманець"
 
-#: src/components/WalletHistory.tsx:197
+#: src/components/WalletHistory.tsx:208
 msgid "Status"
 msgstr ""
 
@@ -612,6 +636,10 @@ msgstr ""
 #: src/components/WalletSendTransactionResultDialog.tsx:12
 msgid "Success"
 msgstr "Успіх"
+
+#: src/components/standard/nftRecover/NFTRecover.tsx:108
+msgid "SUCCESS"
+msgstr ""
 
 #: src/components/WalletHeader.tsx:49
 msgid "Summary"
@@ -637,7 +665,7 @@ msgstr "Транзакція не може бути одразу включен�
 msgid "This access token is verified"
 msgstr "Цей токен доступу перевірено"
 
-#: src/components/WalletHistory.tsx:160
+#: src/components/WalletHistory.tsx:171
 msgid "This is not a valid address for sending funds to"
 msgstr "Це не є дійсною адресою для відправки на неї коштів"
 
@@ -695,7 +723,7 @@ msgstr "Загальний баланс"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Транзакція успішно відправлена на повний вузол та включена до мемпулу."
 
-#: src/components/WalletHistory.tsx:422
+#: src/components/WalletHistory.tsx:462
 msgid "Transactions"
 msgstr "Транзакції"
 
@@ -707,18 +735,26 @@ msgstr ""
 msgid "Transactions with values smaller than the fee will not be auto claimed."
 msgstr ""
 
+#: src/components/standard/nftRecover/NFTRecover.tsx:120
+msgid "visiting the Pool tab of your CHIA-GUI. using this command: chia plotNFT show. Note: you have to do this on the CHIA client, not the fork!"
+msgstr ""
+
+#: src/components/Wallet.tsx:22
+msgid "Wallet {walletId} not found"
+msgstr "Гаманець {walletId} не знайдено"
+
 #: src/components/WalletConnections.tsx:67
 msgid "Wallet Connections"
 msgstr "З'єднання з гаманцем"
 
-#: src/components/WalletAdd.tsx:101
-#: src/components/WalletImport.tsx:148
-msgid "Wallet Name"
-msgstr "Назва Гаманця"
-
 #: src/components/cat/WalletCAT.tsx:66
 msgid "Wallet does not exists"
 msgstr "Гаманець не існує"
+
+#: src/components/WalletAdd.tsx:99
+#: src/components/WalletImport.tsx:147
+msgid "Wallet Name"
+msgstr "Назва Гаманця"
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:200
 msgid "Wallet needs to be synced for claiming clawback transactions"
@@ -728,10 +764,6 @@ msgstr ""
 msgid "Wallet with type {0} not supported"
 msgstr "Гаманець з типом {0} не підтримується"
 
-#: src/components/Wallet.tsx:22
-msgid "Wallet {walletId} not found"
-msgstr "Гаманець {walletId} не знайдено"
-
 #: src/components/WalletsSidebar.tsx:138
 #~ msgid "Want to see your old balance for yourself?"
 #~ msgstr "Хочете побачити свій попередній баланс?"
@@ -740,11 +772,11 @@ msgstr "Гаманець {walletId} не знайдено"
 #~ msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
 #~ msgstr "Ми зробили оновлення до стандарту CAT, який вимагає перевипущення всіх CAT. Ви отримаєте доступ до Ваших нових токенів, оскільки вони повторно будуть випущені вихідними видавцями. Токени ЛА базуються на балансі за висотою блоку:<0/><1/><2/>(Приблизний час: 26 липня, 2022 @ 17:00 UTC)"
 
-#: src/components/WalletAdd.tsx:67
+#: src/components/WalletAdd.tsx:65
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Ласкаво просимо! Ці слова використовуються для резервної копії вашого гаманця. Без них Ви втратите доступ до свого гаманця, тримайте їх у безпеці! Запишіть кожне слово разом з порядковим номером поруч з ними. (Порядок важливий)"
 
-#: src/components/WalletHistoryClawbackChip.tsx:41
+#: src/components/WalletHistoryClawbackChip.tsx:56
 msgid "Will be autoclaimed in "
 msgstr ""
 
@@ -776,22 +808,6 @@ msgstr ""
 #~ msgid "Your CAT tokens have been upgraded!"
 #~ msgstr "Ваші CAT токени оновлено!"
 
-#: src/components/WalletImport.tsx:72
+#: src/components/WalletImport.tsx:73
 msgid "Your pasted list does not include {mnemonicWordCount} valid mnemonic words."
-msgstr ""
-
-#: src/components/standard/nftRecover/NFTRecover.tsx:161
-msgid "contract address"
-msgstr ""
-
-#: src/components/WalletHeader.tsx:56
-msgid "nftRecover"
-msgstr ""
-
-#: src/components/standard/nftRecover/NFTRecover.tsx:89
-msgid "not find contract address, Please enter a contract address"
-msgstr ""
-
-#: src/components/standard/nftRecover/NFTRecover.tsx:120
-msgid "visiting the Pool tab of your CHIA-GUI. using this command: chia plotNFT show. Note: you have to do this on the CHIA client, not the fork!"
 msgstr ""

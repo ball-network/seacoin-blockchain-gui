@@ -13,12 +13,12 @@ export default function offerToOfferBuilderData(
 ): OfferBuilderData {
   const { fees, offered, requested, infos } = offerSummary;
 
-  const defaultFeeXSEA = defaultFee ? mojoToSea(defaultFee).toFixed() : '';
+  const defaultFeExch = defaultFee ? mojoToSea(defaultFee).toFixed() : '';
 
   const offeredXsea: OfferBuilderData['offered']['xsea'] = [];
   const offeredTokens: OfferBuilderData['offered']['tokens'] = [];
   const offeredNfts: OfferBuilderData['offered']['nfts'] = [];
-  const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeeXSEA }] : [];
+  const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeExch }] : [];
   const requestedXsea: OfferBuilderData['requested']['xsea'] = [];
   const requestedTokens: OfferBuilderData['requested']['tokens'] = [];
   const requestedNfts: OfferBuilderData['requested']['nfts'] = [];

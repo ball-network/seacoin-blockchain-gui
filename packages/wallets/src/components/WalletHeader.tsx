@@ -12,8 +12,8 @@ import useWallet from "../hooks/useWallet";
 type StandardWalletProps = {
   walletId: number;
   actions?: ReactNode;
-  tab: 'summary' | 'send' | 'receive' | 'staking' | 'nftRecover';
-  onTabChange: (tab: 'summary' | 'send' | 'receive' | 'staking' | 'nftRecover') => void;
+  tab: 'summary' | 'send' | 'receive'| 'nftRecover';
+  onTabChange: (tab: 'summary' | 'send' | 'receive'| 'nftRecover') => void;
 };
 
 export default function WalletHeader(props: StandardWalletProps) {
@@ -71,7 +71,7 @@ export default function WalletHeader(props: StandardWalletProps) {
           <DropdownActions label={<Trans>Actions</Trans>} variant="outlined">
             <MenuItem onClick={handleDeleteUnconfirmedTransactions} close>
               <ListItemIcon>
-                <DeleteIcon />
+                <DeleteIcon color="info" />
               </ListItemIcon>
               <Typography variant="inherit" noWrap>
                 <Trans>Delete Unconfirmed Transactions</Trans>
