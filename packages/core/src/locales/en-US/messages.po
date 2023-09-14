@@ -35,10 +35,10 @@ msgid "{minPassphraseLength, plural, one {Passphrases must be at least # charact
 msgstr "{minPassphraseLength, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
-msgid "A new version of Sea is available!"
-msgstr "A new version of Sea is available!"
+msgid "A new version of SeaCoin is available!"
+msgstr "A new version of SeaCoin is available!"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:259
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:268
 msgid "Add Icon"
 msgstr "Add Icon"
 
@@ -351,7 +351,7 @@ msgstr ""
 msgid "Public key:"
 msgstr "Public key:"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:278
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:287
 msgid "Random"
 msgstr "Random"
 
@@ -367,7 +367,7 @@ msgstr "Release Notes"
 msgid "Reload Application"
 msgstr "Reload Application"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:259
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:268
 msgid "Remove Icon"
 msgstr "Remove Icon"
 
@@ -396,7 +396,7 @@ msgstr "Sea {latestVersion} is currently the latest version available."
 msgid "Sea Application Version:"
 msgstr "Sea Application Version:"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:171
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:180
 #: src/screens/SelectKey/Search.tsx:34
 msgid "Search"
 msgstr "Search"

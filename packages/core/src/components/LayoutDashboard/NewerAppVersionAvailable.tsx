@@ -92,7 +92,7 @@ export default function NewerAppVersionAvailable(props: NewerAppVersionAvailable
           {isLoadingVersion ? (
             <Trans>Checking for updates...</Trans>
           ) : newVersionAvailable ? (
-            <Trans>A new version of Sea is available!</Trans>
+            <Trans>A new version of SeaCoin is available!</Trans>
           ) : (
             <Trans>You're up to date</Trans>
           )}

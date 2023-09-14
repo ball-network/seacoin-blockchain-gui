@@ -5,7 +5,7 @@ import debug from 'debug';
 
 import type Headers from '../../@types/Headers';
 
-const log = debug('sea-gui:downloadFile');
+const log = debug('seacoin-gui:downloadFile');
 
 class WriteStreamPromise {
   private stream: WriteStream;

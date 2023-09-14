@@ -15,9 +15,13 @@ export default function PlotNFTSelectFaucet(props: Props) {
   const currencyCode = useCurrencyCode();
   const openExternal = useOpenExternal();
 
-  function handleClick() {
-    openExternal('https://faucet.seacoin.vip/');
-  }
+  const handleClick = React.useCallback(() => {
+    if (currencyCode === 'TXSEA') {
+      openExternal('https://testnet10-faucet.seacoin.vip/');
+    } else {
+      openExternal('https://faucet.seacoin.vip/');
+    }
+  }, [currencyCode, openExternal]);
 
   return (
     <CardStep

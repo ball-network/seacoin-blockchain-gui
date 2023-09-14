@@ -31,7 +31,7 @@ import { NFTOfferSummary } from './NFTOfferViewer';
 import OfferSummary from './OfferSummary';
 import { offerContainsAssetOfType } from './utils';
 
-const log = debug('sea-gui:offers');
+const log = debug('seacoin-gui:offers');
 
 /* ========================================================================== */
 

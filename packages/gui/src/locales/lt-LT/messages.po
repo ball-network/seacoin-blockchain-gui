@@ -352,7 +352,7 @@ msgstr ""
 
 #: src/components/block/Block.jsx:250
 msgid "Block at height {0} in the SeaCoin blockchain"
-msgstr "Bloko aukštis {0} SeaCoin blokų grandinėje"
+msgstr "Bloko aukštis {0} Sea blokų grandinėje"
 
 #: src/components/block/Block.jsx:120
 msgid "Block with hash {headerHash}"
@@ -474,11 +474,11 @@ msgid "Change Pool"
 msgstr ""
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Sea is started"
+msgid "Changes will take effect the next time SeaCoin is started"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Sea is started."
+msgid "Changes will take effect the next time SeaCoin is started."
 msgstr ""
 
 #: src/electron/main.tsx:1080

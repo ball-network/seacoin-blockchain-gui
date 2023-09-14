@@ -1,10 +1,11 @@
 // import { useGetNFTInfoQuery } from '@sea-network/api-react';
 import { fromBech32m } from '@sea-network/api';
-import { AddressBookContext, Flex, Form, TextField } from '@sea-network/core';
+import { AddressBookContext, Color, EmojiAndColorPicker, Flex, Form, TextField } from '@sea-network/core';
 import { Trans } from '@lingui/macro';
 import { Add, Remove } from '@mui/icons-material';
 import { Box, Button, IconButton, Typography } from '@mui/material';
-import React, { useContext } from 'react';
+import { useTheme } from '@mui/material/styles';
+import React, { useContext, useState } from 'react';
 import { useForm, useFormContext, useFieldArray } from 'react-hook-form';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -14,7 +15,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 function AddressFields() {
   const { control } = useFormContext();
   const { fields, append, remove } = useFieldArray({
-    control,
     name: 'addresses',
   });
 
@@ -186,10 +186,15 @@ function DomainFields() {
 }
 
 export default function ContactEdit() {
-  const [, , , getContactContactId, editContact] = useContext(AddressBookContext);
+  const [addressBook, , , getContactContactId, editContact] = useContext(AddressBookContext);
   const { contactId } = useParams();
   const navigate = useNavigate();
   const contact = getContactContactId(Number(contactId));
+
+  const theme: any = useTheme();
+  const isDark = theme.palette.mode === 'dark';
+  const [showEmojiPicker, setShowEmojiPicker] = useState<boolean>(false);
+  const [chosenEmoji, setChosenEmoji] = useState(contact.emoji);
 
   const methods = useForm<ContactEditData>({
     defaultValues: {
@@ -232,10 +237,21 @@ export default function ContactEdit() {
       } catch (err) {
         throw new Error(`${entry.address} is not a valid address`);
       }
+      addressBook.forEach((abContact) => {
+        if (abContact.contactId.toString() !== contactId) {
+          abContact.addresses.forEach((contactAddress) => {
+            if (contactAddress.address === entry.address) {
+              throw new Error(
+                `The address ${entry.address} is already assigned to an existing contact: ${abContact.name}`
+              );
+            }
+          });
+        }
+      });
     });
     filteredProfiles.forEach((entry) => {
       try {
-        if (entry.did.slice(0, 9).toLowerCase() !== 'did:sea:') {
+        if (entry.did.slice(0, 7).toLowerCase() !== 'did:sea:') {
           throw new Error();
         } else if (fromBech32m(entry.did).length !== 64) {
           throw new Error();
@@ -243,6 +259,15 @@ export default function ContactEdit() {
       } catch (err) {
         throw new Error(`${entry.did} is not a valid DID`);
       }
+      addressBook.forEach((abContact) => {
+        if (abContact.contactId.toString() !== contactId) {
+          abContact.dids.forEach((contactDID) => {
+            if (contactDID.did === entry.did) {
+              throw new Error(`The profile ${entry.did} is already assigned to an existing contact: ${abContact.name}`);
+            }
+          });
+        }
+      });
     });
     editContact(
       contact.contactId,
@@ -251,7 +276,8 @@ export default function ContactEdit() {
       filteredProfiles,
       data.notes,
       data.nftId,
-      filteredDomains
+      filteredDomains,
+      chosenEmoji
     );
     navigate(`/dashboard/addressbook/${Number(contact.contactId)}`);
   }
@@ -259,49 +285,74 @@ export default function ContactEdit() {
   return (
     <div>
       <Form methods={methods} key={0} onSubmit={handleSubmit}>
-        <Flex flexDirection="row" justifyContent="right" style={{ height: '80px' }}>
-          <Flex flexGrow={1}>
-            <Typography
-              variant="h5"
-              sx={{
-                position: 'absolute',
-                left: 44,
-                top: 48,
-              }}
-            >
-              <Trans>Edit Contact</Trans>
-            </Typography>
+        <Flex flexDirection="column" gap={1} alignItems="left" style={{ paddingLeft: '44px', paddingRight: '44px' }}>
+          <Flex flexDirection="row" alignItems="center" style={{ paddingTop: '2px' }}>
+            <Flex flexGrow={1}>
+              <Typography variant="h5">
+                <Trans>Edit Contact</Trans>
+              </Typography>
+            </Flex>
+            <Flex gap={1}>
+              <Button variant="contained" color="primary" type="submit">
+                <Trans>Save</Trans>
+              </Button>
+              <Button variant="outlined" color="secondary" onClick={() => handleCancel(Number(contact.contactId))}>
+                <Trans>Cancel</Trans>
+              </Button>
+            </Flex>
           </Flex>
-          <Flex style={{ paddingRight: '30px' }}>
-            <Button
-              variant="contained"
-              color="primary"
-              type="submit"
-              sx={{
-                position: 'absolute',
-                right: 44,
-                top: 44,
-              }}
-            >
-              <Trans>Save</Trans>
-            </Button>
-            <Button
-              variant="outlined"
-              color="secondary"
-              onClick={() => handleCancel(Number(contact.contactId))}
-              sx={{
-                position: 'absolute',
-                right: 122,
-                top: 44,
-              }}
-            >
-              <Trans>Cancel</Trans>
-            </Button>
-          </Flex>
-        </Flex>
 
-        <Flex flexDirection="column" gap={6} alignItems="center" style={{ paddingBottom: '40px' }}>
-          <Flex flexDirection="column" gap={6} maxWidth="600px" style={{ width: '100%', paddingTop: '40px' }}>
+          <Flex flexDirection="column" gap={6} style={{ width: '100%', paddingTop: '38px' }}>
+            <Flex gap={2} flexDirection="column">
+              <Typography variant="h6">
+                <Trans>Theme</Trans>
+              </Typography>
+              <Flex minWidth={0} alignItems="baseline">
+                <span
+                  style={{ display: showEmojiPicker ? 'inline' : 'none', position: 'fixed', zIndex: 10 }}
+                  onClick={() => {}}
+                >
+                  {showEmojiPicker && (
+                    <EmojiAndColorPicker
+                      onSelect={(result: any) => {
+                        setChosenEmoji(result);
+                        setShowEmojiPicker(false);
+                      }}
+                      onClickOutside={() => {
+                        setShowEmojiPicker(false);
+                      }}
+                      currentEmoji={chosenEmoji}
+                      themeColors={theme.palette.colors}
+                      isDark={isDark}
+                      emojiOnly
+                    />
+                  )}
+                </span>
+                <Flex flexDirection="row" minWidth={0}>
+                  <Box
+                    sx={{
+                      backgroundColor: 'none',
+                      fontSize: '26px',
+                      marginRight: '10px',
+                      width: '40px',
+                      height: '40px',
+                      lineHeight: '42px',
+                      textAlign: 'center',
+                      borderRadius: '5px',
+                      border: 1,
+                      borderColor: isDark ? Color.Neutral[400] : Color.Neutral[300],
+                      ':hover': {
+                        cursor: 'pointer',
+                        backgroundColor: isDark ? Color.Neutral[400] : Color.Neutral[300],
+                      },
+                    }}
+                    onClick={() => setShowEmojiPicker(true)}
+                  >
+                    {chosenEmoji}
+                  </Box>
+                </Flex>
+              </Flex>
+            </Flex>
             <Flex gap={2} flexDirection="column">
               <Typography variant="h6">
                 <Trans>Contact Name</Trans>

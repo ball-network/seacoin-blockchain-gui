@@ -68,6 +68,7 @@ export default function WalletStakingWithdraw(props: StakingWithdrawProps) {
     }
 
     const response = await stakingWithdraw({
+      walletId: walletId,
       amount: seaToMojo(amount),
       fingerprint: fingerprint,
       waitForConfirmation: true,

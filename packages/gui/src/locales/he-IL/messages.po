@@ -474,11 +474,11 @@ msgid "Change Pool"
 msgstr "שנה/י בריכה (Pool)"
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Sea is started"
+msgid "Changes will take effect the next time SeaCoin is started"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Sea is started."
+msgid "Changes will take effect the next time SeaCoin is started."
 msgstr ""
 
 #: src/electron/main.tsx:1080

@@ -11,7 +11,6 @@ import {
   Flex,
   calculatePoolReward,
   calculateBaseFarmerReward,
-  calculateCommunityReward,
   useCurrencyCode,
   mojoToSea,
   Suspender,
@@ -27,7 +26,7 @@ import BlockTitle from './BlockTitle';
 
 async function computeNewPlotId(block) {
   const { poolPublicKey, plotPublicKey } = block.rewardChainBlock.proofOfSpace;
-  if (!poolPublicKey || !plotPublicKey) {
+  if (!poolPublicKey) {
     return undefined;
   }
   let buf = hexToArray(poolPublicKey);
@@ -148,7 +147,6 @@ export default function Block() {
 
   const poolReward = mojoToSea(calculatePoolReward(blockRecord.height));
   const baseFarmerReward = mojoToSea(calculateBaseFarmerReward(blockRecord.height));
-  const communityReward = mojoToSea(calculateCommunityReward(blockRecord.height));
 
   const seaFees = blockRecord.fees !== undefined ? mojoToSea(blockRecord.fees) : '';
 
@@ -236,10 +234,6 @@ export default function Block() {
     {
       name: <Trans>Base Farmer Reward Amount</Trans>,
       value: `${baseFarmerReward} ${currencyCode}`,
-    },
-    {
-      name: <Trans>Community Reward Amount</Trans>,
-      value: `${communityReward} ${currencyCode}`,
     },
     {
       name: <Trans>Fees Amount</Trans>,

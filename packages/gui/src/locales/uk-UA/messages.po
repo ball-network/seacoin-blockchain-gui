@@ -182,7 +182,7 @@ msgstr ""
 msgid "(Not Installed)"
 msgstr "(Не встановлено)"
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:49
+#: src/components/plot/add/PlotAddChooseKeys.tsx:64
 msgid "(Not recommended) Used to create an old style plot for solo farming."
 msgstr ""
 
@@ -194,7 +194,7 @@ msgstr "(Не підтримується)"
 #~ msgid "(Optional)"
 #~ msgstr "(Не обов'язково)"
 
-#: src/components/plot/add/PlotAddNFT.tsx:59
+#: src/components/plot/add/PlotAddNFT.tsx:67
 msgid "(Recommended)"
 msgstr ""
 
@@ -202,11 +202,14 @@ msgstr ""
 msgid "{0, plural, one {mojo} other {mojos}}"
 msgstr "{0, plural, one {mojo} other {mojos}}"
 
-#: src/components/addressbook/ContactSummary.tsx:161
 #: src/components/nfts/NFTPreview.tsx:431
-#: src/components/settings/Settings.tsx:81
+#: src/components/settings/Settings.tsx:85
 msgid "{0}"
 msgstr "{0}"
+
+#: src/components/addressbook/ContactSummary.tsx:155
+msgid "{0} {1}"
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:169
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:201
@@ -266,15 +269,15 @@ msgstr "{value} з {max_value}"
 msgid "{warning}"
 msgstr "{warning}"
 
-#: src/components/settings/SettingsHarvester.tsx:409
+#: src/components/settings/SettingsHarvester.tsx:534
 msgid "* Disabled - use device at specified index if available; if not, attempt to use device at other indices; if no GPUs available, use CPU"
 msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:407
+#: src/components/settings/SettingsHarvester.tsx:532
 msgid "* Enabled - use device at specified index if available; else error"
 msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:486
+#: src/components/settings/SettingsHarvester.tsx:344
 msgid "*Usually it takes seconds to complete restarting."
 msgstr ""
 
@@ -282,7 +285,7 @@ msgstr ""
 msgid "+ Add a Plot"
 msgstr "+ Додати ділянку"
 
-#: src/components/plot/add/PlotAddNFT.tsx:119
+#: src/components/plot/add/PlotAddNFT.tsx:127
 msgid "+ Add New Plot NFT"
 msgstr "+ Додати нову NFT ділянку"
 
@@ -355,7 +358,7 @@ msgstr ""
 msgid "Activity"
 msgstr ""
 
-#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:42
+#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:46
 msgid "Add {currencyCode} from the Faucet"
 msgstr "Додати {currencyCode} з Faucet"
 
@@ -364,7 +367,7 @@ msgid "Add a plot"
 msgstr "Додати ділянку"
 
 #: src/components/farm/FarmHero.tsx:37
-#: src/components/plot/add/PlotAddForm.tsx:206
+#: src/components/plot/add/PlotAddForm.tsx:230
 #: src/components/plot/overview/PlotOverviewHero.tsx:43
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:199
 #: src/components/plotNFT/PlotNFTCard.tsx:232
@@ -385,6 +388,10 @@ msgstr "Додайте CAT гаманці, щоб мати більше опці
 
 #: src/components/walletConnect/WalletConnectConnections.tsx:105
 msgid "Add Connection"
+msgstr ""
+
+#: src/components/addressbook/AddressBookSideBar.tsx:128
+msgid "Add Contact"
 msgstr ""
 
 #: src/components/plot/PlotAddDirectoryDialog.tsx:114
@@ -411,7 +418,7 @@ msgstr ""
 msgid "Add Verifiable Credential from file"
 msgstr ""
 
-#: src/components/addressbook/ContactAdd.tsx:57
+#: src/components/addressbook/ContactAdd.tsx:58
 #: src/components/addressbook/ContactEdit.tsx:61
 #: src/components/notification/NotificationSendDialog.tsx:219
 #: src/components/signVerify/SigningEntityWalletAddress.tsx:45
@@ -422,7 +429,7 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
-#: src/components/addressbook/ContactAdd.tsx:29
+#: src/components/addressbook/ContactAdd.tsx:30
 #: src/components/addressbook/ContactEdit.tsx:33
 msgid "Addresses"
 msgstr ""
@@ -434,10 +441,6 @@ msgstr ""
 #: src/components/app/AppKeyringMigrator.tsx:251
 msgid "After your keys are successfully migrated to the new keyring, you may choose to have your keys removed from the old keyring."
 msgstr "Після того, як ваші ключі будуть успішно перенесені до нової системи ключів, ви можете видалити ключі зі старої системи ключів."
-
-#: src/components/settings/SettingsHarvester.tsx:327
-msgid "All changes below will take effect the next time Harvester restarts."
-msgstr ""
 
 #: src/components/nfts/NFTProfileDropdown.tsx:101
 #: src/components/nfts/NFTProfileDropdown.tsx:114
@@ -583,7 +586,7 @@ msgstr ""
 msgid "Are you sure you want to revoke"
 msgstr ""
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:56
+#: src/components/plot/add/PlotAddChooseSize.tsx:61
 msgid "Are you sure you want to use k={plotSize}?"
 msgstr "Ви впевнені, що бажаєте використовувати k={plotSize}?"
 
@@ -671,7 +674,7 @@ msgstr ""
 #~ msgid "Balance: {standardBalance} XSEA"
 #~ msgstr "Баланс: {standardBalance} XSEA"
 
-#: src/components/block/Block.jsx:237
+#: src/components/block/Block.jsx:235
 msgid "Base Farmer Reward Amount"
 msgstr "Базова сума винагороди фермера"
 
@@ -687,12 +690,12 @@ msgstr "Нижче наведені значення випробувань дл
 msgid "Best estimate over last 24 hours"
 msgstr "Найкраща оцінка за останні 24 години"
 
-#: src/components/block/Block.jsx:135
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:101
+#: src/components/block/Block.jsx:134
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:104
 msgid "Block"
 msgstr "Блок"
 
-#: src/components/block/Block.jsx:256
+#: src/components/block/Block.jsx:250
 msgid "Block at height {0} in the SeaCoin blockchain"
 msgstr "Блок на висоті {0} в блокчейні Sea"
 
@@ -704,15 +707,15 @@ msgstr ""
 #~ msgid "Block Rewards"
 #~ msgstr "Винагорода за блок"
 
-#: src/components/block/Block.jsx:197
+#: src/components/block/Block.jsx:195
 msgid "Block VDF Iterations"
 msgstr "VDF ітерацій блоку"
 
-#: src/components/block/Block.jsx:121
+#: src/components/block/Block.jsx:120
 msgid "Block with hash {headerHash}"
 msgstr "Блок з хешем {headerHash}"
 
-#: src/components/block/Block.jsx:140
+#: src/components/block/Block.jsx:139
 msgid "Block with hash {headerHash} does not exist."
 msgstr "Блок з хешем {headerHash} не існує."
 
@@ -761,8 +764,8 @@ msgstr ""
 msgid "Cache size (GB)"
 msgstr "Розмір кешу (GB)"
 
-#: src/components/addressbook/ContactAdd.tsx:290
-#: src/components/addressbook/ContactEdit.tsx:298
+#: src/components/addressbook/ContactAdd.tsx:286
+#: src/components/addressbook/ContactEdit.tsx:300
 #: src/components/addressbook/ContactSummary.tsx:43
 #: src/components/app/AppPassPrompt.tsx:183
 #: src/components/farm/FarmManageFarmingRewards.tsx:163
@@ -778,8 +781,8 @@ msgstr "Розмір кешу (GB)"
 #: src/components/offers2/CancelOfferList.tsx:146
 #: src/components/offers2/OfferEditorCancelConflictingOffersDialog.tsx:361
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:110
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:71
-#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:30
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:78
+#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:34
 #: src/components/settings/ChangePassphrasePrompt.tsx:286
 #: src/components/settings/RemovePassphrasePrompt.tsx:168
 #: src/components/settings/ResyncPrompt.tsx:49
@@ -839,11 +842,11 @@ msgid "Change Pool"
 msgstr "Змінити пул"
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Sea is started"
+msgid "Changes will take effect the next time SeaCoin is started"
 msgstr "Зміни набудуть чинності наступного разу при запуску Sea"
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Sea is started."
+msgid "Changes will take effect the next time SeaCoin is started."
 msgstr ""
 
 #: src/electron/main.tsx:1080
@@ -868,11 +871,11 @@ msgstr "Перевірити походження на Spacescan.io"
 msgid "Choose Farming Mode"
 msgstr "Оберіть режим фармінгу"
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:79
+#: src/components/plot/add/PlotAddChooseSize.tsx:84
 msgid "Choose K value"
 msgstr ""
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:79
+#: src/components/plot/add/PlotAddChooseSize.tsx:84
 msgid "Choose K value and compression level"
 msgstr ""
 
@@ -961,15 +964,15 @@ msgstr ""
 msgid "Collection"
 msgstr "Колекція"
 
-#: src/components/block/Block.jsx:241
-msgid "Community Reward Amount"
+#: src/components/settings/SettingsHarvester.tsx:433
+msgid "Compressed plot support"
 msgstr ""
 
 #: src/components/harvest/HarvesterPlotDetails.tsx:132
 msgid "Compression"
 msgstr ""
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:116
+#: src/components/plot/add/PlotAddChooseSize.tsx:121
 msgid "Compression level"
 msgstr ""
 
@@ -1023,7 +1026,7 @@ msgstr "Підключитися"
 msgid "Connect to other peers"
 msgstr "Підключитися до інших вузлів"
 
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:90
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:97
 msgid "Connect to pool"
 msgstr "Підключитися до пулу"
 
@@ -1054,12 +1057,12 @@ msgstr "Стан підключення:"
 msgid "Connection type"
 msgstr "Тип підключення"
 
-#: src/components/addressbook/ContactAdd.tsx:298
-#: src/components/addressbook/ContactEdit.tsx:307
+#: src/components/addressbook/ContactAdd.tsx:343
+#: src/components/addressbook/ContactEdit.tsx:358
 msgid "Contact Name"
 msgstr ""
 
-#: src/components/addressbook/AddressBookSideBar.tsx:119
+#: src/components/addressbook/AddressBookSideBar.tsx:124
 #: src/components/dashboard/DashboardSideBar.tsx:82
 msgid "Contacts"
 msgstr ""
@@ -1124,8 +1127,8 @@ msgstr ""
 msgid "Counter Offer"
 msgstr ""
 
-#: src/components/plot/add/PlotAddForm.tsx:216
-#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:79
+#: src/components/plot/add/PlotAddForm.tsx:240
+#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:80
 #: src/components/settings/ProfileAdd.tsx:159
 msgid "Create"
 msgstr "Створити"
@@ -1142,7 +1145,7 @@ msgstr ""
 msgid "Create a new profile"
 msgstr "Створити новий профіль"
 
-#: src/components/plot/add/PlotAddNFT.tsx:39
+#: src/components/plot/add/PlotAddNFT.tsx:46
 msgid "Create a Plot NFT"
 msgstr "Створити NFT ділянку"
 
@@ -1155,7 +1158,7 @@ msgstr "Створити NFT пропозицію"
 msgid "Create an Offer"
 msgstr "Створити пропозицію"
 
-#: src/components/addressbook/ContactAdd.tsx:257
+#: src/components/addressbook/ContactAdd.tsx:271
 msgid "Create Contact"
 msgstr ""
 
@@ -1200,7 +1203,7 @@ msgstr "створено {0}"
 msgid "Creates and submits a transaction on the blockchain that cancels the offer"
 msgstr "Створює та надсилає транзакцію в блокчейні, яка скасовує пропозицію"
 
-#: src/components/addressbook/ContactAdd.tsx:260
+#: src/components/addressbook/ContactAdd.tsx:274
 msgid "Creating a contact enables you to keep track of people who you know and store information such as their DIDs, Profile NFT or Websites."
 msgstr ""
 
@@ -1239,7 +1242,7 @@ msgstr "Відсоток авторського гонорару здаєтьс�
 msgid "Credentials"
 msgstr ""
 
-#: src/components/plot/add/PlotAddForm.tsx:131
+#: src/components/plot/add/PlotAddForm.tsx:140
 msgid "Currency code is not defined"
 msgstr "Код валюти не визначено"
 
@@ -1293,7 +1296,7 @@ msgstr ""
 msgid "Date"
 msgstr "Дата"
 
-#: src/components/settings/SettingsHarvester.tsx:455
+#: src/components/settings/SettingsHarvester.tsx:472
 msgid "Decompressor Thread Count"
 msgstr ""
 
@@ -1328,7 +1331,7 @@ msgstr "Видалити"
 msgid "Delete contact"
 msgstr ""
 
-#: src/components/addressbook/ContactSummary.tsx:185
+#: src/components/addressbook/ContactSummary.tsx:175
 msgid "Delete Contact"
 msgstr ""
 
@@ -1397,7 +1400,7 @@ msgstr "Подробиці"
 msgid "Dexie URL"
 msgstr "Dexie URL"
 
-#: src/components/addressbook/ContactAdd.tsx:115
+#: src/components/addressbook/ContactAdd.tsx:116
 #: src/components/addressbook/ContactEdit.tsx:119
 #: src/components/signVerify/SigningEntityDID.tsx:76
 #: src/components/signVerify/SignMessage.tsx:155
@@ -1409,7 +1412,7 @@ msgstr ""
 msgid "DID Id"
 msgstr ""
 
-#: src/components/block/Block.jsx:183
+#: src/components/block/Block.jsx:181
 #: src/components/fullNode/card/FullNodeCardDifficulty.tsx:14
 msgid "Difficulty"
 msgstr "Складність"
@@ -1423,7 +1426,7 @@ msgstr ""
 msgid "Disable assigning automatic thread affinity. This is useful when running multiple simultaneous instances of Bladebit as you can manually assign thread affinity yourself when launching Bladebit."
 msgstr "Вимкнути автоматичний thread affinity. Це корисно під час одночасного запуску кількох екземплярів Bladebit, оскільки ви можете самостійно вручну призначити thread affinity під час запуску Bladebit."
 
-#: src/components/settings/SettingsHarvester.tsx:428
+#: src/components/settings/SettingsHarvester.tsx:553
 msgid "Disable assigning automatic thread affinity. This is useful when you want to manually assign thread affinity."
 msgstr ""
 
@@ -1435,7 +1438,7 @@ msgstr "Вимкнути автоматичне прив'язування пам
 msgid "Disable bitfield plotting"
 msgstr "Вимкнути використання бітового поля"
 
-#: src/components/settings/SettingsHarvester.tsx:420
+#: src/components/settings/SettingsHarvester.tsx:545
 msgid "Disable CPU Affinity"
 msgstr ""
 
@@ -1509,12 +1512,12 @@ msgstr ""
 msgid "Does your machine support parallel plotting?"
 msgstr "Ваша машина підтримує паралельну генерацію ділянок?"
 
-#: src/components/addressbook/ContactAdd.tsx:173
+#: src/components/addressbook/ContactAdd.tsx:174
 #: src/components/addressbook/ContactEdit.tsx:177
 msgid "Domain"
 msgstr ""
 
-#: src/components/addressbook/ContactAdd.tsx:145
+#: src/components/addressbook/ContactAdd.tsx:146
 #: src/components/addressbook/ContactEdit.tsx:149
 msgid "Domain Names"
 msgstr ""
@@ -1571,7 +1574,7 @@ msgstr ""
 msgid "Duplicate"
 msgstr "Дублювати"
 
-#: src/components/harvest/HarvesterOverview.tsx:193
+#: src/components/harvest/HarvesterOverview.tsx:203
 msgid "Duplicate plots"
 msgstr ""
 
@@ -1587,8 +1590,8 @@ msgstr ""
 #~ msgid "Edit"
 #~ msgstr "Редагувати"
 
-#: src/components/addressbook/ContactEdit.tsx:272
-#: src/components/addressbook/ContactSummary.tsx:177
+#: src/components/addressbook/ContactEdit.tsx:292
+#: src/components/addressbook/ContactSummary.tsx:167
 msgid "Edit Contact"
 msgstr ""
 
@@ -1611,12 +1614,16 @@ msgstr "Edition Number"
 msgid "Edition Total"
 msgstr ""
 
-#: src/components/harvest/HarvesterDetail.tsx:157
+#: src/components/harvest/HarvesterDetail.tsx:158
 msgid "Effective Space"
 msgstr ""
 
-#: src/components/harvest/HarvesterOverview.tsx:184
+#: src/components/harvest/HarvesterOverview.tsx:194
 msgid "Eligible plots per signage point"
+msgstr ""
+
+#: src/components/addressbook/ContactAdd.tsx:293
+msgid "Emoji"
 msgstr ""
 
 #: src/components/settings/SettingsCustodyAutoClaim.tsx:75
@@ -1628,6 +1635,10 @@ msgstr ""
 msgid "Enable Auto Login"
 msgstr "Увімкнути автоматичний вхід"
 
+#: src/components/settings/SettingsHarvester.tsx:440
+msgid "Enable compressed plot support"
+msgstr ""
+
 #: src/components/settings/SettingsDataLayer.tsx:36
 msgid "Enable DataLayer"
 msgstr "Увімкнути DataLayer"
@@ -1636,7 +1647,7 @@ msgstr "Увімкнути DataLayer"
 msgid "Enable File Propagation Server"
 msgstr "Увімкнути File Propagation Server"
 
-#: src/components/settings/SettingsHarvester.tsx:367
+#: src/components/settings/SettingsHarvester.tsx:492
 msgid "Enable GPU Harvesting"
 msgstr ""
 
@@ -1644,7 +1655,11 @@ msgstr ""
 msgid "Enable notifications"
 msgstr ""
 
-#: src/components/settings/SettingsVerifiableCredentials.tsx:27
+#: src/components/settings/SettingsHarvester.tsx:500
+msgid "Enable to use GPU for harvesting, disable to use CPU for harvesting."
+msgstr ""
+
+#: src/components/settings/SettingsVerifiableCredentials.tsx:28
 msgid "Enable Verifiable Credentials"
 msgstr ""
 
@@ -1653,15 +1668,15 @@ msgstr ""
 msgid "Enable WalletConnect"
 msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:375
-msgid "Enable/Disable GPU harvesting"
+#: src/components/settings/SettingsHarvester.tsx:408
+msgid "Enable/Disable the ability to scan all subdirectories automatically for plots"
 msgstr ""
 
 #: src/constants/WalletConnectCommands.tsx:290
 msgid "End"
 msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:399
+#: src/components/settings/SettingsHarvester.tsx:524
 msgid "Enforce GPU Index"
 msgstr ""
 
@@ -1800,7 +1815,7 @@ msgstr ""
 msgid "Failed to set passphrase: {0}"
 msgstr "Не вдалося встановити пароль: {0}"
 
-#: src/components/settings/SettingsHarvester.tsx:152
+#: src/components/settings/SettingsHarvester.tsx:170
 msgid "Failed to update Harvester config"
 msgstr ""
 
@@ -1832,11 +1847,15 @@ msgstr "Фермер не підключений"
 msgid "Farmer is not running"
 msgstr "Фермер не запущений"
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:136
+#: src/components/plot/add/PlotAddChooseKeys.tsx:165
 msgid "Farmer Public Key"
 msgstr "Відкритий ключ фермера"
 
-#: src/components/block/Block.jsx:216
+#: src/components/plot/add/PlotAddForm.tsx:195
+msgid "Farmer public key is invalid"
+msgstr ""
+
+#: src/components/block/Block.jsx:214
 msgid "Farmer Puzzle Hash"
 msgstr "Хеш головоломки фермера"
 
@@ -1872,7 +1891,7 @@ msgstr "Режим фармінгу"
 msgid "Farming Rewards"
 msgstr ""
 
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:110
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:113
 msgid "Farming Rewards History"
 msgstr ""
 
@@ -1902,7 +1921,7 @@ msgstr ""
 #: src/components/offers/ConfirmOfferCancellation.tsx:109
 #: src/components/offers/NFTOfferViewer.tsx:614
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:157
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:115
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:122
 #: src/components/pool/PoolInfo.tsx:18
 #: src/components/settings/ProfileAdd.tsx:152
 #: src/components/vcs/VCRevokeDialog.tsx:80
@@ -1937,7 +1956,7 @@ msgstr "Комісія використовується ДВІЧІ: один р�
 msgid "Fees"
 msgstr ""
 
-#: src/components/block/Block.jsx:245
+#: src/components/block/Block.jsx:239
 msgid "Fees Amount"
 msgstr "Сума збору"
 
@@ -1958,7 +1977,6 @@ msgstr "Комісії, включені в пропозицію:"
 msgid "Filename"
 msgstr "Ім'я файлу"
 
-#: src/components/addressbook/AddressBookSideBar.tsx:128
 #: src/components/nfts/gallery/NFTGallery.tsx:280
 msgid "Filter"
 msgstr ""
@@ -2120,7 +2138,7 @@ msgid "Government IDs"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:474
-#: src/components/settings/SettingsHarvester.tsx:383
+#: src/components/settings/SettingsHarvester.tsx:508
 msgid "GPU Device Index"
 msgstr ""
 
@@ -2136,24 +2154,20 @@ msgstr ""
 msgid "Harvester latency"
 msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:314
-msgid "Harvester manages plots and fetches proofs of space corresponding to challenges sent by a farmer."
-msgstr ""
-
-#: src/components/settings/SettingsHarvester.tsx:311
+#: src/components/settings/SettingsHarvester.tsx:372
 msgid "Harvester Services"
 msgstr ""
 
-#: src/components/harvest/HarvesterOverview.tsx:142
+#: src/components/harvest/HarvesterOverview.tsx:146
 msgid "Harvester Summary"
 msgstr ""
 
-#: src/components/harvest/HarvesterOverview.tsx:201
+#: src/components/harvest/HarvesterOverview.tsx:211
 #: src/components/plot/PlotHarvesters.tsx:37
 msgid "Harvesters"
 msgstr "Комбайни"
 
-#: src/components/harvest/HarvesterOverview.tsx:177
+#: src/components/harvest/HarvesterOverview.tsx:187
 msgid "Harvesting Effectiveness"
 msgstr ""
 
@@ -2177,7 +2191,7 @@ msgstr ""
 msgid "Hashgreen DEX URL"
 msgstr "Hashgreen DEX URL"
 
-#: src/components/block/Block.jsx:157
+#: src/components/block/Block.jsx:155
 msgid "Header hash"
 msgstr "Хеш заголовка"
 
@@ -2185,7 +2199,7 @@ msgstr "Хеш заголовка"
 msgid "Header Hash"
 msgstr "Хеш заголовка"
 
-#: src/components/block/Block.jsx:170
+#: src/components/block/Block.jsx:168
 #: src/components/fullNode/FullNode.jsx:61
 #: src/components/fullNode/FullNodeConnections.tsx:61
 msgid "Height"
@@ -2199,7 +2213,7 @@ msgstr "Висота"
 msgid "Here are the current block challenges. You may or may not have a proof of space for these challenges. These blocks do not currently contain a proof of time."
 msgstr "Нижче наведені значення випробувань для блоків. У вас може бути чи не бути доказів наявності місця (proof of space) для цих випробувань. Ці блоки ще не містять підтверджень часу (proof of time)."
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:173
+#: src/components/plot/add/PlotAddChooseKeys.tsx:198
 msgid "Hex public key of pool"
 msgstr ""
 
@@ -2340,8 +2354,8 @@ msgstr "Недостатньо доступних коштів для створ
 #~ msgid "Integration"
 #~ msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:359
-msgid "Interval seconds to refresh plots."
+#: src/components/settings/SettingsHarvester.tsx:424
+msgid "Interval (in seconds) in which directories are scanned to refresh the list of available plots"
 msgstr ""
 
 #: src/components/signVerify/VerifyMessage.tsx:169
@@ -2397,14 +2411,14 @@ msgstr "Одноразове посилання для входу, яке мож
 #~ msgid "Join {teamName}"
 #~ msgstr "Приєднатися до {teamName}"
 
-#: src/components/plot/add/PlotAddNFT.tsx:137
-#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:139
-#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:153
+#: src/components/plot/add/PlotAddNFT.tsx:145
+#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:141
+#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:155
 #: src/components/pool/PoolHero.tsx:24
 msgid "Join a Pool"
 msgstr "Приєднатися до пулу"
 
-#: src/components/plot/add/PlotAddNFT.tsx:41
+#: src/components/plot/add/PlotAddNFT.tsx:49
 msgid "Join a pool and get consistent XSEA farming rewards. The average returns are the same, but it is much less volatile."
 msgstr "Приєднуйтесь до пулу та отримуйте послідовні нагороди за фермерство у XSEA. Середній дохід однаковий, але набагато менш волатильний."
 
@@ -2412,7 +2426,7 @@ msgstr "Приєднуйтесь до пулу та отримуйте посл�
 msgid "Join a pool and get consistent XSEA farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
 msgstr "Приєднуйтесь до пулу та отримуйте послідовні нагороди за фермерство у XSEA. Середній дохід однаковий, але набагато менш волатильний. Призначити ділянки у NFT дільниці. Ви можете легко перемикатися на пули без повторного засіву."
 
-#: src/components/plot/add/PlotAddNFT.tsx:129
+#: src/components/plot/add/PlotAddNFT.tsx:137
 msgid "Join a pool and get more consistent XSEA farming rewards. Create a plot NFT and assign your new plots to a group."
 msgstr "Приєднуйтесь до пулу та отримайте більш послідовні нагороди за фермерство у XSEA. Створіть ділянки NFT та призначте свої нові ділянки до групи."
 
@@ -2424,7 +2438,7 @@ msgstr "Приєднуйтеся до фермерських пулів"
 msgid "Join Pool"
 msgstr "Приєднатися до пулу"
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:96
+#: src/components/plot/add/PlotAddChooseSize.tsx:101
 msgid "K value"
 msgstr ""
 
@@ -2457,7 +2471,7 @@ msgstr ""
 msgid "Keyring migration failed: {0}"
 msgstr "Помилка міграції системи ключів: {0}"
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:111
+#: src/components/plot/add/PlotAddChooseKeys.tsx:141
 msgid "Keys"
 msgstr ""
 
@@ -2491,7 +2505,8 @@ msgid "Last Attempted Proof"
 msgstr "Остання спроба доказу"
 
 #: src/components/farm/card/FarmingRewardsHistoryCards.tsx:95
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:104
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:98
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:107
 msgid "Last block won"
 msgstr ""
 
@@ -2518,7 +2533,7 @@ msgstr "Лаунчер Id"
 msgid "Launcher ID"
 msgstr "Лаунчер ID"
 
-#: src/components/plot/add/PlotAddNFT.tsx:76
+#: src/components/plot/add/PlotAddNFT.tsx:84
 msgid "Learn more"
 msgstr ""
 
@@ -2790,7 +2805,8 @@ msgstr "Перемістити до профілю"
 msgid "Multi-select"
 msgstr ""
 
-#: src/components/addressbook/MyContact.tsx:124
+#: src/components/addressbook/AddressBookSideBar.tsx:160
+#: src/components/addressbook/MyContact.tsx:112
 msgid "My Contact Info"
 msgstr ""
 
@@ -2803,14 +2819,14 @@ msgstr "Мій DID"
 msgid "N/A"
 msgstr ""
 
-#: src/components/addressbook/ContactAdd.tsx:46
-#: src/components/addressbook/ContactAdd.tsx:104
-#: src/components/addressbook/ContactAdd.tsx:162
-#: src/components/addressbook/ContactAdd.tsx:306
+#: src/components/addressbook/ContactAdd.tsx:47
+#: src/components/addressbook/ContactAdd.tsx:105
+#: src/components/addressbook/ContactAdd.tsx:163
+#: src/components/addressbook/ContactAdd.tsx:351
 #: src/components/addressbook/ContactEdit.tsx:50
 #: src/components/addressbook/ContactEdit.tsx:108
 #: src/components/addressbook/ContactEdit.tsx:166
-#: src/components/addressbook/ContactEdit.tsx:315
+#: src/components/addressbook/ContactEdit.tsx:366
 #: src/constants/WalletConnectCommands.tsx:555
 #: src/constants/WalletConnectCommands.tsx:780
 msgid "Name"
@@ -2840,10 +2856,6 @@ msgstr "Назва мережі"
 msgid "New Address"
 msgstr ""
 
-#: src/components/addressbook/AddressBookSideBar.tsx:156
-msgid "New Contact"
-msgstr ""
-
 #: src/components/notification/utils.ts:105
 msgid "New counter offer"
 msgstr ""
@@ -2864,7 +2876,7 @@ msgstr ""
 msgid "New Puzzle Hash"
 msgstr ""
 
-#: src/components/block/Block.jsx:265
+#: src/components/block/Block.jsx:259
 #: src/components/nfts/detail/NFTDetailV2.tsx:130
 msgid "Next"
 msgstr "Далі"
@@ -2987,7 +2999,7 @@ msgstr ""
 msgid "No connected applications"
 msgstr ""
 
-#: src/components/addressbook/AddressBookSideBar.tsx:86
+#: src/components/addressbook/AddressBookSideBar.tsx:89
 msgid "No Contacts"
 msgstr ""
 
@@ -3049,7 +3061,7 @@ msgstr ""
 #: src/components/farm/PoolingHealth.tsx:194
 #: src/components/nfts/NFTMoveToProfileDialog.tsx:130
 #: src/components/nfts/NFTMoveToProfileDialog.tsx:272
-#: src/components/plot/add/PlotAddNFT.tsx:88
+#: src/components/plot/add/PlotAddNFT.tsx:96
 msgid "None"
 msgstr "Пусто"
 
@@ -3097,6 +3109,14 @@ msgstr "Не синхронізовано"
 msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XSEA reward for pooling plots."
 msgstr "Зауважте, що це не змінює адреси виплат пула. Це впливає лише на старий формат ділянок та на винагороду 0.25XSEA за ділянки у пулі."
 
+#: src/components/plot/add/PlotAddChooseKeys.tsx:99
+msgid "Note: the farmer public key corresponding to the current logged-in wallet is {farmerPublicKeyForFingerprint}"
+msgstr ""
+
+#: src/components/plot/add/PlotAddChooseKeys.tsx:66
+msgid "Note: the pool public key corresponding to the current logged-in wallet is {poolPublicKeyForFingerprint}"
+msgstr ""
+
 #: src/components/notification/NotificationSendDialog.tsx:145
 msgid "Notification has successfully been sent to a full node and included in the mempool."
 msgstr ""
@@ -3132,7 +3152,7 @@ msgstr "Кількість кошиків на фазі 3 та 4"
 msgid "Number of NFTs"
 msgstr ""
 
-#: src/components/harvest/HarvesterOverview.tsx:169
+#: src/components/harvest/HarvesterOverview.tsx:179
 msgid "Number of plots"
 msgstr ""
 
@@ -3141,16 +3161,12 @@ msgstr ""
 msgid "Number of Plots"
 msgstr "Кількість ділянок"
 
-#: src/components/settings/SettingsHarvester.tsx:447
-msgid "Number of proofs decompressed in parallel during harvesting"
-msgstr ""
-
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:130
 msgid "Number of threads"
 msgstr "Число потоків"
 
-#: src/components/settings/SettingsHarvester.tsx:463
-msgid "Number of threads for a decompressor context.<0/>The product of \"Parallel Decompressors Count\" and this value must be less than or equal to the total thread count on system."
+#: src/components/settings/SettingsHarvester.tsx:480
+msgid "Number of threads for a decompressor context."
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:281
@@ -3375,7 +3391,7 @@ msgstr "Власник DID"
 msgid "Owner Public Key"
 msgstr "Публічний ключ власника"
 
-#: src/components/plot/add/PlotAddForm.tsx:149
+#: src/components/plot/add/PlotAddForm.tsx:158
 msgid "p2SingletonPuzzleHash is not defined"
 msgstr "p2SingletonPuzzleHash не визначено"
 
@@ -3391,7 +3407,7 @@ msgstr ""
 msgid "Paired Keys"
 msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:439
+#: src/components/settings/SettingsHarvester.tsx:456
 msgid "Parallel Decompressor Count"
 msgstr ""
 
@@ -3554,6 +3570,10 @@ msgstr "Будь ласка, введіть ваш пароль"
 msgid "Please enter your passphrase to proceed"
 msgstr "Будь ласка, введіть ваш пароль для продовження"
 
+#: src/components/settings/SettingsHarvester.tsx:385
+msgid "Please restart your harvester in order for any changes to take effect."
+msgstr ""
+
 #: src/components/nfts/NFTMoveToProfileDialog.tsx:154
 msgid "Please select a profile to move the NFT to."
 msgstr "Будь ласка, виберіть профіль для переміщення NFT."
@@ -3597,6 +3617,10 @@ msgstr "Будь ласка, вкажіть тимчасову теку"
 msgid "Please wait for wallet synchronization"
 msgstr ""
 
+#: src/components/settings/SettingsHarvester.tsx:392
+msgid "Plot"
+msgstr ""
+
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:51
 msgid "Plot Count"
 msgstr "Кількість ділянок"
@@ -3605,7 +3629,7 @@ msgstr "Кількість ділянок"
 msgid "Plot details"
 msgstr ""
 
-#: src/components/block/Block.jsx:224
+#: src/components/block/Block.jsx:222
 msgid "Plot Id"
 msgstr "ID ділянки"
 
@@ -3621,11 +3645,11 @@ msgstr "Ділянка є дублікатом {0}"
 msgid "Plot Key"
 msgstr "Ключ ділянки"
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:173
+#: src/components/plot/add/PlotAddChooseKeys.tsx:198
 msgid "Plot NFT Plot Target Address"
 msgstr "NFT ділянка цільової адреси"
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:177
+#: src/components/plot/add/PlotAddChooseKeys.tsx:202
 msgid "Plot NFT Pool Contract Address"
 msgstr "Адреса NFT контракту пулу"
 
@@ -3638,7 +3662,7 @@ msgstr "Ділянка NFT з p2_singleton_puzzle_hash {plotNFTId} не існу
 msgid "Plot pass ratio"
 msgstr ""
 
-#: src/components/block/Block.jsx:208
+#: src/components/block/Block.jsx:206
 msgid "Plot Public Key"
 msgstr "Публічний ключ ділянки"
 
@@ -3650,7 +3674,7 @@ msgstr "Публічний ключ ділянки"
 msgid "Plot Sizes"
 msgstr ""
 
-#: src/components/plot/add/PlotAddNFT.tsx:56
+#: src/components/plot/add/PlotAddNFT.tsx:64
 msgid "Plot to a Plot NFT"
 msgstr ""
 
@@ -3684,7 +3708,7 @@ msgstr "Ділянки, що пройшли фільтр"
 msgid "Plots passing filter"
 msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:351
+#: src/components/settings/SettingsHarvester.tsx:416
 msgid "Plots Refresh Interval (seconds)"
 msgstr ""
 
@@ -3709,7 +3733,7 @@ msgstr "Паралельне (одночасне) засіювання декі�
 msgid "Plotting Manager"
 msgstr "Управління плотерами"
 
-#: src/components/plot/add/PlotAddNFT.tsx:69
+#: src/components/plot/add/PlotAddNFT.tsx:77
 msgid "Plotting to a Plot NFT allows you the flexibility to join a pool or solo farm. You can easily switch between different pools or solo farming at any time. If you choose not to plot to a Plot NFT, you will need to replot in order to join any of the standard pools."
 msgstr ""
 
@@ -3744,7 +3768,7 @@ msgstr "Пул не надає relativeLockHeight."
 msgid "Pool does not provide targetPuzzleHash."
 msgstr "Пул не надає targetPuzzleHash."
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:161
+#: src/components/plot/add/PlotAddChooseKeys.tsx:186
 msgid "Pool Farming"
 msgstr ""
 
@@ -3760,12 +3784,16 @@ msgstr "Посилання для входу на пул"
 msgid "Pool Payout Instructions"
 msgstr "Інструкції з виплати пулу"
 
-#: src/components/block/Block.jsx:212
-#: src/components/plot/add/PlotAddChooseKeys.tsx:179
+#: src/components/block/Block.jsx:210
+#: src/components/plot/add/PlotAddChooseKeys.tsx:204
 msgid "Pool Public Key"
 msgstr "Публічний ключ пулу"
 
-#: src/components/block/Block.jsx:220
+#: src/components/plot/add/PlotAddForm.tsx:202
+msgid "Pool public key is invalid"
+msgstr ""
+
+#: src/components/block/Block.jsx:218
 msgid "Pool Puzzle Hash"
 msgstr "Хеш головоломки пула"
 
@@ -3785,7 +3813,7 @@ msgstr "Невірний формат адреси винагороди ферм
 msgid "Pool Reward Address must not be empty."
 msgstr "Адреса нагород фермера не повинна бути порожньою."
 
-#: src/components/block/Block.jsx:233
+#: src/components/block/Block.jsx:231
 msgid "Pool Reward Amount"
 msgstr "Кількість винагороди пула"
 
@@ -3841,12 +3869,12 @@ msgstr "Попередній перегляд зображення"
 msgid "Preview video uris"
 msgstr "Попередній перегляд відео"
 
-#: src/components/block/Block.jsx:262
+#: src/components/block/Block.jsx:256
 #: src/components/nfts/detail/NFTDetailV2.tsx:120
 msgid "Previous"
 msgstr "Попередній"
 
-#: src/components/block/Block.jsx:179
+#: src/components/block/Block.jsx:177
 msgid "Previous Header Hash"
 msgstr "Хеш попереднього заголовка"
 
@@ -3862,7 +3890,7 @@ msgstr "Назва профілю"
 msgid "Profile Name (Optional)"
 msgstr ""
 
-#: src/components/addressbook/ContactAdd.tsx:87
+#: src/components/addressbook/ContactAdd.tsx:88
 #: src/components/addressbook/ContactEdit.tsx:91
 msgid "Profiles"
 msgstr "Профіль"
@@ -3871,7 +3899,7 @@ msgstr "Профіль"
 msgid "Profiles (DIDs)"
 msgstr ""
 
-#: src/components/block/Block.jsx:204
+#: src/components/block/Block.jsx:202
 msgid "Proof of Space Size"
 msgstr "Розмір Доказу простору"
 
@@ -3957,7 +3985,7 @@ msgstr "Рекомендується"
 #~ msgid "Recommended: 0.000005 XSEA"
 #~ msgstr "Рекомендовано: 0.000005 XSEA"
 
-#: src/components/settings/SettingsHarvester.tsx:335
+#: src/components/settings/SettingsHarvester.tsx:400
 msgid "Recursive Plot Scan"
 msgstr ""
 
@@ -4121,7 +4149,7 @@ msgstr ""
 #~ msgid "Response too large"
 #~ msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:301
+#: src/components/settings/SettingsHarvester.tsx:339
 msgid "Restart Local Harvester to apply changes"
 msgstr ""
 
@@ -4181,8 +4209,8 @@ msgstr "Відсоток роялті"
 msgid "Runs the full node"
 msgstr "Запуск повного вузла"
 
-#: src/components/addressbook/ContactAdd.tsx:278
-#: src/components/addressbook/ContactEdit.tsx:286
+#: src/components/addressbook/ContactAdd.tsx:283
+#: src/components/addressbook/ContactEdit.tsx:297
 #: src/components/farm/FarmManageFarmingRewards.tsx:166
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:113
 #: src/components/settings/SettingsCustodyAutoClaim.tsx:75
@@ -4231,6 +4259,7 @@ msgstr "Пошук блоку за хешем заголовку"
 msgid "Search on Tail Database"
 msgstr "Пошук в Tail Database"
 
+#: src/components/addressbook/AddressBookSideBar.tsx:150
 #: src/components/nfts/gallery/NFTGallery.tsx:263
 msgid "Search..."
 msgstr ""
@@ -4304,7 +4333,7 @@ msgstr "Виберіть розташування тимчасової теки,
 msgid "Select Your Client Mode"
 msgstr "Виберіть режим клієнта"
 
-#: src/components/plot/add/PlotAddNFT.tsx:83
+#: src/components/plot/add/PlotAddNFT.tsx:91
 msgid "Select your Plot NFT"
 msgstr "Виберіть вашу NFT ділянку"
 
@@ -4318,7 +4347,7 @@ msgstr "Виберіть вашу NFT ділянку"
 msgid "Selected"
 msgstr "Вибрано"
 
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:86
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:93
 msgid "Self pool. When you win a block you will earn XSEA rewards."
 msgstr "Свій пул. Коли ви виграєте блок, ви отримаєте нагороду XSEA."
 
@@ -4371,12 +4400,12 @@ msgstr ""
 msgid "Set Passphrase"
 msgstr "Встановити пароль"
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:125
+#: src/components/plot/add/PlotAddChooseKeys.tsx:154
 msgid "Set up keys manually"
 msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:137
-#: src/components/settings/Settings.tsx:70
+#: src/components/settings/Settings.tsx:74
 msgid "Settings"
 msgstr "Налаштування"
 
@@ -4528,7 +4557,7 @@ msgstr "Пропустити додавання фінальної директ�
 msgid "Smooth out your XSEA farming rewards by joining a pool."
 msgstr "Отримайте свої нагороди за фарм XSEA, приєднавшись до пулу."
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:154
+#: src/components/plot/add/PlotAddChooseKeys.tsx:179
 msgid "Solo Farming"
 msgstr ""
 
@@ -4541,12 +4570,16 @@ msgid "Sorry, you can't switch to mainnet by clicking here..."
 msgstr ""
 
 #: src/components/harvest/HarvesterDetail.tsx:107
-#: src/components/harvest/HarvesterOverview.tsx:146
+#: src/components/harvest/HarvesterOverview.tsx:150
 msgid "Space"
 msgstr ""
 
 #: src/components/offers/OfferShareDialog.tsx:673
 msgid "Spacescan.io URL"
+msgstr ""
+
+#: src/components/settings/SettingsHarvester.tsx:464
+msgid "Specify a value if using CPU as your harvester. Typical values will be 1 or 2."
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:134
@@ -4557,8 +4590,8 @@ msgstr "Вкажіть значення 0 для використання всі
 msgid "Specify a wallet address, NFT, or DID to sign with"
 msgstr ""
 
-#: src/components/settings/SettingsHarvester.tsx:391
-msgid "Specify GPU device to harvest"
+#: src/components/settings/SettingsHarvester.tsx:516
+msgid "Specify GPU index (0, 1, 2, etc) for harvesting if more than one GPU is present)"
 msgstr ""
 
 #: src/electron/main.tsx:1149
@@ -4642,7 +4675,7 @@ msgstr "Надіслати"
 msgid "Success"
 msgstr "Успіх"
 
-#: src/components/settings/SettingsHarvester.tsx:179
+#: src/components/settings/SettingsHarvester.tsx:197
 msgid "Successfully restarted Harvester"
 msgstr ""
 
@@ -4690,12 +4723,12 @@ msgstr "Хеш-головоломка фермера"
 msgid "Temporary folder location"
 msgstr "Тимчасова тека"
 
-#: src/components/harvest/HarvesterOverview.tsx:59
+#: src/components/harvest/HarvesterOverview.tsx:61
 msgid "The average number of plots which passed filter over last 64 signage points"
 msgstr ""
 
-#: src/components/harvest/HarvesterOverview.tsx:95
-msgid "The average number of plots which passed filter over the last 64 signage points. It is expected to be {expectedAvgPassedFilter} for total {latestTotalPlots} plots"
+#: src/components/harvest/HarvesterOverview.tsx:99
+msgid "The average number of plots which passed filter over the last 64 signage points. It is expected to be {expectedAvgPassedFilter} for total {latestTotalPlots} plots. (Current plot filter: 1 / {plotFilter})"
 msgstr ""
 
 #: src/components/settings/SettingsCustody.tsx:49
@@ -4715,8 +4748,12 @@ msgstr "Папка знаходиться на RAM диску"
 msgid "The full node that your farmer is connected to is below. <0>Learn more</0>"
 msgstr "Повний вузол, до якого підключено вашого фермера, вказано нижче. <0>Дізнатися більше</0>"
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:52
-#: src/components/plot/add/PlotAddChooseSize.tsx:107
+#: src/components/settings/SettingsHarvester.tsx:375
+msgid "The Harvester manages plots and fetches proofs of space corresponding to challenges sent by a farmer."
+msgstr ""
+
+#: src/components/plot/add/PlotAddChooseSize.tsx:57
+#: src/components/plot/add/PlotAddChooseSize.tsx:112
 msgid "The minimum required size for mainnet is k=32"
 msgstr "Мінімальний необхідний розмір для головної мережі (mainnet) – k=32"
 
@@ -4785,7 +4822,7 @@ msgstr "URL-адреса пулу має використовувати прот
 msgid "The Sea application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Sea services version: {backV}<2/>Sea application version: {guiV}<3/><4/>It is recommended that you quit the Sea application and stop all Sea services."
 msgstr ""
 
-#: src/components/block/Block.jsx:226
+#: src/components/block/Block.jsx:224
 msgid "The seed used to create the plot. This depends on the pool pk and plot pk."
 msgstr "Зерно, яке використовувалося для створення ділянки. Зерно залежить від публічного ключа пулу і публічного ключа ділянки."
 
@@ -4809,17 +4846,21 @@ msgstr "Загальна сама за запитом включає в себе
 msgid "The total amount requested includes the asking price, plus the associated creator fees (if the NFT has royalty payments enabled).{0}"
 msgstr "Загальна запитана сума включає ціну попиту, а також пов’язані комісії творця (якщо в NFT увімкнено виплати роялті).{0}"
 
-#: src/components/block/Block.jsx:190
+#: src/components/block/Block.jsx:188
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on the whole chain up to this block."
 msgstr "Загальна кількість ітерації VDF (від англ. Verifiable Delay Function - функція затримки, що перевіряється) або доказів тимчасових ітерацій по всьому ланцюжку до цього блоку."
 
-#: src/components/block/Block.jsx:200
+#: src/components/block/Block.jsx:198
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on this block."
 msgstr "Загальна кількість VDF (від англ. Verifiable Delay Function - перевіряємо функція затримки), іншими словами загальна кількість доказів часових ітерацій в цьому блоці."
 
-#: src/components/block/Block.jsx:247
+#: src/components/block/Block.jsx:241
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Загальна комісія за транзакції в цьому блоці, що була отримана фермерами."
+
+#: src/components/addressbook/ContactEdit.tsx:308
+msgid "Theme"
+msgstr ""
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:91
 msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XSEA address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
@@ -4850,15 +4891,23 @@ msgstr "Ця функція доступна лише з графічного і
 msgid "This harvester does not have any plots to harvest"
 msgstr ""
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:139
+#: src/components/harvest/HarvesterOverview.tsx:168
+msgid "This is a sum of effective plot sizes currently farming. An effective plot size is a theoretical value which is derived only by kSize"
+msgstr ""
+
+#: src/components/harvest/HarvesterDetail.tsx:160
+msgid "This is a sum of effective plot sizes currently harvesting. An effective plot size is a theoretical value which is derived only by kSize."
+msgstr ""
+
+#: src/components/plot/add/PlotAddChooseKeys.tsx:97
 msgid "This is the farmer public key corresponding to the current logged-in wallet"
 msgstr ""
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:41
+#: src/components/plot/add/PlotAddChooseKeys.tsx:42
 msgid "This is the plot nft contract address of \"{plotNFTName}\". If you want to change this, select \"None\" at Plot to a Plot NFT form."
 msgstr ""
 
-#: src/components/block/Block.jsx:164
+#: src/components/block/Block.jsx:162
 msgid "This is the time the block was created by the farmer, which is before it is finalized with a proof of time"
 msgstr "Це час, коли блок був створений фермером, який до того, як він буде опрацьований доказом часу"
 
@@ -4932,7 +4981,7 @@ msgstr "Множник потоків для етапу 2"
 msgid "Time Created"
 msgstr "Час створення"
 
-#: src/components/block/Block.jsx:161
+#: src/components/block/Block.jsx:159
 msgid "Timestamp"
 msgstr "Часова мітка"
 
@@ -4953,7 +5002,7 @@ msgstr "Стандарт токена"
 msgid "Tokens"
 msgstr "Токени"
 
-#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:111
+#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:113
 msgid "Too Many Plot NFTs"
 msgstr "Занадто багато NFT ділянок"
 
@@ -4979,11 +5028,11 @@ msgstr "Загальна сума запиту"
 msgid "Total Amount with Royalties"
 msgstr ""
 
-#: src/components/harvest/HarvesterOverview.tsx:161
+#: src/components/harvest/HarvesterOverview.tsx:165
 msgid "Total farm size effective"
 msgstr ""
 
-#: src/components/harvest/HarvesterOverview.tsx:153
+#: src/components/harvest/HarvesterOverview.tsx:157
 msgid "Total farm size raw"
 msgstr ""
 
@@ -5051,7 +5100,7 @@ msgstr ""
 msgid "Total Space"
 msgstr ""
 
-#: src/components/block/Block.jsx:187
+#: src/components/block/Block.jsx:185
 msgid "Total VDF Iterations"
 msgstr "Загальна кількість VDF ітерацій"
 
@@ -5096,7 +5145,7 @@ msgstr ""
 msgid "Transaction Speed"
 msgstr ""
 
-#: src/components/block/Block.jsx:229
+#: src/components/block/Block.jsx:227
 msgid "Transactions Filter Hash"
 msgstr "Хеш фільтру транзакцій"
 
@@ -5137,6 +5186,10 @@ msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:51
 msgid "Turn on/off the DataLayer service."
+msgstr ""
+
+#: src/components/settings/SettingsHarvester.tsx:448
+msgid "Turn this off if you don't have any compressed plots to harvest"
 msgstr ""
 
 #: src/components/vcs/VCCard.tsx:141
@@ -5234,7 +5287,7 @@ msgstr ""
 msgid "Unlock Keyring"
 msgstr "Розблокувати зв'язку ключів"
 
-#: src/components/addressbook/AddressBookMenuItem.tsx:51
+#: src/components/addressbook/AddressBookMenuItem.tsx:50
 msgid "Unnamed Contact"
 msgstr ""
 
@@ -5272,7 +5325,7 @@ msgstr ""
 msgid "Use left and right arrow keys to navigate"
 msgstr ""
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:37
+#: src/components/plot/add/PlotAddChooseKeys.tsx:38
 msgid "Used to create a pool plot."
 msgstr ""
 
@@ -5329,7 +5382,7 @@ msgstr ""
 msgid "Verifiable Credential successfully added."
 msgstr ""
 
-#: src/components/settings/SettingsVerifiableCredentials.tsx:16
+#: src/components/settings/SettingsVerifiableCredentials.tsx:17
 #: src/components/vcs/VCList.tsx:258
 #: src/components/vcs/VCList.tsx:318
 msgid "Verifiable Credentials"
@@ -5351,7 +5404,7 @@ msgstr ""
 msgid "Verify Message"
 msgstr ""
 
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:126
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:133
 msgid "Verify Pool Details"
 msgstr "Підтвердіть подробиці пулу"
 
@@ -5551,21 +5604,17 @@ msgstr "Попередження: Переконайтеся, що запроп�
 msgid "Warning: You're about to visit a website"
 msgstr "Попередження: Ви збираєтеся відвідати веб-сайт"
 
-#: src/components/block/Block.jsx:174
+#: src/components/block/Block.jsx:172
 msgid "Weight"
 msgstr "Вага"
 
-#: src/components/block/Block.jsx:176
+#: src/components/block/Block.jsx:174
 msgid "Weight is the total added difficulty of all blocks up to and including this one"
 msgstr "Вага - загальна складність всіх блоків до, включаючи цей"
 
 #: src/components/offers/OfferEditorConfirmationDialog.tsx:22
 msgid "When creating an offer, any assets that are being offered will be locked and unavailable until the offer is accepted or cancelled, resulting in your spendable balance changing."
 msgstr "Під час створення пропозиції будь-які активи, які пропонуються, будуть заблоковані та недоступні, доки пропозицію не буде прийнято або скасовано, що призведе до зміни балансу витрат."
-
-#: src/components/settings/SettingsHarvester.tsx:343
-msgid "Whether to scan plots directory recursively"
-msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:475
 msgid "Which CUDA device to use when plotting"
@@ -5600,7 +5649,7 @@ msgid "Would you like to transfer the specified NFT to a new owner?"
 msgstr ""
 
 #: src/components/offers2/OfferIncomingTable.tsx:210
-#: src/components/plot/add/PlotAddChooseSize.tsx:53
+#: src/components/plot/add/PlotAddChooseSize.tsx:58
 #: src/components/vcs/VCCard.tsx:82
 msgid "Yes"
 msgstr "Так"
@@ -5617,11 +5666,11 @@ msgstr ""
 msgid "Yes, move"
 msgstr "Так, перемістити"
 
-#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:167
+#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:170
 msgid "You already have 50 or more Plot NFTs."
 msgstr "У вас уже є 50 або більше NFT ділянок."
 
-#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:112
+#: src/components/plotNFT/select/PlotNFTSelectPool.tsx:114
 msgid "You already have more than 10 Plot NFTs. Click OK if you're sure you want to create a new one."
 msgstr "У вас уже є більше 10 NFT ділянок. Натисніть OK, якщо ви впевнені, що хочете створити новий."
 
@@ -5629,7 +5678,7 @@ msgstr "У вас уже є більше 10 NFT ділянок. Натисніт
 msgid "You can always change your mode later in the settings"
 msgstr "Ви завжди можете змінити свій режим пізніше в налаштуваннях"
 
-#: src/components/plot/add/PlotAddChooseKeys.tsx:113
+#: src/components/plot/add/PlotAddChooseKeys.tsx:143
 msgid "You can customize farmer public key, pool public key / pool contract address here manually.<0/>Usually you don't need manual set up so please consider carefully whether you really need to edit these keys for a plot. One possible situation is to create a plot for someone who asks you to plot with your great hardware."
 msgstr ""
 
@@ -5646,7 +5695,7 @@ msgstr "Ви все ще можете створювати ділянки для
 msgid "You created this offer"
 msgstr "Ви створили цю пропозицію"
 
-#: src/components/plot/add/PlotAddChooseSize.tsx:82
+#: src/components/plot/add/PlotAddChooseSize.tsx:87
 msgid "You do not need to be synced or connected to plot. Temporary files are created during the plotting process which exceed the size of the final plot files. Make sure you have enough space. <0>Learn more</0>"
 msgstr "Вам не потрібно синхронізуватись або підключатися до ділянки. У процесі побудови ділянки створюються тимчасові файли, що перевищують розмір кінцевих ділянок файлів. Переконайтеся, що ви маєте достатньо місця. <0>Докладніше</0>"
 
@@ -5683,7 +5732,7 @@ msgstr ""
 msgid "You have received a new offer"
 msgstr ""
 
-#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:37
+#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:41
 msgid "You need {currencyCode} to join a pool."
 msgstr "Вам потрібно {currencyCode}, щоб приєднатися до пулу."
 

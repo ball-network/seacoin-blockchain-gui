@@ -13,13 +13,13 @@ export default function offerToOfferBuilderData(
 ): OfferBuilderData {
   const { fees, offered, requested, infos } = offerSummary;
 
-  const defaultFeExch = defaultFee ? mojoToSea(defaultFee).toFixed() : '';
+  const defaultFeeXSEA = defaultFee ? mojoToSea(defaultFee).toFixed() : '';
 
-  const offeredXsea: OfferBuilderData['offered']['xsea'] = [];
+  const offeredXSea: OfferBuilderData['offered']['xsea'] = [];
   const offeredTokens: OfferBuilderData['offered']['tokens'] = [];
   const offeredNfts: OfferBuilderData['offered']['nfts'] = [];
-  const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeExch }] : [];
-  const requestedXsea: OfferBuilderData['requested']['xsea'] = [];
+  const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeeXSEA }] : [];
+  const requestedXSea: OfferBuilderData['requested']['xsea'] = [];
   const requestedTokens: OfferBuilderData['requested']['tokens'] = [];
   const requestedNfts: OfferBuilderData['requested']['nfts'] = [];
 
@@ -39,7 +39,7 @@ export default function offerToOfferBuilderData(
         nftId: launcherIdToNFTId(info.launcherId),
       });
     } else if (id === 'xsea') {
-      offeredXsea.push({
+      offeredXSea.push({
         amount: mojoToSea(amount).toFixed(),
       });
     }
@@ -59,7 +59,7 @@ export default function offerToOfferBuilderData(
         nftId: launcherIdToNFTId(info.launcherId),
       });
     } else if (id === 'xsea') {
-      requestedXsea.push({
+      requestedXSea.push({
         amount: mojoToSea(amount).toFixed(),
       });
     }
@@ -67,13 +67,13 @@ export default function offerToOfferBuilderData(
 
   return {
     offered: {
-      xsea: offeredXsea,
+      xsea: offeredXSea,
       tokens: offeredTokens,
       nfts: offeredNfts,
       fee: offeredFee,
     },
     requested: {
-      xsea: requestedXsea,
+      xsea: requestedXSea,
       tokens: requestedTokens,
       nfts: requestedNfts,
       fee: [

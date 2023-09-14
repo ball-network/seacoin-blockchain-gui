@@ -1,6 +1,6 @@
 {
   "name": "@sea-network/gui",
-  "author": "Ball Network <hello@seacion.vip> (https://seacion.vip/)",
+  "author": "Ball Network <admin@ballcoin.top> (https://seacoin.vip/)",
   "description": "GUI for SeaCoin Blockchain",
   "license": "Apache-2.0",
   "productName": "SeaCoin Blockchain",
@@ -10,7 +10,7 @@
     "node": ">=16.15.0"
   },
   "build": {
-    "productName": "sea",
+    "productName": "seaCoin",
     "appId": "vip.seacoin.blockchain",
     "asar": true,
     "asarUnpack": "**/daemon/**",
@@ -24,13 +24,13 @@
     ],
     "protocols": [
       {
-        "name": "Sea URL",
+        "name": "SeaCoin URL",
         "schemes": [
           "sea"
         ]
       },
       {
-        "name": "Sea XSEA Address",
+        "name": "SeaCoin XSEA Address",
         "schemes": [
           "xsea"
         ]
@@ -40,7 +40,7 @@
       "target": "nsis",
       "icon": "src/assets/img/sea.ico",
       "timeStampServer": "http://timestamp.comodoca.com",
-      "executableName": "Sea"
+      "executableName": "SeaCoin"
     },
     "nsis": {
       "artifactName": "SeaCoinSetup-${env.SEA_INSTALLER_VERSION}.exe",
@@ -53,13 +53,13 @@
       "include": "installer.nsh"
     },
     "mac": {
-      "executableName": "Sea",
+      "executableName": "SeaCoin",
       "artifactName": "${productName}-${env.SEA_INSTALLER_VERSION}.${ext}",
       "category": "public.app-category.finance",
       "target": "dmg",
       "icon": "src/assets/img/sea.icns",
       "entitlements": "entitlements.mac.plist",
-      "provisioningProfile": "seacionblockchain.provisionprofile",
+      "provisioningProfile": "seablockchain.provisionprofile",
       "darkModeSupport": true,
       "hardenedRuntime": true,
       "gatekeeperAssess": false
@@ -244,7 +244,7 @@
     "copy-webpack-plugin": "10.2.0",
     "cross-env": "7.0.3",
     "css-loader": "6.5.1",
-    "electron": "25.1.1",
+    "electron": "25.4.0",
     "electron-devtools-assembler": "1.2.0",
     "electron-playwright-helpers": "^1.2.0",
     "electron-winstaller": "5.0.0",
@@ -276,5 +276,5 @@
       "last 1 safari version"
     ]
   },
-  "version": "2.0.0-rc2"
+  "version": "2.0.0"
 }

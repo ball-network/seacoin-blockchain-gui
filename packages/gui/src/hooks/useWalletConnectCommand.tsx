@@ -15,7 +15,7 @@ import waitForWalletSync from '../util/waitForWalletSync';
 import useWalletConnectPairs from './useWalletConnectPairs';
 import useWalletConnectPreferences from './useWalletConnectPreferences';
 
-const log = debug('sea-gui:walletConnectCommand');
+const log = debug('seacoin-gui:walletConnectCommand');
 
 type UseWalletConnectCommandOptions = {
   onNotification?: (notification: Notification) => void;

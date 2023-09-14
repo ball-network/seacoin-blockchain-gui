@@ -28,7 +28,7 @@ export default function useNFTMinterDID(nftId: string): UseNFTMinterDIDResult {
     let didNameLocal;
 
     if (didIdLocal === 'did:sea:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2') {
-      didNameLocal = 'Sea Network';
+      didNameLocal = 'Ball Network';
     }
 
     return [didIdLocal, hexDIDIdLocal, didNameLocal];

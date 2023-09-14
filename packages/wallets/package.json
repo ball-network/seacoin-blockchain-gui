@@ -1,7 +1,7 @@
 {
   "name": "@sea-network/wallets",
-  "author": "Ball Network <hello@seacoin.vip> (https://seacoin.vip/)",
-  "description": "SeaCoin wallets Library",
+  "author": "Ball Network <admin@ballcoin.top> (https://seacoin.vip/)",
+  "description": "Sea wallets Library",
   "version": "1.0.0",
   "engines": {
     "node": ">=16.15.0"

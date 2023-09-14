@@ -1733,7 +1733,7 @@ msgid "This trade was included on blockchain at this block height"
 msgstr ""
 
 #: src/components/app/AppTimeBombAlert.tsx:11
-msgid "This version of Sea is no longer compatible with the blockchain and can not safely farm."
+msgid "This version of SeaCoin is no longer compatible with the blockchain and can not safely farm."
 msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:86

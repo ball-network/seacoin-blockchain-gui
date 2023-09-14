@@ -59,8 +59,8 @@ export default async function offerBuilderDataToOffer({
   assetsToUnlock: AssetStatusForOffer[];
 }> {
   const {
-    offered: { xsea: offeredXsea = [], tokens: offeredTokens = [], nfts: offeredNfts = [], fee: [firstFee] = [] },
-    requested: { xsea: requestedXsea = [], tokens: requestedTokens = [], nfts: requestedNfts = [] },
+    offered: { xsea: offeredXSea = [], tokens: offeredTokens = [], nfts: offeredNfts = [], fee: [firstFee] = [] },
+    requested: { xsea: requestedXSea = [], tokens: requestedTokens = [], nfts: requestedNfts = [] },
   } = data;
 
   const usedNFTs: string[] = [];
@@ -71,7 +71,7 @@ export default async function offerBuilderDataToOffer({
   const driverDict: Record<string, Driver> = {};
 
   if (!allowEmptyOfferColumn) {
-    const hasOffer = !!offeredXsea.length || !!offeredTokens.length || !!offeredNfts.length;
+    const hasOffer = !!offeredXSea.length || !!offeredTokens.length || !!offeredNfts.length;
 
     if (!hasOffer) {
       throw new Error(t`Please specify at least one offered asset`);
@@ -137,15 +137,15 @@ export default async function offerBuilderDataToOffer({
 
   let standardWallet: Wallet | undefined;
   let standardWalletBalance: WalletBalanceFormatted | undefined;
-  let pendingXseaOffer: AssetStatusForOffer | undefined;
-  let pendingXsea = new BigNumber(0);
-  if (offeredXsea.length > 0 || feeInMojos.gt(0)) {
+  let pendingXSeaOffer: AssetStatusForOffer | undefined;
+  let pendingXSea = new BigNumber(0);
+  if (offeredXSea.length > 0 || feeInMojos.gt(0)) {
     standardWallet = wallets.find((w) => w.type === WalletType.STANDARD_WALLET);
     for (let i = 0; i < pendingOffers.length; i++) {
       const po = pendingOffers[i];
       if (po.type === 'XSEA') {
-        pendingXseaOffer = po;
-        pendingXsea = po.lockedAmount;
+        pendingXSeaOffer = po;
+        pendingXSea = po.lockedAmount;
         break;
       }
     }
@@ -154,8 +154,8 @@ export default async function offerBuilderDataToOffer({
     }
   }
 
-  // offeredXsea.length should be always 0 or 1
-  const xseaTasks = offeredXsea.map(async (xsea) => {
+  // offeredXSea.length should be always 0 or 1
+  const xseaTasks = offeredXSea.map(async (xsea) => {
     const { amount } = xsea;
     if (!amount || amount === '0') {
       throw new Error(t`Please enter an XSEA amount`);
@@ -168,26 +168,26 @@ export default async function offerBuilderDataToOffer({
     walletIdsAndAmounts[standardWallet.id] = mojoAmount.negated();
 
     const spendableBalance = new BigNumber(standardWalletBalance.spendableBalance);
-    const hasEnoughTotalBalance = spendableBalance.plus(pendingXsea).minus(feeInMojos).gte(mojoAmount);
+    const hasEnoughTotalBalance = spendableBalance.plus(pendingXSea).minus(feeInMojos).gte(mojoAmount);
     if (!hasEnoughTotalBalance) {
       throw new Error(t`Amount exceeds XSEA total balance`);
     }
 
-    if (pendingXseaOffer) {
-      // Assuming offeredXsea.length is always less then or equal to 1
-      pendingXseaOffer.spendingAmount = mojoAmount.plus(feeInMojos);
-      pendingXseaOffer.spendableAmount = spendableBalance;
-      pendingXseaOffer.confirmedAmount = new BigNumber(standardWalletBalance.confirmedWalletBalance);
-      const hasEnoughSpendableBalance = spendableBalance.gte(pendingXseaOffer.spendingAmount);
+    if (pendingXSeaOffer) {
+      // Assuming offeredXSea.length is always less then or equal to 1
+      pendingXSeaOffer.spendingAmount = mojoAmount.plus(feeInMojos);
+      pendingXSeaOffer.spendableAmount = spendableBalance;
+      pendingXSeaOffer.confirmedAmount = new BigNumber(standardWalletBalance.confirmedWalletBalance);
+      const hasEnoughSpendableBalance = spendableBalance.gte(pendingXSeaOffer.spendingAmount);
       if (!hasEnoughSpendableBalance) {
-        pendingXseaOffer.status = 'conflictsWithNewOffer';
+        pendingXSeaOffer.status = 'conflictsWithNewOffer';
       } else {
-        pendingXseaOffer.status = 'alsoUsedInNewOfferWithoutConflict';
+        pendingXSeaOffer.status = 'alsoUsedInNewOfferWithoutConflict';
       }
     }
   });
   // Treat fee as xsea spending
-  if (offeredXsea.length === 0 && feeInMojos.gt(0)) {
+  if (offeredXSea.length === 0 && feeInMojos.gt(0)) {
     if (!standardWallet || !standardWalletBalance) {
       throw new Error(t`No standard wallet found`);
     }
@@ -197,15 +197,15 @@ export default async function offerBuilderDataToOffer({
     if (!hasEnoughTotalBalance) {
       throw new Error(t`Fee exceeds XSEA total balance`);
     }
-    if (pendingXseaOffer) {
-      pendingXseaOffer.spendingAmount = feeInMojos;
-      pendingXseaOffer.spendableAmount = spendableBalance;
-      pendingXseaOffer.confirmedAmount = new BigNumber(standardWalletBalance.confirmedWalletBalance);
-      const hasEnoughSpendableBalance = spendableBalance.gte(pendingXseaOffer.spendingAmount);
+    if (pendingXSeaOffer) {
+      pendingXSeaOffer.spendingAmount = feeInMojos;
+      pendingXSeaOffer.spendableAmount = spendableBalance;
+      pendingXSeaOffer.confirmedAmount = new BigNumber(standardWalletBalance.confirmedWalletBalance);
+      const hasEnoughSpendableBalance = spendableBalance.gte(pendingXSeaOffer.spendingAmount);
       if (!hasEnoughSpendableBalance) {
-        pendingXseaOffer.status = 'conflictsWithNewOffer';
+        pendingXSeaOffer.status = 'conflictsWithNewOffer';
       } else {
-        pendingXseaOffer.status = 'alsoUsedInNewOfferWithoutConflict';
+        pendingXSeaOffer.status = 'alsoUsedInNewOfferWithoutConflict';
       }
     }
   }
@@ -282,7 +282,7 @@ export default async function offerBuilderDataToOffer({
   await Promise.all([...xseaTasks, ...tokenTasks, ...nftTasks]);
 
   // requested
-  requestedXsea.forEach((xsea) => {
+  requestedXSea.forEach((xsea) => {
     const { amount } = xsea;
 
     // For one-sided offers where nothing is requested, we allow the amount to be '0'
@@ -342,19 +342,19 @@ export default async function offerBuilderDataToOffer({
     if (driver) {
       driverDict[id] = driver;
 
-      if (considerNftRoyalty && pendingXseaOffer) {
+      if (considerNftRoyalty && pendingXSeaOffer) {
         const royaltyPercentageStr = driver.also.also?.transfer_program.royalty_percentage;
         if (royaltyPercentageStr) {
           const royaltyMultiplier = 1 + +royaltyPercentageStr / 10_000;
-          const spendingXsea = pendingXseaOffer.spendingAmount.minus(feeInMojos);
-          const newSpendingXsea = spendingXsea.multipliedBy(royaltyMultiplier).plus(feeInMojos);
-          pendingXseaOffer.spendingAmount = newSpendingXsea;
+          const spendingXSea = pendingXSeaOffer.spendingAmount.minus(feeInMojos);
+          const newSpendingXSea = spendingXSea.multipliedBy(royaltyMultiplier).plus(feeInMojos);
+          pendingXSeaOffer.spendingAmount = newSpendingXSea;
 
-          const hasEnoughSpendableBalance = pendingXseaOffer.spendableAmount.gte(pendingXseaOffer.spendingAmount);
+          const hasEnoughSpendableBalance = pendingXSeaOffer.spendableAmount.gte(pendingXSeaOffer.spendingAmount);
           if (!hasEnoughSpendableBalance) {
-            pendingXseaOffer.status = 'conflictsWithNewOffer';
+            pendingXSeaOffer.status = 'conflictsWithNewOffer';
           } else {
-            pendingXseaOffer.status = 'alsoUsedInNewOfferWithoutConflict';
+            pendingXSeaOffer.status = 'alsoUsedInNewOfferWithoutConflict';
           }
         }
       }

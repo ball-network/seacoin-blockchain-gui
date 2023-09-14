@@ -22,7 +22,11 @@ msgstr ""
 msgid "-"
 msgstr "-"
 
-#: src/components/WalletSend.tsx:283
+#: src/components/WalletSend.tsx:366
+msgid "- Memo helps the receiver side to identify the payment.<0/>- Anything you enter will be publicly accessible on the blockchain."
+msgstr ""
+
+#: src/components/WalletSend.tsx:293
 msgid "- Set a time frame which allows you claw back (revoke) the transaction.<0/>- Recipient of the transaction can only claim the funds once that time frame expires."
 msgstr ""
 
@@ -38,11 +42,19 @@ msgstr "操作"
 msgid "Add"
 msgstr "添加"
 
+#: src/components/WalletSend.tsx:287
+msgid "Add option to claw back transaction"
+msgstr ""
+
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:68
 #: src/components/WalletsManageTokens.tsx:155
 msgid "Add Token"
 msgstr "添加代币"
+
+#: src/components/WalletSend.tsx:361
+msgid "Add transaction memo"
+msgstr ""
 
 #: src/components/cat/WalletCATCreateSimple.tsx:92
 msgid "Adding {0} token"
@@ -57,12 +69,12 @@ msgstr "地址"
 #~ msgid "Address / Puzzle hash"
 #~ msgstr "地址 / 谜语哈希"
 
-#: src/components/AddressBookAutocomplete.tsx:68
-msgid "Address / Puzzle hash or Address Book Contact"
+#: src/components/AddressBookAutocomplete.tsx:66
+msgid "Address or Contact"
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:207
-#: src/components/WalletSend.tsx:232
+#: src/components/WalletSend.tsx:240
 msgid "Amount"
 msgstr "数量"
 
@@ -88,16 +100,16 @@ msgstr "原子交换钱包"
 msgid "Authorized Payee Wallet"
 msgstr "授权的 Payee 钱包"
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:226
+#: src/components/ClawbackClaimTransactionDialog.tsx:227
 msgid "Auto-claim transactions with this fee from now on."
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:186
+#: src/components/standard/nftRecover/NFTRecover.tsx:185
 msgid "Available Balance"
-msgstr "可用余额"
+msgstr "可取余额"
 
-#: src/components/WalletSend.tsx:323
-msgid "Before sending this transaction, you should ensure that the recipient has a wallet with the capability to claim it manually after the timer has expired."
+#: src/components/WalletSend.tsx:335
+msgid "Before sending this transaction, you should ensure that the recipient has a wallet that can claim it manually after the timer has expired."
 msgstr ""
 
 #: src/components/WalletHistoryClawbackChip.tsx:61
@@ -110,9 +122,9 @@ msgid "Cancel"
 msgstr "取消"
 
 #: src/components/cat/WalletCATSend.tsx:118
-#: src/components/WalletSend.tsx:144
+#: src/components/WalletSend.tsx:152
 msgid "Cannot send sea to coloured address. Please enter a sea address."
-msgstr "错误: 无法发送奇亚到上色的地址. 请输入一个奇亚钱包地址."
+msgstr "错误: 无法发送sea到上色的地址. 请输入一个sea钱包地址."
 
 #: src/components/WalletsSidebar.tsx:130
 #~ msgid "Check my snapshot balance"
@@ -122,8 +134,8 @@ msgstr "错误: 无法发送奇亚到上色的地址. 请输入一个奇亚钱�
 msgid "Claim transaction"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:136
-#: src/components/ClawbackClaimTransactionDialog.tsx:259
+#: src/components/ClawbackClaimTransactionDialog.tsx:137
+#: src/components/ClawbackClaimTransactionDialog.tsx:260
 msgid "Claim Transaction"
 msgstr ""
 
@@ -131,31 +143,35 @@ msgstr ""
 msgid "Claiming..."
 msgstr ""
 
+#: src/components/WalletHistory.tsx:429
+msgid "Claw back expiration"
+msgstr ""
+
 #: src/components/WalletHistoryClawbackChip.tsx:94
 msgid "Claw back this transaction"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:259
+#: src/components/ClawbackClaimTransactionDialog.tsx:260
 msgid "Claw back Transaction"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:136
+#: src/components/ClawbackClaimTransactionDialog.tsx:137
 msgid "Claw Back Transaction"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:128
+#: src/components/ClawbackClaimTransactionDialog.tsx:129
 msgid "Clawback payment claimed"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:128
+#: src/components/ClawbackClaimTransactionDialog.tsx:129
 msgid "Clawback payment clawed back"
 msgstr ""
 
-#: src/components/WalletSend.tsx:354
+#: src/components/WalletSend.tsx:333
 msgid "Clawback will be applied."
 msgstr ""
 
-#: src/components/WalletSend.tsx:361
+#: src/components/WalletSend.tsx:343
 msgid "Clawback will not be applied."
 msgstr ""
 
@@ -167,8 +183,8 @@ msgstr ""
 #~ msgid "Click here to download an older version of the wallet"
 #~ msgstr "点击这里下载旧版本的钱包"
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:157
-#: src/components/ClawbackClaimTransactionDialog.tsx:248
+#: src/components/ClawbackClaimTransactionDialog.tsx:158
+#: src/components/ClawbackClaimTransactionDialog.tsx:249
 msgid "Close"
 msgstr ""
 
@@ -176,11 +192,11 @@ msgstr ""
 msgid "Confirmation"
 msgstr "确认"
 
-#: src/components/WalletHistory.tsx:194
+#: src/components/WalletHistory.tsx:197
 msgid "Confirmed"
 msgstr "已确认"
 
-#: src/components/WalletHistory.tsx:412
+#: src/components/WalletHistory.tsx:418
 msgid "Confirmed at Height"
 msgstr "确认于区块高度"
 
@@ -188,7 +204,7 @@ msgstr "确认于区块高度"
 msgid "Connection type"
 msgstr "连接类型"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:161
+#: src/components/standard/nftRecover/NFTRecover.tsx:160
 msgid "contract address"
 msgstr "合约地址"
 
@@ -209,16 +225,16 @@ msgstr "新建钱包"
 msgid "Create Offer"
 msgstr "创建报价"
 
-#: src/components/standard/staking/WalletStakingSend.tsx:95
+#: src/components/standard/staking/WalletStakingSend.tsx:96
 msgid "Create Staking"
 msgstr "发起质押"
 
 #: src/components/cat/WalletCATSend.tsx:179
-#: src/components/WalletSend.tsx:204
+#: src/components/WalletSend.tsx:212
 msgid "Create Transaction"
 msgstr "发起交易"
 
-#: src/components/WalletHistory.tsx:217
+#: src/components/WalletHistory.tsx:220
 msgid "Creation Date"
 msgstr ""
 
@@ -254,7 +270,7 @@ msgstr "派生索引: {0}"
 msgid "DID Wallet"
 msgstr "DID钱包"
 
-#: src/components/WalletSend.tsx:316
+#: src/components/WalletSend.tsx:326
 msgid "Disable"
 msgstr ""
 
@@ -270,26 +286,26 @@ msgstr ""
 msgid "Error the entered address appears to be for a different colour."
 msgstr "错误，输入的地址似乎有不同的颜色。"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:108
-msgid "FAILED"
+#: src/components/standard/nftRecover/NFTRecover.tsx:107
+msgid "Failed"
 msgstr "失败"
 
 #: src/components/cat/WalletCATSend.tsx:245
-#: src/components/WalletSend.tsx:403
+#: src/components/WalletSend.tsx:389
 msgid "Farm"
 msgstr "农场"
 
 #: src/components/cat/WalletCATSend.tsx:221
-#: src/components/WalletHistory.tsx:231
-#: src/components/WalletSend.tsx:245
+#: src/components/WalletHistory.tsx:234
+#: src/components/WalletSend.tsx:253
 msgid "Fee"
 msgstr "费用"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:149
+#: src/components/standard/nftRecover/NFTRecover.tsx:148
 msgid "Find"
 msgstr "查找"
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:175
+#: src/components/ClawbackClaimTransactionDialog.tsx:176
 msgid "From:"
 msgstr ""
 
@@ -321,7 +337,7 @@ msgstr "使用助记词导入钱包"
 msgid "IP address"
 msgstr "IP地址"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:135
+#: src/components/standard/nftRecover/NFTRecover.tsx:134
 msgid "Launcher Id"
 msgstr "启动器ID"
 
@@ -334,11 +350,11 @@ msgid "Manage token list"
 msgstr "管理代币列表"
 
 #: src/components/cat/WalletCATSend.tsx:235
-#: src/components/WalletSend.tsx:392
+#: src/components/WalletSend.tsx:378
 msgid "Memo"
 msgstr "备注"
 
-#: src/components/WalletHistory.tsx:417
+#: src/components/WalletHistory.tsx:423
 msgid "Memos"
 msgstr "备注"
 
@@ -375,7 +391,7 @@ msgstr "新钱包"
 msgid "Next"
 msgstr "下一步"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:117
+#: src/components/standard/nftRecover/NFTRecover.tsx:116
 msgid "NFT Recover"
 msgstr "NFT恢复"
 
@@ -391,7 +407,7 @@ msgstr "NFT恢复"
 msgid "Nickname"
 msgstr "昵称"
 
-#: src/components/WalletHistory.tsx:485
+#: src/components/WalletHistory.tsx:500
 msgid "No previous transactions"
 msgstr "无过往交易"
 
@@ -399,17 +415,17 @@ msgstr "无过往交易"
 msgid "Node ID"
 msgstr "节点ID"
 
-#: src/components/WalletHistory.tsx:406
-#: src/components/WalletHistory.tsx:413
+#: src/components/WalletHistory.tsx:412
+#: src/components/WalletHistory.tsx:419
 msgid "Not Available"
 msgstr "不可用"
 
+#: src/components/standard/nftRecover/NFTRecover.tsx:177
 #: src/components/standard/nftRecover/NFTRecover.tsx:178
-#: src/components/standard/nftRecover/NFTRecover.tsx:179
 msgid "Not Available Balance"
 msgstr "暂不可取余额"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:89
+#: src/components/standard/nftRecover/NFTRecover.tsx:91
 msgid "not find contract address, Please enter a contract address"
 msgstr "未找到合约地址，请输入合约地址"
 
@@ -417,7 +433,7 @@ msgstr "未找到合约地址，请输入合约地址"
 msgid "Not Synced"
 msgstr "未同步"
 
-#: src/components/WalletHistory.tsx:203
+#: src/components/WalletHistory.tsx:206
 msgid "Offer Accepted"
 msgstr "报价已接受"
 
@@ -426,7 +442,7 @@ msgid "OK"
 msgstr "确定"
 
 #: src/components/cat/WalletCATSend.tsx:182
-#: src/components/WalletSend.tsx:207
+#: src/components/WalletSend.tsx:215
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "每个交易区块平均打包时间为一分钟。通常您的交易将在一分钟内被确认，除非出现拥堵。"
 
@@ -442,7 +458,7 @@ msgstr "粘贴助记符"
 msgid "Paste Mnemonic ({0} words)"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:196
+#: src/components/WalletHistory.tsx:199
 msgid "Pending"
 msgstr "待处理"
 
@@ -462,11 +478,11 @@ msgstr ""
 msgid "Pending Total Balance"
 msgstr "待处理总余额"
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:206
+#: src/components/ClawbackClaimTransactionDialog.tsx:207
 msgid "Please enter a transaction fee to claim the above amount:"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:208
+#: src/components/ClawbackClaimTransactionDialog.tsx:209
 msgid "Please enter a transaction fee to claw back the above amount:"
 msgstr ""
 
@@ -481,12 +497,12 @@ msgstr "请输入一个有效的启动器ID"
 #: src/components/cat/WalletCATSend.tsx:104
 #: src/components/standard/staking/WalletStakingSend.tsx:67
 #: src/components/standard/staking/WalletStakingWithdraw.tsx:67
-#: src/components/WalletSend.tsx:134
+#: src/components/WalletSend.tsx:142
 msgid "Please enter a valid numeric amount"
 msgstr "请输入一个正确的数目"
 
 #: src/components/cat/WalletCATSend.tsx:109
-#: src/components/WalletSend.tsx:139
+#: src/components/WalletSend.tsx:147
 msgid "Please enter a valid numeric fee"
 msgstr "请输入一个正确的费用"
 
@@ -501,7 +517,7 @@ msgstr "请输入有效的钱包名称"
 #: src/components/cat/WalletCATSend.tsx:95
 #: src/components/standard/staking/WalletStakingSend.tsx:62
 #: src/components/standard/staking/WalletStakingWithdraw.tsx:62
-#: src/components/WalletSend.tsx:129
+#: src/components/WalletSend.tsx:137
 msgid "Please finish syncing before making a transaction"
 msgstr "同步完成后才能发起交易。"
 
@@ -538,7 +554,7 @@ msgstr "接收地址"
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr "收件人地址不是彩色钱包地址。请输入一个彩色钱包地址"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:204
+#: src/components/standard/nftRecover/NFTRecover.tsx:203
 msgid "Recover"
 msgstr "恢复"
 
@@ -546,9 +562,13 @@ msgstr "恢复"
 msgid "Recoverable Wallet"
 msgstr "可恢复的钱包"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:106
-msgid "Recovered Amount:"
-msgstr "恢复余额"
+#: src/components/standard/nftRecover/NFTRecover.tsx:105
+msgid "Recovered Amount"
+msgstr ""
+
+#: src/components/standard/nftRecover/NFTRecover.tsx:105
+#~ msgid "Recovered Amount:"
+#~ msgstr "恢复金额"
 
 #: src/components/cat/WalletCATSelect.tsx:39
 msgid "Recovery Wallet"
@@ -559,7 +579,7 @@ msgstr "恢复钱包"
 msgid "Rename Wallet"
 msgstr "重命名钱包"
 
-#: src/components/WalletHistory.tsx:202
+#: src/components/WalletHistory.tsx:205
 msgid "Retire"
 msgstr "废弃"
 
@@ -575,7 +595,7 @@ msgstr "保存"
 #: src/components/create/WalletCreateList.tsx:32
 #: src/constants/WalletName.ts:23
 msgid "Sea Asset Token"
-msgstr "奇亚资产代币"
+msgstr "sea资产代币"
 
 #: src/components/cat/WalletCATTAILDialog.tsx:59
 #: src/components/WalletTokenCard.tsx:177
@@ -588,7 +608,7 @@ msgstr "选择钱包类别"
 
 #: src/components/cat/WalletCATSend.tsx:256
 #: src/components/WalletHeader.tsx:50
-#: src/components/WalletSend.tsx:414
+#: src/components/WalletSend.tsx:400
 msgid "Send"
 msgstr "发送"
 
@@ -600,7 +620,7 @@ msgstr "显示资产ID"
 msgid "Spendable Balance"
 msgstr "可用余额"
 
-#: src/components/standard/staking/WalletStakingSend.tsx:123
+#: src/components/standard/staking/WalletStakingSend.tsx:124
 #: src/components/WalletHeader.tsx:53
 msgid "Staking"
 msgstr "质押"
@@ -609,7 +629,7 @@ msgstr "质押"
 msgid "Staking Address"
 msgstr "质押地址"
 
-#: src/components/standard/staking/WalletStakingSend.tsx:109
+#: src/components/standard/staking/WalletStakingSend.tsx:110
 msgid "Staking Amount"
 msgstr "质押数量"
 
@@ -617,29 +637,23 @@ msgstr "质押数量"
 msgid "Staking Balance"
 msgstr "质押余额"
 
-#: src/components/standard/staking/WalletStakingSend.tsx:98
-msgid "Staking will make farming XSEA easier."
-msgstr "质押将使耕种BALL变得更容易。"
+#: src/components/standard/staking/WalletStakingSend.tsx:99
+msgid "Staking will make farming SSD easier."
+msgstr "质押将使耕种SSD变得更容易。"
 
 #: src/constants/WalletName.ts:5
 msgid "Standard Wallet"
 msgstr "标准钱包"
 
-#: src/components/WalletHistory.tsx:208
+#: src/components/standard/nftRecover/NFTRecover.tsx:106
+#: src/components/WalletHistory.tsx:211
 msgid "Status"
 msgstr "状态"
 
 #: src/components/standard/nftRecover/NFTRecover.tsx:107
-msgid "Status:"
-msgstr "状态："
-
 #: src/components/WalletSendTransactionResultDialog.tsx:12
 msgid "Success"
 msgstr "成功"
-
-#: src/components/standard/nftRecover/NFTRecover.tsx:108
-msgid "SUCCESS"
-msgstr ""
 
 #: src/components/WalletHeader.tsx:49
 msgid "Summary"
@@ -665,13 +679,13 @@ msgstr "由于指定的费用太低，无法立即将交易记录入内存池。
 msgid "This access token is verified"
 msgstr "通行币已被验证"
 
-#: src/components/WalletHistory.tsx:171
+#: src/components/WalletHistory.tsx:172
 msgid "This is not a valid address for sending funds to"
 msgstr "这不是一个有效的可发送资金进入的地址"
 
 #: src/components/standard/WalletStandardCards.tsx:23
 msgid "This is the amount of Sea that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Sea that you have just spent but is not yet in the blockchain."
-msgstr "这是你目前可以交易的奇亚币数额。该数额不包含处理中的农场奖励、收入交易，以及未经区块链确认的支付交易。"
+msgstr "这是你目前可以交易的sea币数额。该数额不包含处理中的农场奖励、收入交易，以及未经区块链确认的支付交易。"
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -683,13 +697,13 @@ msgstr "待处理的收入与支出总和(还未上链). 不包括农场耕种�
 
 #: src/components/standard/WalletStandardCards.tsx:17
 msgid "This is the total amount of sea in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "这里是你的私钥所控制的，到目前最新子块高度为止的全部奇亚数。包含被冻结的耕种奖励， 但不包含待处理的收入与支出。"
+msgstr "这里是你的私钥所控制的，到目前最新子块高度为止的全部sea数。包含被冻结的耕种奖励， 但不包含待处理的收入与支出。"
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "目前结余+待处理的结余: 在链上确认完成后就是你的最终总结余."
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:193
+#: src/components/ClawbackClaimTransactionDialog.tsx:194
 msgid "This transaction will be automatically claimed with a fee:"
 msgstr ""
 
@@ -697,7 +711,8 @@ msgstr ""
 #~ msgid "To"
 #~ msgstr "目标地址"
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:175
+#: src/components/ClawbackClaimTransactionDialog.tsx:176
+#: src/components/WalletHistory.tsx:165
 msgid "To:"
 msgstr ""
 
@@ -714,8 +729,8 @@ msgid "Tokens"
 msgstr "代币"
 
 #: src/components/card/WalletCardTotalBalance.tsx:60
+#: src/components/standard/nftRecover/NFTRecover.tsx:169
 #: src/components/standard/nftRecover/NFTRecover.tsx:170
-#: src/components/standard/nftRecover/NFTRecover.tsx:171
 msgid "Total Balance"
 msgstr "总余额"
 
@@ -723,19 +738,19 @@ msgstr "总余额"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "交易已成功发送到一个完整的节点，并包含在备注库中。"
 
-#: src/components/WalletHistory.tsx:462
+#: src/components/WalletHistory.tsx:477
 msgid "Transactions"
 msgstr "交易"
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:232
+#: src/components/ClawbackClaimTransactionDialog.tsx:233
 msgid "Transactions will be claimed automatically when the Clawback time expires."
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:235
+#: src/components/ClawbackClaimTransactionDialog.tsx:236
 msgid "Transactions with values smaller than the fee will not be auto claimed."
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:120
+#: src/components/standard/nftRecover/NFTRecover.tsx:119
 msgid "visiting the Pool tab of your CHIA-GUI. using this command: chia plotNFT show. Note: you have to do this on the CHIA client, not the fork!"
 msgstr "访问 CHIA-GUI 的 Pool 选项卡。 使用此命令：chia plotNFT show。 注意：你必须在 CHIA 客户端上执行此操作，而不是 fork！"
 
@@ -756,7 +771,7 @@ msgstr "钱包不存在"
 msgid "Wallet Name"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:200
+#: src/components/ClawbackClaimTransactionDialog.tsx:201
 msgid "Wallet needs to be synced for claiming clawback transactions"
 msgstr ""
 
@@ -774,35 +789,35 @@ msgstr "不支持类型 {0} 的钱包"
 
 #: src/components/WalletAdd.tsx:65
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
-msgstr "欢迎使用奇亚! 下面的词语列表是你的钱包密语, 请务必严格完整的把它们记下来(保持顺序). 没有这段密语的话, 你就没办法找回钱包里的币. 千万也不要透露给别人."
+msgstr "欢迎使用sea! 下面的词语列表是你的钱包密语, 请务必严格完整的把它们记下来(保持顺序). 没有这段密语的话, 你就没办法找回钱包里的币. 千万也不要透露给别人."
 
 #: src/components/WalletHistoryClawbackChip.tsx:56
 msgid "Will be autoclaimed in "
 msgstr ""
 
-#: src/components/standard/staking/WalletStakingWithdraw.tsx:123
+#: src/components/standard/staking/WalletStakingWithdraw.tsx:124
 msgid "Withdraw"
 msgstr "提取"
 
-#: src/components/standard/staking/WalletStakingWithdraw.tsx:109
+#: src/components/standard/staking/WalletStakingWithdraw.tsx:110
 msgid "Withdraw Amount"
 msgstr "提取数量"
 
-#: src/components/standard/staking/WalletStakingWithdraw.tsx:95
+#: src/components/standard/staking/WalletStakingWithdraw.tsx:96
 msgid "Withdraw Staking"
 msgstr "提取质押"
 
-#: src/components/standard/staking/WalletStakingWithdraw.tsx:98
+#: src/components/standard/staking/WalletStakingWithdraw.tsx:99
 msgid "Withdraw staking. withdraw amount 0 will withdraw all staking"
 msgstr "提取质押。 提取数量 0 将提取所有质押"
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:238
+#: src/components/ClawbackClaimTransactionDialog.tsx:239
 msgid "You can change the Clawback Auto Claim fee in Settings."
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:187
+#: src/components/standard/nftRecover/NFTRecover.tsx:186
 msgid "You can only claim rewards older than 7 days"
-msgstr "您只能领取超过 7 天的奖励！"
+msgstr "您只能恢复超过7天的奖励！"
 
 #: src/components/WalletsSidebar.tsx:106
 #~ msgid "Your CAT tokens have been upgraded!"
@@ -810,4 +825,4 @@ msgstr "您只能领取超过 7 天的奖励！"
 
 #: src/components/WalletImport.tsx:73
 msgid "Your pasted list does not include {mnemonicWordCount} valid mnemonic words."
-msgstr ""
+msgstr "您粘贴的列表中未包含{mnemonicWordCount}个有效的助记词。"

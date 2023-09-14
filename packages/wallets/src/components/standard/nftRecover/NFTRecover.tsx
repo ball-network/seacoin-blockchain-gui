@@ -47,9 +47,9 @@ export default function NFTRecover(props: NFTRecoverProps) {
   const currencyCode = useCurrencyCode();
   const [locale] = useLocale();
   const { wallet } = useWallet(walletId);
-  const [launcherId, setLauncherId] = useLocalStorage<string>('launcher_id', "");
-  const [contractAddress, setContractAddress] = useLocalStorage<string>('contract_address', "");
-  const [typography, setContent] = React.useState(" ")
+  const [launcherId, setLauncherId] = useLocalStorage<string>('launcher_id', '');
+  const [contractAddress, setContractAddress] = useLocalStorage<string>('contract_address', '');
+  const [typography, setContent] = React.useState('')
   const [nftData, setNFTData] = React.useState<NFTRecoverInfo>()
   const [recoverPoolNFT, { isLoading: isRecoverPoolNFTLoading, error: recoverPoolNFTError }] = useRecoverPoolNFTMutation();
   const [findPoolNFT, { isLoading: isFindPoolNFTLoading, error: findPoolNFTError }] = useFindPoolNFTMutation();
@@ -75,23 +75,22 @@ export default function NFTRecover(props: NFTRecoverProps) {
       throw new Error(t`Please enter a valid NFT Launcher Id`);
     }
     const address = data.contractAddress.trim();
-    if (launcher != launcherId) {
-      setLauncherId(launcher);
-    }
     const response = await findPoolNFT({
       launcherId: launcher,
       contractAddress: address,
     }).unwrap();
-    const err = findPoolNFTError ? findPoolNFTError+'' : ''
+    const err = findPoolNFTError ? `${findPoolNFTError}` : ''
     setContent(err);
     if (!err) {
-      if (response.contractAddress == "") {
+      if (launcher !== launcherId) {
+        setLauncherId(launcher);
+      }
+      setContractAddress(response.contractAddress);
+      findMethods.setValue('contractAddress', response.contractAddress)
+      if (response.contractAddress === '') {
         throw new Error(t`not find contract address, Please enter a contract address`);
       }
       setNFTData(response);
-      if (contractAddress != response.contractAddress) {
-        setContractAddress(response.contractAddress);
-      }
     }
   }
 
@@ -103,11 +102,11 @@ export default function NFTRecover(props: NFTRecoverProps) {
      launcherId,
      contractAddress,
     }).unwrap();
-    const t1 = t`Recovered Amount:`;
-    const t2 = t`Status:`;
-    const t3 = response.status == 'SUCCESS' ? t`SUCCESS` : t`FAILED`;
-    setContent(t1 + " " + mojoToSea(response.amount) + " " + currencyCode+", "+t2 + " "+t3 +
-      (recoverPoolNFTError ? ', ' + recoverPoolNFTError+' ' : ' '));
+    const t1 = t`Recovered Amount`;
+    const t2 = t`Status`;
+    const t3 = response.status === 'SUCCESS' ? t`Success` : t`Failed`;
+    setContent(`${t1  }: ${  mojoToSea(response.amount)  } ${  currencyCode}, ${t2  }: ${t3
+      }${recoverPoolNFTError ? `, ${  recoverPoolNFTError} ` : ' '}`);
   }
 
   return (
@@ -197,7 +196,7 @@ export default function NFTRecover(props: NFTRecoverProps) {
               variant="contained"
               color="primary"
               type="submit"
-              disable={!nftData || nftData.recordAmount==0 || nftData.contractAddress==""}
+              disable={!nftData || nftData.recordAmount===0 || nftData.contractAddress===''}
               loading={isRecoverPoolNFTLoading}
               data-testid="NFTRecover-Recover"
             >

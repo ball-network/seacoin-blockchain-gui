@@ -115,7 +115,7 @@ export default function About(props: Props) {
         </StyledLink>
         <StyledSubTitle>{description}</StyledSubTitle>
         <Spacer />
-        <div className="copyright">Copyright (c) {currentYear} Sea Network</div>
+        <div className="copyright">Copyright (c) {currentYear} Ball Network</div>
         <Spacer />
         <VersionsTable>
           {versions?.electron && (

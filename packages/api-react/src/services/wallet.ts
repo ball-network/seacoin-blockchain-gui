@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign -- This file use Immer */
-import { CAT, DID, Farmer, NFT, Pool, Staking, WalletService, WalletType, toBech32m, VC } from '@sea-network/api';
+import { CAT, DID, Farmer, NFT, Pool, WalletService, WalletType, toBech32m, VC, Staking } from '@sea-network/api';
 import type { NFTInfo, Transaction, Wallet, WalletBalance } from '@sea-network/api';
 import BigNumber from 'bignumber.js';
 
@@ -1452,16 +1452,25 @@ export const walletApi = apiWithTag.injectEndpoints({
 
     spendClawbackCoins: mutation(build, WalletService, 'spendClawbackCoins'),
 
-    stakingInfo: build.query<{balance: number;address: string;}, {fingerprint: number;}>({
-      query: ({ fingerprint }) => ({
-        command: 'stakingInfo',
-        service: Staking,
-        args: [fingerprint],
-      }),
-      transformResponse: (response: any) => response,
+    findPoolNFT: mutation(build, Staking, 'findPoolNFT'),
+
+    recoverPoolNFT: mutation(build, Staking, 'recoverPoolNFT', {
+      invalidatesTags: [
+        { type: 'Transactions', id: 'LIST' },
+      ],
     }),
 
-    stakingSend: build.mutation<any, {amount: string;fingerprint: number;waitForConfirmation?: boolean;}>({
+    stakingInfo: query(build, Staking, 'stakingInfo'),
+
+    stakingSend: build.mutation<
+      any,
+      {
+        walletId: number;
+        amount: string;
+        fingerprint: number;
+        waitForConfirmation?: boolean;
+      }
+    >({
       async queryFn(args, queryApi, _extraOptions, fetchWithBQ) {
         let subscribeResponse: any;
 
@@ -1578,7 +1587,15 @@ export const walletApi = apiWithTag.injectEndpoints({
       invalidatesTags: [{ type: 'Transactions', id: 'LIST' }],
     }),
 
-    stakingWithdraw: build.mutation<any,{amount: string;fingerprint: number;waitForConfirmation?: boolean;}>({
+    stakingWithdraw: build.mutation<
+      any,
+      {
+        walletId: number;
+        amount: string;
+        fingerprint: number;
+        waitForConfirmation?: boolean;
+      }
+   >({
       async queryFn(args, queryApi, _extraOptions, fetchWithBQ) {
         let subscribeResponse: any;
 
@@ -1693,33 +1710,6 @@ export const walletApi = apiWithTag.injectEndpoints({
         }
       },
       invalidatesTags: [{ type: 'Transactions', id: 'LIST' }],
-    }),
-
-    findPoolNFT: build.mutation<{totalAmount: number;balanceAmount: number;contractAddress: string;recordAmount: string;},{
-      launcherId: string;
-      contractAddress?: string;
-    }>({
-      query: ({ launcherId, contractAddress }) => {
-        return {
-        command: 'findPoolNFT',
-        service: Staking,
-        args: [launcherId, contractAddress],
-      }},
-    }),
-
-    recoverPoolNFT: build.mutation<{num: number;totalAmount: number;amount: number;status: string;},{
-      launcherId: string;
-      contractAddress?: string;
-    }>({
-      query: ({ launcherId, contractAddress }) => {
-        return {
-        command: 'recoverPoolNFT',
-        service: Staking,
-        args: [launcherId, contractAddress],
-      }},
-      invalidatesTags: [
-        { type: 'Transactions', id: 'LIST' },
-      ],
     }),
   }),
 });

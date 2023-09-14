@@ -17,7 +17,7 @@ import getNFTId from '../../../../util/getNFTId';
 import limit from '../../../../util/limit';
 import { getChangedEventName } from './useNFTDataOnDemand';
 
-const log = debug('sea-gui:useNFTData');
+const log = debug('seacoin-gui:useNFTData');
 
 type UseNFTDataProps = {
   pageSize?: number;

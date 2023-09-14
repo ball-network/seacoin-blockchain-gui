@@ -68,6 +68,7 @@ export default function WalletStakingSend(props: StakingSendProps) {
     }
 
     const response = await stakingSend({
+      walletId: walletId,
       amount: seaToMojo(amount),
       fingerprint: fingerprint,
       waitForConfirmation: true,
@@ -96,7 +97,7 @@ export default function WalletStakingSend(props: StakingSendProps) {
         &nbsp;
         <TooltipIcon>
           <Trans>
-            Staking will make farming XSEA easier.
+            Staking will make farming SSD easier.
           </Trans>
         </TooltipIcon>
       </Typography>

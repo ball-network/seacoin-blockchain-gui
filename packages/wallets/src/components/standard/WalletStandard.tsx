@@ -26,7 +26,7 @@ export default function StandardWallet(props: StandardWalletProps) {
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedTab = searchParams.get('selectedTab') || 'summary';
 
-  const setSelectedTab = (tab: 'summary' | 'send' | 'receive'| 'nftRecover') => {
+  const setSelectedTab = (tab: 'summary' | 'send' | 'receive' | 'staking' | 'nftRecover') => {
     setSearchParams({ selectedTab: tab });
   };
 

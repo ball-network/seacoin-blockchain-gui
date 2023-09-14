@@ -5,7 +5,7 @@ import initDebug from 'debug';
 import walletConnectCommands from '../constants/WalletConnectCommands';
 import { type Pairs } from '../hooks/useWalletConnectPairs';
 
-const log = initDebug('sea-gui:walletConnect');
+const log = initDebug('seacoin-gui:walletConnect');
 
 const availableCommands = walletConnectCommands.map((command) => `sea_${command.command}`);
 

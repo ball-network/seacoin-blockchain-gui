@@ -130,7 +130,6 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
   {
     field: (row: Row, metadata) => {
       const isIncomingClawback = getIsIncomingClawbackTransaction(row);
-      const isOutgoing = getIsOutgoingTransaction(row);
 
       const { confirmed: isConfirmed } = row;
       // const { memos } = row;
@@ -140,11 +139,13 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
       const shouldObscureAddress = isRetire || isOffer;
 
       let displayAddress = truncateValue(row.toAddress, {});
+      let displayEmoji = null;
 
       if (metadata.matchList) {
         metadata.matchList.forEach((contact) => {
           if (contact.address === row.toAddress) {
             displayAddress = contact.displayName;
+            displayEmoji = contact.emoji;
           }
         });
       }
@@ -161,7 +162,7 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
         >
           <div>
             <Typography variant="caption" component="span">
-              {isOutgoing ? 'To: ' : 'From: '}
+              <Trans>To: </Trans>
             </Typography>
             <Tooltip
               title={
@@ -178,7 +179,9 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
                 </Flex>
               }
             >
-              <span>{displayAddress}</span>
+              <span>
+                {displayEmoji} {displayAddress}
+              </span>
             </Tooltip>
           </div>
           <Flex gap={0.5}>
@@ -286,6 +289,7 @@ export default function WalletHistory(props: Props) {
 
   const isLoading = isWalletTransactionsLoading || isWalletLoading;
   const isSyncing = isWalletSyncLoading || !walletState || !!walletState?.syncing;
+  const isSynced = !isSyncing && walletState?.synced;
 
   const [clawbackClaimTransactionDialogProps, setClawbackClaimTransactionDialogProps] = React.useState<{
     coinId: string;
@@ -310,9 +314,11 @@ export default function WalletHistory(props: Props) {
         match.addresses.forEach((addressInfo) => {
           if (transaction.toAddress === addressInfo.address) {
             const nameStr = JSON.stringify(match.name).slice(1, -1);
+            const emojiStr = match.emoji ? match.emoji : '';
+            const matchColor = (theme) => `${match.color ? theme.palette.colors[match.color].main : null}`;
             const addNameStr = JSON.stringify(addressInfo.name).slice(1, -1);
-            const matchName = `${nameStr} | ${addNameStr}`;
-            contactList.push({ displayName: matchName, address: addressInfo.address });
+            const matchName = `${emojiStr} ${nameStr} | ${addNameStr}`;
+            contactList.push({ displayName: matchName, address: addressInfo.address, color: matchColor });
           }
         });
       }
@@ -417,6 +423,14 @@ export default function WalletHistory(props: Props) {
           label: <Trans>Memos</Trans>,
           value: memosDescription,
         },
+        TransactionType.INCOMING_CLAWBACK_SEND === row.type &&
+          row.metadata?.timeLock && {
+            key: 'clawBackExpiration',
+            label: <Trans>Claw back expiration</Trans>,
+            value: moment(row.createdAtTime * 1000)
+              .add(row.metadata.timeLock, 'seconds')
+              .format('LLL'),
+          },
       ].filter((item) => !!item);
 
       return (
@@ -446,16 +460,17 @@ export default function WalletHistory(props: Props) {
   );
 
   const ExtraRowsAfterHeader = useMemo(
-    () => (
-      <WalletHistoryPending
-        walletId={walletId}
-        cols={cols}
-        metadata={metadata}
-        expandedField={expandedField}
-        expandedCellShift={1}
-      />
-    ),
-    [cols, expandedField, metadata, walletId]
+    () =>
+      isSynced && (
+        <WalletHistoryPending
+          walletId={walletId}
+          cols={cols}
+          metadata={metadata}
+          expandedField={expandedField}
+          expandedCellShift={1}
+        />
+      ),
+    [cols, expandedField, metadata, walletId, isSynced]
   );
 
   return (

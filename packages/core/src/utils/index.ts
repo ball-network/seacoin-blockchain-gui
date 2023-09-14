@@ -1,7 +1,7 @@
 export { default as activateLocale } from './activateLocale';
 export { default as bigNumberToLocaleString } from './bigNumberToLocaleString';
 export { default as blockHeightToTimestamp } from './blockHeightToTimestamp';
-export { calculatePoolReward, calculateBaseFarmerReward, calculateCommunityReward  } from './blockRewards';
+export { calculatePoolReward, calculateBaseFarmerReward, calculateCommunityReward } from './blockRewards';
 export { default as catToMojo } from './catToMojo';
 export { default as seaFormatter } from './seaFormatter';
 export { default as seaToMojo } from './seaToMojo';

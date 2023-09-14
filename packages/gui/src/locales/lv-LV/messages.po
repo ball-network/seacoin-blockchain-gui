@@ -69,7 +69,7 @@ msgstr ""
 #: src/electron/main.tsx:1101
 #: src/electron/main.tsx:1188
 msgid "About SeaCoin Blockchain"
-msgstr "Par SeaCoin Blokķēdi"
+msgstr "Par Sea Blokķēdi"
 
 #: src/components/offers/NFTOfferViewer.tsx:638
 #: src/components/offers/OfferAcceptConfirmationDialog.tsx:21
@@ -474,11 +474,11 @@ msgid "Change Pool"
 msgstr ""
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Sea is started"
+msgid "Changes will take effect the next time SeaCoin is started"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Sea is started."
+msgid "Changes will take effect the next time SeaCoin is started."
 msgstr ""
 
 #: src/electron/main.tsx:1080

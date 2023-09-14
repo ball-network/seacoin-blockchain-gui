@@ -22,7 +22,11 @@ msgstr ""
 msgid "-"
 msgstr ""
 
-#: src/components/WalletSend.tsx:283
+#: src/components/WalletSend.tsx:366
+msgid "- Memo helps the receiver side to identify the payment.<0/>- Anything you enter will be publicly accessible on the blockchain."
+msgstr ""
+
+#: src/components/WalletSend.tsx:293
 msgid "- Set a time frame which allows you claw back (revoke) the transaction.<0/>- Recipient of the transaction can only claim the funds once that time frame expires."
 msgstr ""
 
@@ -38,10 +42,18 @@ msgstr "Orders"
 msgid "Add"
 msgstr ""
 
+#: src/components/WalletSend.tsx:287
+msgid "Add option to claw back transaction"
+msgstr ""
+
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:68
 #: src/components/WalletsManageTokens.tsx:155
 msgid "Add Token"
+msgstr ""
+
+#: src/components/WalletSend.tsx:361
+msgid "Add transaction memo"
 msgstr ""
 
 #: src/components/cat/WalletCATCreateSimple.tsx:92
@@ -57,12 +69,12 @@ msgstr "Coordinates"
 #~ msgid "Address / Puzzle hash"
 #~ msgstr "Coordinates / Puzzle hash"
 
-#: src/components/AddressBookAutocomplete.tsx:68
-msgid "Address / Puzzle hash or Address Book Contact"
+#: src/components/AddressBookAutocomplete.tsx:66
+msgid "Address or Contact"
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:207
-#: src/components/WalletSend.tsx:232
+#: src/components/WalletSend.tsx:240
 msgid "Amount"
 msgstr ""
 
@@ -88,16 +100,16 @@ msgstr ""
 msgid "Authorized Payee Wallet"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:226
+#: src/components/ClawbackClaimTransactionDialog.tsx:227
 msgid "Auto-claim transactions with this fee from now on."
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:186
+#: src/components/standard/nftRecover/NFTRecover.tsx:185
 msgid "Available Balance"
 msgstr ""
 
-#: src/components/WalletSend.tsx:323
-msgid "Before sending this transaction, you should ensure that the recipient has a wallet with the capability to claim it manually after the timer has expired."
+#: src/components/WalletSend.tsx:335
+msgid "Before sending this transaction, you should ensure that the recipient has a wallet that can claim it manually after the timer has expired."
 msgstr ""
 
 #: src/components/WalletHistoryClawbackChip.tsx:61
@@ -110,7 +122,7 @@ msgid "Cancel"
 msgstr "Abandon"
 
 #: src/components/cat/WalletCATSend.tsx:118
-#: src/components/WalletSend.tsx:144
+#: src/components/WalletSend.tsx:152
 msgid "Cannot send sea to coloured address. Please enter a sea address."
 msgstr ""
 
@@ -122,8 +134,8 @@ msgstr ""
 msgid "Claim transaction"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:136
-#: src/components/ClawbackClaimTransactionDialog.tsx:259
+#: src/components/ClawbackClaimTransactionDialog.tsx:137
+#: src/components/ClawbackClaimTransactionDialog.tsx:260
 msgid "Claim Transaction"
 msgstr ""
 
@@ -131,31 +143,35 @@ msgstr ""
 msgid "Claiming..."
 msgstr ""
 
+#: src/components/WalletHistory.tsx:429
+msgid "Claw back expiration"
+msgstr ""
+
 #: src/components/WalletHistoryClawbackChip.tsx:94
 msgid "Claw back this transaction"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:259
+#: src/components/ClawbackClaimTransactionDialog.tsx:260
 msgid "Claw back Transaction"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:136
+#: src/components/ClawbackClaimTransactionDialog.tsx:137
 msgid "Claw Back Transaction"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:128
+#: src/components/ClawbackClaimTransactionDialog.tsx:129
 msgid "Clawback payment claimed"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:128
+#: src/components/ClawbackClaimTransactionDialog.tsx:129
 msgid "Clawback payment clawed back"
 msgstr ""
 
-#: src/components/WalletSend.tsx:354
+#: src/components/WalletSend.tsx:333
 msgid "Clawback will be applied."
 msgstr ""
 
-#: src/components/WalletSend.tsx:361
+#: src/components/WalletSend.tsx:343
 msgid "Clawback will not be applied."
 msgstr ""
 
@@ -167,8 +183,8 @@ msgstr ""
 #~ msgid "Click here to download an older version of the wallet"
 #~ msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:157
-#: src/components/ClawbackClaimTransactionDialog.tsx:248
+#: src/components/ClawbackClaimTransactionDialog.tsx:158
+#: src/components/ClawbackClaimTransactionDialog.tsx:249
 msgid "Close"
 msgstr ""
 
@@ -176,11 +192,11 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:194
+#: src/components/WalletHistory.tsx:197
 msgid "Confirmed"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:412
+#: src/components/WalletHistory.tsx:418
 msgid "Confirmed at Height"
 msgstr ""
 
@@ -188,7 +204,7 @@ msgstr ""
 msgid "Connection type"
 msgstr "Contact type"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:161
+#: src/components/standard/nftRecover/NFTRecover.tsx:160
 msgid "contract address"
 msgstr ""
 
@@ -209,16 +225,16 @@ msgstr ""
 msgid "Create Offer"
 msgstr ""
 
-#: src/components/standard/staking/WalletStakingSend.tsx:95
+#: src/components/standard/staking/WalletStakingSend.tsx:96
 msgid "Create Staking"
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:179
-#: src/components/WalletSend.tsx:204
+#: src/components/WalletSend.tsx:212
 msgid "Create Transaction"
 msgstr "Make Transaction"
 
-#: src/components/WalletHistory.tsx:217
+#: src/components/WalletHistory.tsx:220
 msgid "Creation Date"
 msgstr ""
 
@@ -254,7 +270,7 @@ msgstr ""
 msgid "DID Wallet"
 msgstr ""
 
-#: src/components/WalletSend.tsx:316
+#: src/components/WalletSend.tsx:326
 msgid "Disable"
 msgstr ""
 
@@ -270,26 +286,30 @@ msgstr ""
 msgid "Error the entered address appears to be for a different colour."
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:108
-msgid "FAILED"
+#: src/components/standard/nftRecover/NFTRecover.tsx:107
+msgid "Failed"
 msgstr ""
 
+#: src/components/standard/nftRecover/NFTRecover.tsx:107
+#~ msgid "FAILED"
+#~ msgstr ""
+
 #: src/components/cat/WalletCATSend.tsx:245
-#: src/components/WalletSend.tsx:403
+#: src/components/WalletSend.tsx:389
 msgid "Farm"
 msgstr "Lootin'"
 
 #: src/components/cat/WalletCATSend.tsx:221
-#: src/components/WalletHistory.tsx:231
-#: src/components/WalletSend.tsx:245
+#: src/components/WalletHistory.tsx:234
+#: src/components/WalletSend.tsx:253
 msgid "Fee"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:149
+#: src/components/standard/nftRecover/NFTRecover.tsx:148
 msgid "Find"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:175
+#: src/components/ClawbackClaimTransactionDialog.tsx:176
 msgid "From:"
 msgstr ""
 
@@ -321,7 +341,7 @@ msgstr "Get Treasure Chest from Mnemonics"
 msgid "IP address"
 msgstr "Moorin' spot"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:135
+#: src/components/standard/nftRecover/NFTRecover.tsx:134
 msgid "Launcher Id"
 msgstr ""
 
@@ -334,11 +354,11 @@ msgid "Manage token list"
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:235
-#: src/components/WalletSend.tsx:392
+#: src/components/WalletSend.tsx:378
 msgid "Memo"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:417
+#: src/components/WalletHistory.tsx:423
 msgid "Memos"
 msgstr ""
 
@@ -375,7 +395,7 @@ msgstr "New Treasure Chest"
 msgid "Next"
 msgstr "Further"
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:117
+#: src/components/standard/nftRecover/NFTRecover.tsx:116
 msgid "NFT Recover"
 msgstr ""
 
@@ -391,7 +411,7 @@ msgstr ""
 msgid "Nickname"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:485
+#: src/components/WalletHistory.tsx:500
 msgid "No previous transactions"
 msgstr ""
 
@@ -399,17 +419,17 @@ msgstr ""
 msgid "Node ID"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:406
-#: src/components/WalletHistory.tsx:413
+#: src/components/WalletHistory.tsx:412
+#: src/components/WalletHistory.tsx:419
 msgid "Not Available"
 msgstr "Nothin' 'ere"
 
+#: src/components/standard/nftRecover/NFTRecover.tsx:177
 #: src/components/standard/nftRecover/NFTRecover.tsx:178
-#: src/components/standard/nftRecover/NFTRecover.tsx:179
 msgid "Not Available Balance"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:89
+#: src/components/standard/nftRecover/NFTRecover.tsx:91
 msgid "not find contract address, Please enter a contract address"
 msgstr ""
 
@@ -417,7 +437,7 @@ msgstr ""
 msgid "Not Synced"
 msgstr "Not Over the Horizon Yet"
 
-#: src/components/WalletHistory.tsx:203
+#: src/components/WalletHistory.tsx:206
 msgid "Offer Accepted"
 msgstr ""
 
@@ -426,7 +446,7 @@ msgid "OK"
 msgstr "YARR"
 
 #: src/components/cat/WalletCATSend.tsx:182
-#: src/components/WalletSend.tsx:207
+#: src/components/WalletSend.tsx:215
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "On average we got a transaction booty every minute. If pirates aren't movin' loot like crazy, ye can expect yer transaction t' be included in less than a minute."
 
@@ -442,7 +462,7 @@ msgstr ""
 msgid "Paste Mnemonic ({0} words)"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:196
+#: src/components/WalletHistory.tsx:199
 msgid "Pending"
 msgstr "Workin' on it"
 
@@ -462,11 +482,11 @@ msgstr ""
 msgid "Pending Total Balance"
 msgstr "All Yer Under Way Treasure"
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:206
+#: src/components/ClawbackClaimTransactionDialog.tsx:207
 msgid "Please enter a transaction fee to claim the above amount:"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:208
+#: src/components/ClawbackClaimTransactionDialog.tsx:209
 msgid "Please enter a transaction fee to claw back the above amount:"
 msgstr ""
 
@@ -481,12 +501,12 @@ msgstr ""
 #: src/components/cat/WalletCATSend.tsx:104
 #: src/components/standard/staking/WalletStakingSend.tsx:67
 #: src/components/standard/staking/WalletStakingWithdraw.tsx:67
-#: src/components/WalletSend.tsx:134
+#: src/components/WalletSend.tsx:142
 msgid "Please enter a valid numeric amount"
 msgstr "Give a good number fer amount"
 
 #: src/components/cat/WalletCATSend.tsx:109
-#: src/components/WalletSend.tsx:139
+#: src/components/WalletSend.tsx:147
 msgid "Please enter a valid numeric fee"
 msgstr "Give a good number fer a fee"
 
@@ -501,7 +521,7 @@ msgstr ""
 #: src/components/cat/WalletCATSend.tsx:95
 #: src/components/standard/staking/WalletStakingSend.tsx:62
 #: src/components/standard/staking/WalletStakingWithdraw.tsx:62
-#: src/components/WalletSend.tsx:129
+#: src/components/WalletSend.tsx:137
 msgid "Please finish syncing before making a transaction"
 msgstr "Get yer syncin' done afore makin' a transaction"
 
@@ -538,7 +558,7 @@ msgstr "Yer Treasure's Coordinates (give t'is to scallywags who owe you)"
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:204
+#: src/components/standard/nftRecover/NFTRecover.tsx:203
 msgid "Recover"
 msgstr ""
 
@@ -546,9 +566,13 @@ msgstr ""
 msgid "Recoverable Wallet"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:106
-msgid "Recovered Amount:"
+#: src/components/standard/nftRecover/NFTRecover.tsx:105
+msgid "Recovered Amount"
 msgstr ""
+
+#: src/components/standard/nftRecover/NFTRecover.tsx:105
+#~ msgid "Recovered Amount:"
+#~ msgstr ""
 
 #: src/components/cat/WalletCATSelect.tsx:39
 msgid "Recovery Wallet"
@@ -559,7 +583,7 @@ msgstr ""
 msgid "Rename Wallet"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:202
+#: src/components/WalletHistory.tsx:205
 msgid "Retire"
 msgstr ""
 
@@ -588,7 +612,7 @@ msgstr "Choose type o' treasure chest"
 
 #: src/components/cat/WalletCATSend.tsx:256
 #: src/components/WalletHeader.tsx:50
-#: src/components/WalletSend.tsx:414
+#: src/components/WalletSend.tsx:400
 msgid "Send"
 msgstr ""
 
@@ -600,7 +624,7 @@ msgstr ""
 msgid "Spendable Balance"
 msgstr "Yer Treasure t' Squander"
 
-#: src/components/standard/staking/WalletStakingSend.tsx:123
+#: src/components/standard/staking/WalletStakingSend.tsx:124
 #: src/components/WalletHeader.tsx:53
 msgid "Staking"
 msgstr ""
@@ -609,7 +633,7 @@ msgstr ""
 msgid "Staking Address"
 msgstr ""
 
-#: src/components/standard/staking/WalletStakingSend.tsx:109
+#: src/components/standard/staking/WalletStakingSend.tsx:110
 msgid "Staking Amount"
 msgstr ""
 
@@ -617,29 +641,35 @@ msgstr ""
 msgid "Staking Balance"
 msgstr ""
 
-#: src/components/standard/staking/WalletStakingSend.tsx:98
-msgid "Staking will make farming XSEA easier."
+#: src/components/standard/staking/WalletStakingSend.tsx:99
+msgid "Staking will make farming SSD easier."
 msgstr ""
+
+#: src/components/standard/staking/WalletStakingSend.tsx:98
+#~ msgid "Staking will make farming XSEA easier."
+#~ msgstr ""
 
 #: src/constants/WalletName.ts:5
 msgid "Standard Wallet"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:208
+#: src/components/standard/nftRecover/NFTRecover.tsx:106
+#: src/components/WalletHistory.tsx:211
 msgid "Status"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:107
-msgid "Status:"
-msgstr ""
+#: src/components/standard/nftRecover/NFTRecover.tsx:106
+#~ msgid "Status:"
+#~ msgstr ""
 
+#: src/components/standard/nftRecover/NFTRecover.tsx:107
 #: src/components/WalletSendTransactionResultDialog.tsx:12
 msgid "Success"
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:108
-msgid "SUCCESS"
-msgstr ""
+#: src/components/standard/nftRecover/NFTRecover.tsx:107
+#~ msgid "SUCCESS"
+#~ msgstr ""
 
 #: src/components/WalletHeader.tsx:49
 msgid "Summary"
@@ -665,7 +695,7 @@ msgstr ""
 msgid "This access token is verified"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:171
+#: src/components/WalletHistory.tsx:172
 msgid "This is not a valid address for sending funds to"
 msgstr ""
 
@@ -689,7 +719,7 @@ msgstr ""
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "'tis ye whole treasure + ye under way treasure: 'tis wha' yer trasure will be aft all under way treasure be let through."
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:193
+#: src/components/ClawbackClaimTransactionDialog.tsx:194
 msgid "This transaction will be automatically claimed with a fee:"
 msgstr ""
 
@@ -697,7 +727,8 @@ msgstr ""
 #~ msgid "To"
 #~ msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:175
+#: src/components/ClawbackClaimTransactionDialog.tsx:176
+#: src/components/WalletHistory.tsx:165
 msgid "To:"
 msgstr ""
 
@@ -714,8 +745,8 @@ msgid "Tokens"
 msgstr ""
 
 #: src/components/card/WalletCardTotalBalance.tsx:60
+#: src/components/standard/nftRecover/NFTRecover.tsx:169
 #: src/components/standard/nftRecover/NFTRecover.tsx:170
-#: src/components/standard/nftRecover/NFTRecover.tsx:171
 msgid "Total Balance"
 msgstr "Ye Whole Treasure"
 
@@ -723,19 +754,19 @@ msgstr "Ye Whole Treasure"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr ""
 
-#: src/components/WalletHistory.tsx:462
+#: src/components/WalletHistory.tsx:477
 msgid "Transactions"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:232
+#: src/components/ClawbackClaimTransactionDialog.tsx:233
 msgid "Transactions will be claimed automatically when the Clawback time expires."
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:235
+#: src/components/ClawbackClaimTransactionDialog.tsx:236
 msgid "Transactions with values smaller than the fee will not be auto claimed."
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:120
+#: src/components/standard/nftRecover/NFTRecover.tsx:119
 msgid "visiting the Pool tab of your CHIA-GUI. using this command: chia plotNFT show. Note: you have to do this on the CHIA client, not the fork!"
 msgstr ""
 
@@ -756,7 +787,7 @@ msgstr ""
 msgid "Wallet Name"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:200
+#: src/components/ClawbackClaimTransactionDialog.tsx:201
 msgid "Wallet needs to be synced for claiming clawback transactions"
 msgstr ""
 
@@ -780,27 +811,27 @@ msgstr "Ahoy! Make sure t' scribble down the followin' secret code. Then ye can 
 msgid "Will be autoclaimed in "
 msgstr ""
 
-#: src/components/standard/staking/WalletStakingWithdraw.tsx:123
+#: src/components/standard/staking/WalletStakingWithdraw.tsx:124
 msgid "Withdraw"
 msgstr ""
 
-#: src/components/standard/staking/WalletStakingWithdraw.tsx:109
+#: src/components/standard/staking/WalletStakingWithdraw.tsx:110
 msgid "Withdraw Amount"
 msgstr ""
 
-#: src/components/standard/staking/WalletStakingWithdraw.tsx:95
+#: src/components/standard/staking/WalletStakingWithdraw.tsx:96
 msgid "Withdraw Staking"
 msgstr ""
 
-#: src/components/standard/staking/WalletStakingWithdraw.tsx:98
+#: src/components/standard/staking/WalletStakingWithdraw.tsx:99
 msgid "Withdraw staking. withdraw amount 0 will withdraw all staking"
 msgstr ""
 
-#: src/components/ClawbackClaimTransactionDialog.tsx:238
+#: src/components/ClawbackClaimTransactionDialog.tsx:239
 msgid "You can change the Clawback Auto Claim fee in Settings."
 msgstr ""
 
-#: src/components/standard/nftRecover/NFTRecover.tsx:187
+#: src/components/standard/nftRecover/NFTRecover.tsx:186
 msgid "You can only claim rewards older than 7 days"
 msgstr ""
 

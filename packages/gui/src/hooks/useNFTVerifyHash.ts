@@ -8,7 +8,7 @@ import useCache from './useCache';
 import useNFT from './useNFT';
 import useNFTMetadata from './useNFTMetadata';
 
-const log = debug('sea-gui:useNFTVerifyHash');
+const log = debug('seacoin-gui:useNFTVerifyHash');
 
 type PreviewState = {
   isVerified: boolean;

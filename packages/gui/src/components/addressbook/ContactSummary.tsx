@@ -148,30 +148,20 @@ export default function ContactSummary() {
 
   return (
     <div>
-      <Flex flexDirection="row" justifyContent="right" style={{ height: '80px' }}>
-        <Flex style={{ paddingRight: '30px' }}>
-          <Typography
-            variant="h5"
-            sx={{
-              position: 'absolute',
-              left: 44,
-              top: 48,
-            }}
-          >
-            <Trans>{contact.name}</Trans>
-          </Typography>
-          <Flex
-            style={{ height: '30px' }}
-            sx={{
-              position: 'absolute',
-              right: 44,
-              top: 48,
-            }}
-          >
+      <Flex flexDirection="column" gap={1} alignItems="left" style={{ paddingLeft: '44px', paddingRight: '44px' }}>
+        <Flex flexDirection="row" alignItems="center" style={{ paddingTop: '4px' }}>
+          <Flex flexGrow={1}>
+            <Typography variant="h5">
+              <Trans>
+                {contact.emoji} {contact.name}
+              </Trans>
+            </Typography>
+          </Flex>
+          <Flex>
             <More>
               <MenuItem onClick={() => handleEditContact(contactId)} close>
                 <ListItemIcon>
-                  <Edit fontSize="small" />
+                  <Edit fontSize="small" color="info" />
                 </ListItemIcon>
                 <Typography variant="inherit" noWrap>
                   <Trans>Edit Contact</Trans>
@@ -179,7 +169,7 @@ export default function ContactSummary() {
               </MenuItem>
               <MenuItem onClick={() => handleRemove(Number(contact.contactId))} close>
                 <ListItemIcon>
-                  <Delete fontSize="small" />
+                  <Delete fontSize="small" color="info" />
                 </ListItemIcon>
                 <Typography variant="inherit" noWrap>
                   <Trans>Delete Contact</Trans>
@@ -188,23 +178,22 @@ export default function ContactSummary() {
             </More>
           </Flex>
         </Flex>
-      </Flex>
-
-      <Flex flexDirection="column" gap={2} alignItems="center" style={{ marginTop: '40px', paddingBottom: '40px' }}>
-        {/*
-        <Flex style={{ width: '600px' }}>{getImage()}</Flex>
-        <Flex style={{ width: '600px' }}>
-          <Flex alignSelf="flex-start">
-            <h1>
-              <Trans>{contact.name}</Trans>
-            </h1>
+        <Flex flexDirection="column" gap={6} style={{ width: '100%', paddingTop: '40px' }}>
+          {/*
+          <Flex style={{ width: '600px' }}>{getImage()}</Flex>
+          <Flex style={{ width: '600px' }}>
+            <Flex alignSelf="flex-start">
+              <h1>
+                <Trans>{contact.name}</Trans>
+              </h1>
+            </Flex>
           </Flex>
-        </Flex>
-        */}
-        <Flex flexDirection="column" gap={6} maxWidth="600px" style={{ width: '100%' }}>
-          {showAddresses()}
-          {showDIDs()}
-          {showDomains()}
+          */}
+          <Flex flexDirection="column" gap={6} style={{ width: '100%' }}>
+            {showAddresses()}
+            {showDIDs()}
+            {showDomains()}
+          </Flex>
         </Flex>
       </Flex>
     </div>
