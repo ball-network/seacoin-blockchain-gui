@@ -51,7 +51,7 @@ export default function SettingsDataLayer() {
             <Trans>Turn on/off the DataLayer service.</Trans>
           </SettingsText>
           <FormHelperText>
-            <Trans>Changes will take effect the next time SeaCoin is started.</Trans>
+            <Trans>Changes will take effect the next time Sea is started.</Trans>
           </FormHelperText>
         </Grid>
       </Grid>

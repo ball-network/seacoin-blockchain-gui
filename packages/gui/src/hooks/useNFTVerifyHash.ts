@@ -4,11 +4,12 @@ import { useEffect, useState, useCallback, useMemo } from 'react';
 
 import type Metadata from '../@types/Metadata';
 import compareChecksums from '../util/compareChecksums';
+
 import useCache from './useCache';
 import useNFT from './useNFT';
 import useNFTMetadata from './useNFTMetadata';
 
-const log = debug('seacoin-gui:useNFTVerifyHash');
+const log = debug('sea-gui:useNFTVerifyHash');
 
 type PreviewState = {
   isVerified: boolean;

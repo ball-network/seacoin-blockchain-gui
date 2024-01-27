@@ -114,6 +114,21 @@ function FarmingRewardsHistoryCards() {
       </Typography>
       <Grid spacing={2} alignItems="stretch" container>
         <Grid xs={12} sm={6} md={4} item>
+          <CardSimple title={<Trans>Stake Reward</Trans>} value={
+            `${mojoToSeaLocaleString(data?.stakeFarmRewardAmount, locale)} ${currencyCode}`
+          } loading={isLoading} error={error} />
+        </Grid>
+        <Grid xs={12} sm={6} md={4} item>
+          <CardSimple title={<Trans>Lock Reward</Trans>} value={
+            `${mojoToSeaLocaleString(data?.stakeLockRewardAmount, locale)} ${currencyCode}`
+          } loading={isLoading} error={error} />
+        </Grid>
+        <Grid xs={12} sm={6} md={4} item>
+          <CardSimple title={<Trans>Farmer Reward</Trans>} value={
+            `${mojoToSeaLocaleString(data?.farmerRewardAmount, locale)} ${currencyCode}`
+          } loading={isLoading} error={error} />
+        </Grid>
+        <Grid xs={12} sm={6} md={4} item>
           {totalSeaFarmedCard}
         </Grid>
         <Grid xs={12} sm={6} md={4} item>

@@ -2,6 +2,7 @@ import { store, walletApi } from '@sea-network/api-react';
 import { isValidURL } from '@sea-network/core';
 
 import OfferServices from '../constants/OfferServices';
+
 import offerToOfferBuilderData from './offerToOfferBuilderData';
 import parseFileContent from './parseFileContent';
 

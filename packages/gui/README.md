@@ -1,5 +1,9 @@
 # seacoin-blockchain-gui/gui
 
+![Sea logo](https://www.seacoin.vip/wp-content/uploads/2022/09/sea-logo.svg)
+
+![GitHub contributors](https://img.shields.io/github/contributors/ball-network/seacoin-blockchain-gui?logo=GitHub)
+
 Sea GUI - written in TypeScript and uses Electron/React.
 
 ## Development

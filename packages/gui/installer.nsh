@@ -86,9 +86,9 @@ Function checkIsSeaRunning
     ${If} $IsSeaProcessRunning == 0
       ${If} $AlreadyAlerted == 0
         StrCpy $AlreadyAlerted 1
-        MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "Installation cannot continue while SeaCoin is still running. Please exit the Sea application and then click OK to proceed." IDOK retry IDCANCEL exit
+        MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "Installation cannot continue while Sea is still running. Please exit the Sea application and then click OK to proceed." IDOK retry IDCANCEL exit
       ${Else}
-        MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "SeaCoin is still running. Please exit the Sea application and then click OK to proceed." IDOK retry IDCANCEL exit
+        MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "Sea is still running. Please exit the Sea application and then click OK to proceed." IDOK retry IDCANCEL exit
       ${EndIf}
     ${EndIf}
 

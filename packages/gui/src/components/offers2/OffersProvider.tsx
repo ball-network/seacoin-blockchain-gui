@@ -23,7 +23,7 @@ export const OffersContext = createContext<
   | undefined
 >(undefined);
 
-const log = debug('seacoin-gui:OfferProvider');
+const log = debug('sea-gui:OfferProvider');
 
 export function getChangedEventName(id: string) {
   return `offerChanged:${id}`;

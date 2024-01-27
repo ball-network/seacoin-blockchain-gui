@@ -29,7 +29,7 @@ export default function SettingsStartup() {
             />
           </FormGroup>
           <Typography variant="body2" color="textSecondary">
-            <Trans>Changes will take effect the next time SeaCoin is started</Trans>
+            <Trans>Changes will take effect the next time Sea is started</Trans>
           </Typography>
         </Flex>
       </Grid>

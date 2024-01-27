@@ -2,6 +2,7 @@ import { useLocalStorage } from '@sea-network/api-react';
 import { useCallback, useState, useEffect } from 'react';
 
 import compareAppVersions from '../utils/compareAppVersion';
+
 import useAppVersion from './useAppVersion';
 
 type UseGetLatestVersionFromWebsiteResult = {

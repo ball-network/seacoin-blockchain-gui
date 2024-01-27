@@ -34,6 +34,7 @@ import seaEnvironment from '../util/seaEnvironment';
 import loadConfig from '../util/loadConfig';
 import manageDaemonLifetime from '../util/manageDaemonLifetime';
 import { setUserDataDir } from '../util/userData';
+
 import CacheManager from './CacheManager';
 import { readAddressBook, saveAddressBook } from './addressBook';
 import installDevTools from './installDevTools.dev';
@@ -716,13 +717,13 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'SeaCoin Blockchain Wiki' }),
           click: () => {
-            openExternal('https://github.com/ball-network/seacoin-blockchain/wiki');
+            openExternal('https://github.com/Chia-Network/chia-blockchain/wiki');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
           click: () => {
-            openExternal('https://github.com/ball-network/seacoin-blockchain/wiki/FAQ');
+            openExternal('https://github.com/Chia-Network/chia-blockchain/wiki/FAQ');
           },
         },
         {
@@ -734,7 +735,7 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'Contribute on GitHub' }),
           click: () => {
-            openExternal('https://github.com/ball-network/seacoin-blockchain/blob/main/CONTRIBUTING.md');
+            openExternal('https://github.com/Chia-Network/chia-blockchain/blob/main/CONTRIBUTING.md');
           },
         },
         {

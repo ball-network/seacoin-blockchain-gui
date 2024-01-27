@@ -5,6 +5,7 @@ import { useGetOfferDataMutation } from '@sea-network/api-react';
 import { useShowSaveDialog } from '@sea-network/core';
 
 import { suggestedFilenameForOffer } from '../components/offers/utils';
+
 import useAssetIdName from './useAssetIdName';
 
 export type SaveOfferFileHook = (tradeId: string) => Promise<void>;

@@ -40,6 +40,7 @@ import isNumeric from 'validator/es/lib/isNumeric';
 
 import useClawbackDefaultTime, { getClawbackTimeInSeconds } from '../hooks/useClawbackDefaultTime';
 import useWallet from '../hooks/useWallet';
+
 import AddressBookAutocomplete from './AddressBookAutocomplete';
 import CreateWalletSendTransactionResultDialog from './WalletSendTransactionResultDialog';
 
@@ -93,12 +94,12 @@ export default function WalletSend(props: SendCardProps) {
     formState: { isSubmitting },
   } = methods;
 
-  const addressValue = useWatch<string>({
+  const addressValue = useWatch({
     control: methods.control,
     name: 'address',
   });
 
-  const clawbackValues = useWatch<(number | string)[]>({
+  const clawbackValues = useWatch({
     control: methods.control,
     name: ['days', 'hours', 'minutes'],
   });
@@ -152,8 +153,8 @@ export default function WalletSend(props: SendCardProps) {
       throw new Error(t`Cannot send sea to coloured address. Please enter a sea address.`);
     }
 
-    if (address.slice(0, 12) === 'sea_addr://') {
-      address = address.slice(12);
+    if (address.slice(0, 16) === 'sea_addr://') {
+      address = address.slice(16);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
       address = address.slice(2);

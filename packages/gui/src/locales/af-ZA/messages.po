@@ -20,7 +20,7 @@ msgstr ""
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:39
 msgid "*Want to explore Sea’s blocks further? Check out <0>Sea Explorer</0> built by an open source developer."
-msgstr "*Wil jy dalk die Sea blokke verder wil ondersoek? Gaan kyk na <0>Sea Explorer<0>, gebou deur a 'n open source programmeerder."
+msgstr "*Wil jy dalk die SeaCoin blokke verder wil ondersoek? Gaan kyk na <0>Sea Explorer<0>, gebou deur a 'n open source programmeerder."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:94
 #~ msgid "0 automatically chooses bucket count"
@@ -1733,7 +1733,7 @@ msgid "This trade was included on blockchain at this block height"
 msgstr ""
 
 #: src/components/app/AppTimeBombAlert.tsx:11
-msgid "This version of SeaCoin is no longer compatible with the blockchain and can not safely farm."
+msgid "This version of Sea is no longer compatible with the blockchain and can not safely farm."
 msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:86

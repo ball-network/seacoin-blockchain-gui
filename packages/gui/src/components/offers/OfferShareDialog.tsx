@@ -27,11 +27,12 @@ import React, { useCallback, useEffect, useMemo } from 'react';
 import useResolveNFTOffer from '../../hooks/useResolveNFTOffer';
 import useSuppressShareOnCreate from '../../hooks/useSuppressShareOnCreate';
 import NotificationSendDialog from '../notification/NotificationSendDialog';
+
 import { NFTOfferSummary } from './NFTOfferViewer';
 import OfferSummary from './OfferSummary';
 import { offerContainsAssetOfType } from './utils';
 
-const log = debug('seacoin-gui:offers');
+const log = debug('sea-gui:offers');
 
 /* ========================================================================== */
 

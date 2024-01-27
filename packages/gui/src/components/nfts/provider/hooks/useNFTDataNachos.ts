@@ -7,9 +7,10 @@ import { useState, useCallback, useMemo } from 'react';
 import type NFTState from '../../../../@types/NFTState';
 import useNachoNFTs from '../../../../hooks/useNachoNFTs';
 import getNFTId from '../../../../util/getNFTId';
+
 import { getChangedEventName } from './useNFTDataOnDemand';
 
-const log = debug('seacoin-gui:NFTProvider:useMetadataData');
+const log = debug('sea-gui:NFTProvider:useMetadataData');
 
 // warning: only used by NFTProvider
 export default function useNFTDataNachos() {

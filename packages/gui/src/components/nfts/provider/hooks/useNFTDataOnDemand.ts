@@ -11,7 +11,7 @@ import getNFTId from '../../../../util/getNFTId';
 import limit from '../../../../util/limit';
 import { launcherIdFromNFTId } from '../../../../util/nfts';
 
-const log = debug('seacoin-gui:NFTProvider:useMetadataData');
+const log = debug('sea-gui:NFTProvider:useMetadataData');
 
 export function getChangedEventName(nftId: string) {
   return `nftChanged:${nftId}`;

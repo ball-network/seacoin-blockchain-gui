@@ -5,7 +5,7 @@ const ServiceName = {
   HARVESTER: 'sea_harvester',
   SIMULATOR: 'sea_full_node_simulator',
   DAEMON: 'daemon',
-  PLOTTER: 'chia_plotter',
+  PLOTTER: 'sea_plotter',
   TIMELORD: 'sea_timelord',
   INTRODUCER: 'sea_introducer',
   EVENTS: 'wallet_ui',
